@@ -1,0 +1,51 @@
+<!-- 我的物业 -->
+		<ul class="b2_ul">
+			<li style="height:90px;">
+				<div  style="line-height: 90px; font-size:30px;">我的物业	
+				</div>
+			</li>
+			<li >
+				<div class="fix b2_ul_color" >绑定物业
+					<span class="b2_ul_111">+</span>
+				</div>
+			</li>
+         	<li>
+         		<div>石景山小区	<span class="ospan2">审核中</span>
+					<input type="checkbox" class="b2_checkbox">
+				</div>
+			</li>
+			<li>
+         		<div>石景山大区<span class="ospan2" style='color:#0079fe'>V</span>
+					<input type="checkbox" class="b2_checkbox">
+				</div>
+			</li>
+			<li>
+         		<div>石景山大区<span class="ospan2" >冻结</span>
+					<input type="checkbox" class="b2_checkbox">
+				</div>
+			</li>
+			<li class="dis_li" >
+         		<div>石景山大区<span class="ospan2" style='color:#666666'>V+</span>
+					<input type="checkbox" class="b2_checkbox">
+				</div>
+			</li>
+		</ul>
+
+<script type="text/javascript">
+	// 物业
+	$(".b2_ul_111").click(function(){
+		// alert()
+		if($(".b2_ul_color").css("background-color")=="rgb(214, 214, 214)"){
+	 		$(".ospan2").hide();
+	 		$(".dis_li").hide();
+	 		$(".b2_ul").css("height","310px");
+	 		$(".b2_ul_color").css("background-color","white");
+		}else{
+			$(".b2_ul").css("height","357px");
+			$(".dis_li").show();
+			$(".ospan2").show();
+			$(".b2_ul_color").css("background-color","rgb(214,214,214)");
+		}
+	})
+
+</script>

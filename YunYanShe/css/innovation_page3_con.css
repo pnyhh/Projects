@@ -1,0 +1,94 @@
+.script_con_left{
+	float:left;
+	width:76%;
+}
+.script_con_left dl{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+	padding-bottom:16px;
+}
+.script_con_left dl dd{
+	margin-left:20px;
+}
+.script_con_left dl dt img{
+	display:block;
+	width:98%;
+	margin:0 auto;
+}
+.script_con_left dl dd  a{
+	float:left;
+	display:inline-block;
+	height:46px;
+	width:86%;
+	font-weight:bold;
+	font-size:18px;
+	line-height:46px;
+}
+.script_con_left dl dd .script_collect{
+	width:9%;
+	height:18px;
+	line-height:18px;
+	font-size:14px;
+	background:rgb(130,193,234);
+	text-align:center;
+	margin-top:12px;
+	border-radius:11px;
+}
+.script_con_left dl dd span{
+	font-size:14px;
+	margin-right:26px;
+	color:rgb(114,114,114);
+}
+.challenge_elaborate{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);	
+}
+.challenge_elaborate p{
+	height:32px;
+	line-height:32px;
+	margin-left:20px;
+	font-size:16px;
+	font-weight:bold;
+	color:rgb(53,76,104);
+}
+.challenge_elaborate span{
+	display:block;
+	padding-left:20px;
+	font-size:14px;
+	text-indent:2em;
+	padding-bottom:16px;
+}
+.challenge_submit{
+	width:96%;
+	margin:0 auto;
+	padding-bottom:90px;
+}
+.challenge_submit span{
+	display:inline-block;
+	width:82%;
+	height:30px;
+	line-height:30px;
+}
+.challenge_submit span input{
+	margin-right:10px;
+	width:13px;
+	color:rgb(228,228,229);
+}
+.challenge_submit span a{
+	color:rgb(130,193,234);
+}
+.challenge_submit .show_more{
+	color:rgb(181,181,182);
+}
+.challenge_submit p{
+	width:164px;
+	height:36px;
+	margin:0 auto;
+	margin-top:12px;
+}
+.challenge_submit p img{
+	width:164px;
+	height:36px;
+}

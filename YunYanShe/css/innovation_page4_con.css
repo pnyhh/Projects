@@ -1,0 +1,70 @@
+.search_con .video_con_left{
+	float:left;
+	width:76%;
+}
+.search_con .video_con_left h3{
+	width:96%;
+	height:42px;
+	margin:0 auto;
+	line-height:42px;
+	text-align:center;
+	color:rgb(148,148,148);
+	font-weight:bold;
+	font-size:18px;
+	letter-spacing:0.2em;
+	border-bottom:1px solid rgb(196,196,196);
+}
+.search_con .video_con_left h6{
+	width:96%;
+	height:24px;
+	line-height:24px;
+	margin:0 auto;
+	text-align:center;
+	color:rgb(148,148,148);
+	font-weight:bold;
+	font-size:12px;
+}
+.search_con .video_con_left div{
+	width:96%;
+	height:340px;
+	margin:0 auto; 
+	border-bottom:1px solid rgb(196,196,196);
+
+}
+.search_con .video_con_left dl{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+	color:rgb(161,161,161);
+}
+.search_con .video_con_left dl dt{
+	height:32px;
+	line-height:32px;
+	text-indent:2em;
+}
+.search_con .video_con_left dl dd{
+	position:relative;
+	font-size:14px;
+	text-indent:2em;
+	margin-bottom: 0.5em;
+}
+.search_con .video_con_left dl dd a{
+	position:absolute;
+	right:0px;
+	color:rgb(146,201,237);
+}
+.search_con .video_con_left .return_videoList{
+	display:block;
+	width:184px;
+	height:22px;
+	line-height:22px;
+	background:rgb(53,76,104);
+	color:white;
+	text-align:center;
+	font-size:14px;
+	letter-spacing:0.3em;
+	border-radius:11px;
+	margin:0 auto;
+	margin-top:10px;
+	margin-bottom: 20px;
+}

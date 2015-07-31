@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{
+			min-width: 320px;
+			max-width: 720px;
+			margin: 0 auto;
+			background:#B9B9B9;
+		}
+		.main{
+			width: 100%;
+		}
+		.head{
+			width: 100%;
+			text-align: center;
+			font:20px/78px "Microsoft YaHei","黑体";
+			height: 78px;
+			background:white;
+			position: fixed;
+			top: 0px;
+			width:100%;
+			overflow: hidden;
+			z-index: 999;
+		}
+		.head-a{
+			float: left;
+			width: 20px;
+			height: 32px;
+			background:url(../images/01.jpg) no-repeat;
+			margin-top: 20px;
+			margin-left: 34px;
+		}
+		.kong{
+			height:78px;
+			width: 100%; 
+		}
+		/*头部*/
+		.cont{
+			width: 100%;
+			overflow: hidden;
+			padding-top-top: 20px;
+		}
+		.cont dl dt{
+			height: 88px;
+			background: white;
+			border-top:1px solid #D1D1D1;
+			border-bottom:1px solid #D1D1D1;
+			line-height: 88px;
+			font-size: 25px;
+			text-indent: 2em;
+		}
+		.cont dl dd{
+			height: 88px;
+			background: rgb(240,239,244);
+			border-bottom:1px solid #D1D1D1;
+			line-height: 88px;
+			font-size: 25px;
+			text-indent: 2em;
+		}
+		
+	</style>
+</head>
+<body>
+<div class="main">
+		<div class="head">
+				<span class="head-a"></span>社区超市
+		</div>
+		<div class="kong"></div>
+		<div class="cont">
+			<dl id="dl">
+				<dt>GPS</dt>
+				<dd>北京市</dd>
+				<dd>热门</dd>
+				<dd>深圳</dd>
+				<dd>广州</dd>
+				<dd>上海</dd>
+				<dd>长沙</dd>
+				<dd>热门</dd>
+				<dd>深圳</dd>
+				<dd>广州</dd>
+				<dd>上海</dd>
+				<dd>长沙</dd>
+			</dl>
+		</div>
+</div>
+
+</body>
+<script>
+	var lis =document.getElementById("dl").getElementsByTagName('dd');
+
+		var a = lis.length;
+		for (var i = 0; i <= a; i++) {
+			lis[i].onclick = function(){	
+				for(var j = 0; j < a; j++){
+					if(lis[j] == this){
+						console.log(j)
+						lis[j].style.backgroundColor = (j % 2 == 0)?'white':'';
+					};
+				};
+			};
+			lis[i].onmouseout = function(){
+				for(var j = 0; j < a; j++){
+						lis[j].style.backgroundColor ='';
+				};
+			} 
+		};
+</script>
+</html>

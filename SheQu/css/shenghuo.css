@@ -1,0 +1,120 @@
+body{
+	max-width: 768px;
+	min-width: 320px;
+}
+.x_box{
+	width:94%;
+	margin: 0 auto;
+	background:#f0eff4;
+}
+.x_header{
+	width:100%;
+	background:white;
+	height: 80px;
+	display:-webkit-box;
+	display:-moz-box;  /*Firefox */
+	display: box;
+}
+.x_header a:nth-child(1){
+	display: block;
+	width:20%;
+	height: 80px;
+	background: url(../images/bianmin/h1.png) 10% 50% no-repeat;
+}
+.x_header a:nth-child(2){
+	display: block;
+	width:60%;
+	text-align: center;
+	font:1.5em/80px "黑体";
+}
+.x_top img{
+	width: 100%;
+}
+.x_content{
+	margin: 25px auto;
+	width:94%;	
+	margin-bottom: 90px;
+}
+.x_content_ul{
+	width: 100%;
+	border:1px solid #c7c7c7;
+	border-radius: 5px;
+	background: white;
+}
+.x_content_ul li{
+	width: 100%;
+	box-sizing:border-box;
+	height:100px;
+	padding-left: 3%;
+	padding-right: 3%;
+	border-bottom: 1px solid  #c7c7c7;
+	overflow: hidden;
+	display: -webkit-box;
+	display:-moz-box; /* Firefox */
+	display: box;
+}
+.x_content_div1{
+	width: 25%;
+	height: 100px;
+	overflow: hidden;
+}
+.x_content_div1 span{
+	margin-top: 20px;
+	display: block;
+	width: 60px;
+	height: 60px;
+}
+.x_content_div1 .span1{
+	background: url(../images/shenghuo/c1.png);
+}
+.x_content_div1 .span2{
+	background: url(../images/shenghuo/c2.png);
+}
+.x_content_div1 .span3{
+	background: url(../images/shenghuo/c3.png);
+}
+.x_content_div1 .span4{
+	background: url(../images/shenghuo/c4.png);
+}
+.x_content_div1 .span5{
+	background: url(../images/shenghuo/c5.png);
+}
+.x_content_div1 .span6{
+	background: url(../images/shenghuo/c6.png);
+}
+.x_content_div2{
+	width: 65%;
+	height: 100px;
+}
+.x_content_div2 h3{
+	width: 100%;
+	line-height: 56px;
+	margin-bottom: 2%;
+	font-size: 1.3em;
+}
+.x_content_div2 p{
+	width:100%;
+	font-size: 1em;
+}
+.x_content_div3{
+	width: 10%;
+	height: 100px;
+	line-height: 100px;
+	overflow: hidden;
+}
+.x_content_div3 a{
+	margin-top: 39px;
+	display: block;
+	width: 13px;
+	height: 22px;
+	background: url(../images/shenghuo/cr.png);
+}
+.v_footer{position: fixed;bottom: 0px;width: 94%;height: 58px;z-index: 1000;background: white;}
+.v_footer_div{width: 18.75%;height: 58px;float: left;border-top: 1px solid gray;padding-top: 10px;}
+.v_footer_l,.v_footer_r{width: 15%;float: left;height: 58px;}
+.v_footer_m{width: 70%;height: 58px;float: left;}
+.v_footer_m h1{height: 30px;text-align: center;}
+.v_footer_m p{height: 38px;text-align: center;font-family: "黑体";font-size: 0.6em;}
+.v_footer_m h1 img{width: 20px;height: 20px;}
+#phone{width: 40px;height: 40px;}
+#tel{padding-top: 10px;}

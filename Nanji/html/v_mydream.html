@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<style>
+	.v_header{
+		position: fixed;
+		top: 0px;
+		background: #f6f6f6;
+		width: 100%;
+		z-index: 1000;
+	}
+	.v_header_main{
+		overflow: hidden;
+		margin: 0 auto;
+		width: 1000px;
+		height: 60px;
+	}
+	.v_header_main_logo,.v_header_main_nav{
+		float: left;
+	}
+	.v_header_main_inf{
+		position: relative;
+		overflow: hidden;
+		float: right;
+		width: 229px;
+		height: 60px;
+	}
+	.v_header_main_nav li{
+		float: left;
+		height: 60px;
+		border-left: 1px solid #f6f6f6;
+		border-right: 1px solid #f6f6f6;
+	}
+	.v_header_main_nav li a{
+		display: block;
+		font-size: 14px;
+		color: #4f4f4f;
+		line-height: 60px;
+		padding-left: 25px;
+		padding-right: 10px;
+		background: url(../images/lv/head_back.png);
+		background-repeat: no-repeat;
+	}
+	.v_header_main_search{
+		float: left;
+		overflow: hidden;
+		width: 215px;
+		height: 36px;
+		margin-top: 13px;
+		margin-left: 15px;
+	}
+	.v_header_main_search_text{
+		float: left;
+		width: 178px;
+		height: 33px;
+		border: 1px solid #e6e6e6;
+		outline: 0 none;
+	}
+	.v_header_main_search_btn{
+		float: left;
+		width: 35px;
+		height: 35px;
+		border: none;
+		background: url(../images/lv/header_search.png);
+		cursor:pointer;
+	}
+	.v_header_main_inf_mission{
+		overflow: hidden;
+		float: left;
+	}
+	.v_header_main_inf_mission li{
+		float: left;
+		border-left: 1px solid #f6f6f6;
+		border-right: 1px solid #f6f6f6;
+		width: 65px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.v_header_main_inf_mission li a{
+		display: block;
+		padding-left: 25px;
+		padding-right: 10px;
+		font-size: 14px;
+		color: #4f4f4f;
+		background: url(../images/lv/header_right_back.png);
+		background-repeat: no-repeat;
+	}
+	.v_header_main_inf_login{
+		float: left;
+		line-height: 60px;
+		height: 60px;
+		font-size: 14px;
+	}
+	.v_header_main_inf_login_log{
+		background: url(../images/lv/header_right_back.png);
+		background-repeat: no-repeat;
+		padding-left: 15px;
+		background-position: 2px -37px;
+	}
+	.v_header_main_inf_login_jiang{
+		position: absolute;
+		top: 10px;
+		left: 8px;
+	}
+	.v_footer{
+		position: relative;
+	}
+	.v_footer_contact{
+		width: 100%;
+		height: 255px;
+		padding-top: 30px;
+		background: #4e525b;
+	}
+	.v_footer_aboutus{
+		width: 100%;
+		height: 145px;
+		background: #3a3e49;
+	}
+	.v_footer_contact_content{
+		width: 1040px;
+		margin: 0 auto;
+		height: 100%;
+	}
+	.v_footer_contact_content ul{
+		height: 255px;
+	}
+	.v_footer_contact_content li{
+		float: left;
+		width: 251px;
+		margin-right: 9px;
+		height: 100%;
+	}
+	.v_footer_contact_content dt{
+		width: 230px;
+		height: 56px;
+		border-bottom: 1px solid #75787F;
+	}
+	.v_footer_contact_content dt a:hover{text-decoration: underline;}
+	.v_footer_contact_content dt a{
+		font-size: 22px;
+		font-family: "黑体";
+		color: #ADAEB0;
+		line-height: 56px;
+	}
+	.v_footer_contact_content span{
+		float: left;
+		width: 55px;
+		height: 27px;
+		margin:22px 20px 0 0;
+		background: #646c79;
+		text-align: center;
+	}
+	.v_footer_contact_content span:hover{background: rgb(88,191,249);}
+	.v_footer_contact_content span a,.v_footer_contact_content dd a,.v_footer_contact_content dd p{
+		color: #F5F5F5;
+		font-size: 14px;
+		font-family: "Microsoft YaHei","黑体";
+	}
+	.v_footer_contact_content dd{margin-top: 10px;}
+	.v_footer_contact_content dd a:hover{
+		text-decoration: underline;
+	}
+	.v_footer_contact_content span a:hover{
+		text-decoration: none;
+	}
+	.v_footer_aboutus_content{
+		width: 1040px;
+		padding-top: 15px;
+		margin: 0 auto;
+	}
+	.v_footer_aboutus_content p{
+		overflow: hidden;
+		font-size: 11px;
+		font-family: "Microsoft YaHei","黑体";
+		color: #AAAFB3;
+	}
+	.v_footer_contact_content_us dd{
+		text-indent: 30px;
+		height: 24px;
+	}
+	.v_aboutus_wx{
+		position: absolute;
+		display: none;
+		top: -44px;
+		left: -136px;
+	}
+	.v_main_back{
+		position: fixed;
+		display: none;
+		right: 30px;
+		bottom: 100px;
+		z-index: 999;
+	}
+	.v_main_back li{
+		width: 60px;
+		height: 60px;
+		background: rgb(30,129,209);
+		margin-top: 3px;
+		cursor: pointer;
+	}
+	.v_main_back li:hover{background: rgb(12,108,186);}
+	.v_content{
+		background: #3D94E5;
+		width: 100%;
+	}
+	.v_content_body{
+		overflow: hidden;
+		background: url(../images/lv/v_mydream_back.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+	.v_content_body_main{
+		overflow: hidden;
+		width: 1000px;
+		margin: 90px auto 30px;
+		min-height: 1000px;
+		background:white;
+	}
+	.v_content_body_main_left{
+		float: left;
+		width: 220px;
+		height: 1000px;
+	}
+	.v_content_body_main_right{
+		float: left;
+		width: 780px;
+	}
+	.v_content_body_main_left li a{
+		display: block;
+		width: 220px;
+		height: 87px;
+		overflow: hidden;
+	}
+	.v_content_body_main_left li a i{
+		display: block;
+		width: 220px;
+		height: 32px;
+		background: url(../images/lv/mydream_left_back.png);
+		background-repeat: no-repeat;
+		margin-top: 10px;
+	}
+	.v_content_body_main_left li a p{
+		text-align: center;
+		color: white;
+		font-family: "微软雅黑",Arial;
+		font-size: 13px;
+		margin-top: 10px;
+	}
+	.v_content_body_right_main{
+		overflow: hidden;
+		width: 700px;
+		height: 1000px;
+		margin: 0 auto;
+	}
+	.v_content_right_header{
+		position: relative;
+		width: 700px;
+		height: 39px;
+		margin-top: 23px;
+		background: url(../images/lv/mydream_right_back.png);
+		background-repeat: no-repeat;
+		background-position: 10px -361px;
+		line-height: 39px;
+		font-size: 18px;
+		font-family: "微软雅黑",Arial;
+		text-indent: 55px;
+	}
+	.v_content_right_nav ul{
+		overflow: hidden;
+	}
+	#container li{
+		display:block;
+		float:left;
+		text-align: center;
+		cursor: pointer;
+		font-size: 14px;
+		width:175px;
+		height:40px;
+		background:url(../images/lv/transparent.png);
+		line-height:40px;
+		border-bottom: 3px solid rgb(242,242,242);
+	}
+	#container{position: relative;}
+	#buoy{
+		position:absolute;
+		width:110px;
+		height:3px;
+		background:rgb(88,191,249);
+		bottom:0px;
+		left:-175px;
+		margin-left: 35px;
+		margin-right: 30px;
+	}
+	.v_content_right_con_my{
+		overflow: hidden;
+		margin-top: 28px;
+	}
+	.v_content_right_con_text{
+		overflow: hidden;
+		width: 700px;
+		height: 200px;
+		margin-top: 20px;
+	}
+	.v_content_right_con_text_left{
+		overflow: hidden;
+		float: left;
+		margin-left: 20px;
+		width: 76px;
+		height: 200px;
+	}
+	.v_content_right_con_text_left img{margin-top: 10px;}
+	.v_content_right_con_text_middle{
+		overflow: hidden;
+		float: left;
+		width: 479px;
+		height: 200px;
+		margin-left: 15px;
+	}
+	.v_content_right_con_text_middle h1{
+		font-size: 18px;
+		font-family: "微软雅黑";
+		font-weight: bold;
+	}
+	.v_content_right_con_text_middle p{
+		font-size: 14px;
+		font-family: "微软雅黑";
+		word-break: break-all;
+		text-indent: 10px;
+		margin-top: 15px;
+	}
+	.v_content_right_con_text_middle p span{
+		background: rgb(88,191,249);
+		color: white;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	.v_content_right_con_text_middle p a{
+		float: right;
+		padding-left: 18px;
+		font-size: 11px;
+		color: #878787;
+		background: url(../images/lv/publish_sprite.png);
+		background-repeat: no-repeat;
+	}
+	.v_content_right_con_text_middle ul{
+		overflow: hidden;
+		margin-top: 40px;
+	}
+	.v_content_right_con_text_middle li{
+		float: left;
+		width: 113px;
+		height: 32px;
+		background: url(../images/lv/publish_sprite.png);
+		background-repeat: no-repeat;
+		line-height: 30px;
+		color: rgb(135,135,135);
+		text-align: center;
+		text-indent: 25px;
+		cursor: pointer;
+	}
+	.v_content_right_con_text_right{
+		overflow: hidden;
+		float: left;
+		width: 110px;
+		height: 200px;
+	}
+	.v_content_right_con_text_right p{
+		height: 32px;
+		background: url(../images/lv/mydream_right_back.png);
+		background-repeat: no-repeat;
+		margin-top: 84px;
+		cursor: pointer;
+		text-align: center;
+		text-indent: 15px;
+		font-size: 14px;
+	}
+	.v_content_right_con_focus{
+		display: none;
+		overflow: hidden;
+		margin-top: 28px;
+	}
+	.v_content_right_con_focus_main{
+		overflow: hidden;
+		width: 700px;
+		height: 110px;
+		margin-top: 20px;
+		background: rgb(250,250,250);
+	}
+	.v_content_right_focus_left{
+		float: left;
+		overflow: hidden;
+		width: 100px;
+		height: 110px;
+		text-align: center;
+	}
+	.v_content_right_focus_left img{width: 80px;height: 80px;margin-top: 15px;}
+	.v_content_right_focus_middle{float: left;overflow: hidden;height: 110px;}
+	.v_content_right_focus_middle p{
+		cursor: pointer;
+		width: 350px;
+		font-size: 16px;
+		font-family: "微软雅黑",Arial;
+		font-weight: bold;
+		margin-top: 40px;
+		margin-left: 30px;
+	}
+	.v_content_right_focus_p{
+		background: url(../images/lv/mydream_right_back.png);
+		background-repeat: no-repeat;
+		background-position: 105px -238px;
+	}
+	.v_content_right_focus_right{
+		float: right;
+		overflow: hidden;
+		width: 125px;
+		height: 110px;
+	}
+	.v_content_right_focus_right p{
+		margin-top: 40px;
+		width: 105px;
+		height: 28px;
+		background: url(../images/lv/mydream_cancel.png);
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	.v_content_right_con_nodata{
+		display: none;
+		overflow: hidden;
+		margin-top: 28px;
+		width: 700px;
+	}
+	.v_content_right_con_nodata_main{
+		overflow: hidden;
+		margin-left: 10px;
+		margin-top: 20px;
+		width: 690px;
+		height: 300px;
+		background: url(../images/lv/mydream_nodata.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.v_content_right_con_nodata_main p{
+		color:white;
+		font-size: 20px;
+		font-family: "微软雅黑","幼圆",Arial;
+		margin-left: 310px;
+		margin-top: 96px;
+		letter-spacing: 3px;
+	}
+	.v_content_right_con_friend{
+		display: none;
+		overflow: hidden;
+		margin-top: 28px;
+	}
+	.v_content_right_friend_right{
+		float: right;
+		overflow: hidden;
+		width: 125px;
+		height: 110px;
+	}
+	.v_content_right_friend_right p{
+		margin-top: 40px;
+		width: 105px;
+		height: 28px;
+		background: url(../images/lv/mydream_right_back.png);
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	.v_mydream{position: relative;}
+	.v_contact{position: absolute;top: 60px;left: 0px;background: gray;z-index: 1000;display: none;}
+	.v_contact_main{width: 560px;background: white;position: absolute;top: 110px;z-index: 1000;display: none;}
+	.v_contact_header{width: 500px;margin: 0 auto;height: 54px;border-bottom: 2px solid gray;}
+	.v_contact_header ul{overflow: hidden;}
+	.v_contact_header ul li{
+		float: left;
+		width: 98px;
+		height: 34px;
+		font-size: 18px;
+		font-family: "微软雅黑";
+		text-align: center;
+		line-height: 34px;
+	}
+	.v_login{height: 304px;width: 560px;}
+	.v_register{height: 460px;width: 560px;display: none;}
+	.v_contact_header_close{width: 20px;height: 20px;background: url(../images/lv/login_close.png);margin-left: 500px;margin-top: 10px;cursor: pointer;}
+	.v_login_left{float: left;width: 360px;font-size: 13px;color: rgb(135,135,135);}
+	.v_login_left input{
+		display: block;
+		width: 233px;
+		height: 33px;
+		text-indent: 30px;
+		margin-top: 20px;
+		margin-left: 30px;
+	}
+	.v_login_left span,.v_register p span{font-size: 13px;color: rgb(88,191,249);}
+	.v_login_left div{margin-left: 30px;margin-top: 20px;}
+	.v_login_left a,.v_register a{margin-left: 20px;color: rgb(88,191,249);text-decoration: underline;}
+	.v_login_left div span{display: inline-block;width: 104px;height: 38px;color: white;letter-spacing: 15px;background: rgb(88,191,249);font-size: 20px;line-height: 38px;border-radius: 3px;text-indent: 25px;cursor: pointer;}
+	.v_login_left div a{margin-left: 0px;}
+	.v_login_right{float: left;}
+	.v_login_right p{font-size: 14px;font-weight: bold;text-align: center;margin-top: 10px;}
+	.v_login_right ul{margin-top: 30px;}
+	.v_login_right li{cursor: pointer;margin-top: 5px;}
+	.v_register ul{overflow: hidden;margin-left: 30px;margin-top: 10px;}
+	.v_register ul li{float: left;width: 183px;height: 42px;cursor: pointer;}
+	.v_register ul li div{width: 181px;height: 33px;border: 1px solid rgb(224,223,223);font-size: 13px;text-align: center;line-height: 33px;}
+	.v_register p input{
+		width: 233px;
+		height: 33px;
+		text-indent: 15px;
+		margin-top: 20px;
+		margin-left: 30px;
+		font-size: 13px
+	}
+	.register_btn{display: inline-block;width: 104px;height: 38px;color: white;background: rgb(88,191,249);font-size: 16px;line-height: 38px;border-radius: 3px;text-indent: 13px;cursor: pointer;margin-left: 30px;}
+	.v_register p a{font-size: 13px;color: rgb(135,135,135);text-decoration: none;}
+</style>
+<body>
+	<div class="v_mydream">
+		<div class="v_header">
+			<div class="v_header_main">
+				<div class="v_header_main_logo">
+					<a href="../index.html">
+						<img src="../images/lv/logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="v_header_main_nav">
+					<ul>
+						<li><a href="b_tj_dream.html" style="background-position: 5px 23px;">发现心愿</a></li>
+						<li><a href="英雄榜.html" style="background-position: 5px -16px;">英&nbsp;&nbsp;雄</a></li>
+						<li><a href="b_fb_dream.html" style="background-position: 5px -58px;">发起心愿</a></li>
+					</ul>
+				</div>
+				<div class="v_header_main_search">
+					<input type="text" class="v_header_main_search_text">
+					<a href="sousuo.html"><input type="button" class="v_header_main_search_btn"></a>
+				</div>
+				<div class="v_header_main_inf">
+					<ul class="v_header_main_inf_mission">
+						<li><a href="" style="background-position: 5px 23px;">任务</a></li>
+						<li><a href="nanjishangcheng.html" style="background-position: 4px -53px;">商城</a></li>
+					</ul>
+					<div class="v_header_main_inf_login">
+						<img src="../images/lv/jiang-pic.gif" alt="jiang" class="v_header_main_inf_login_jiang">
+						<a href="javascript:void(0);" class="v_header_main_inf_login_log">登陆</a> | <a href="javascript:void(0);">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="v_content">
+			<div class="v_content_body">
+				<div class="v_content_body_main">
+					<div class="v_content_body_main_left">
+						<ul>
+							<li><a href="个人信息.html"><i style="background-position: 98px -167px;"></i><p style="color:black;">个人信息</p></a></li>
+							<li><a href="404.html" style="background: rgb(249,196,89);"><i style="background-position: 98px -218px;"></i><p>账号设置</p></a></li>
+							<li><a href="b_zh_zhgl.html" style="background: rgb(168,231,217);"><i style="background-position: 98px -267px;"></i><p>资产管理</p></a></li>
+							<li><a href="#" style="background: rgb(208,160,220);"><i style="background-position: 98px -114px;"></i><p>梦想管理</p></a></li>
+							<li><a href="404.html" style="background: rgb(255,162,125);"><i style="background-position: 92px -46px;"></i><p>我的好友</p></a></li>
+							<li><a href="404.html" style="background: rgb(220,220,220);"><i style="background-position: 92px 6px;"></i><p>企业产品管理</p></a></li>
+						</ul>
+					</div>
+					<div class="v_content_body_main_right">
+						<div class="v_content_body_right_main">
+							<div class="v_content_right_header">
+								梦想管理
+							</div>
+							<div class="v_content_right_nav" id="container">
+								<ul id="nav">
+									<li>我发起的心愿</li>
+									<li>我关注的心愿</li>
+									<li>我帮助的心愿</li>
+									<li>朋友的心愿</li>
+								</ul>
+								<div id="buoy"></div>
+							</div>
+							<div class="v_content_right_con_my">
+								<div class="v_content_right_con_text" style="background: rgb(254,241,187);">
+									<div class="v_content_right_con_text_left">
+										<img src="../images/lv/hero_i_1.png" alt="icon">
+									</div>
+									<div class="v_content_right_con_text_middle">
+										<h1>我的梦想是一个漂亮的书包</h1>
+										<p>我出生在一个什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什什么什么什么什么什么什么什么什么什么什么什么<span>+参与</span><a href="" style="background-position: -135px 3px;">250</a><a href="" style="background-position: -142px -103px;">120</a></p>
+										<ul>
+											<li style="background-position: 4px 0px;">1438</li>
+											<li style="background-position: 2px -63px">1438</li>
+											<li style="background-position: 2px -131px;">1438</li>
+											<li style="background-position: 2px -200px;">1438</li>
+										</ul>
+										
+									</div>
+									<div class="v_content_right_con_text_right">
+										<p style="background-position: 10px 0px;"></p>
+									</div>
+								</div>
+								<div class="v_content_right_con_text">
+									<div class="v_content_right_con_text_left">
+										<img src="../images/lv/hero_i_2.png" alt="icon">
+									</div>
+									<div class="v_content_right_con_text_middle">
+										<h1>我的梦想是一个漂亮的书包</h1>
+										<p>我出生在一个什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么什么<span>+参与</span><a href="" style="background-position: -135px 3px;">250</a><a href="" style="background-position: -142px -103px;">120</a></p>
+										<ul>
+											<li style="background-position: 4px 0px;">1438</li>
+											<li style="background-position: 2px -63px">1438</li>
+											<li style="background-position: 2px -131px;">1438</li>
+											<li style="background-position: 2px -200px;">1438</li>
+										</ul>
+										
+									</div>
+									<div class="v_content_right_con_text_right">
+										<p style="background-position: 10px -296px;">已完成</p>
+									</div>
+								</div>
+							</div>
+							<div class="v_content_right_con_focus">
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p class="v_content_right_focus_p">我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_focus_right">
+										<p></p>
+									</div>
+								</div>
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p>我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_focus_right">
+										<p></p>
+									</div>
+								</div>
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p>我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_focus_right">
+										<p></p>
+									</div>
+								</div>
+							</div>
+							<div class="v_content_right_con_nodata">
+								<div class="v_content_right_con_nodata_main">
+									<p>您还没有帮助的心愿哦！</p>
+								</div>
+							</div>
+							<div class="v_content_right_con_friend">
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p>我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_friend_right">
+										<p style="background-position: 0px -79px;"></p>
+									</div>
+								</div>
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p>我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_friend_right">
+										<p style="background-position: 0px -79px;"></p>
+									</div>
+								</div>
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p>我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_friend_right">
+										<p style="background-position: 0px -160px;"></p>
+									</div>
+								</div>
+								<div class="v_content_right_con_focus_main">
+									<div class="v_content_right_focus_left">
+										<img src="../images/lv/publish_img.jpg" alt="img">
+									</div>
+									<div class="v_content_right_focus_middle">
+										<p>我想养小猫猫</p>
+									</div>
+									<div class="v_content_right_friend_right">
+										<p style="background-position: 0px -160px;"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="v_footer">
+			<div class="v_footer_contact">
+				<div class="v_footer_contact_content">
+					<ul>
+						<li>
+							<dl>
+								<dt><a href="">发现心愿</a>
+									<dd style="margin-top: 0;">
+										<span><a href="">生活</a></span>
+										<span><a href="">职场</a></span>
+										<span><a href="">旅游</a></span>
+										<br>
+										<span><a href="">娱乐</a></span>
+										<span><a href="">感情</a></span>
+										<span><a href="">学习</a></span>
+										<br>
+										<span><a href="">健身</a></span>
+										<span><a href="">爱好</a></span>
+										<span><a href="">...</a></span>
+									</dd>
+								</dt>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><a href="">玩转南极</a>
+									<dd><a href="">发心愿</a></dd>
+									<dd><a href="">做英雄</a></dd>
+									<dd><a href="">得勋章</a></dd>
+									<dd><a href="">网站地图</a></dd>
+									<dd><a href="">夜月游戏</a></dd>
+								</dt>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><a href="">关于南极</a>
+									<dd><a href="">南极介绍</a></dd>
+									<dd><a href="">南极能做什么</a></dd>
+									<dd><a href="">南极公约</a></dd>
+									<dd><a href="">加入我们</a></dd>
+								</dt>
+							</dl>
+						</li>
+						<li>
+							<dl class="v_footer_contact_content_us">
+								<dt><a href="">联系南极</a>
+									<dd style="background:url(../images/lv/us_mail.jpg) no-repeat 0px 0px;"><a href="">Support@nanji.com</a></dd>
+									<dd style="background:url(../images/lv/us_wx.jpg) no-repeat 0px 0px;position: relative;" id="_v_us_wx">
+										<p>南极网微信(nanjiwang520)</p>
+										<div class="v_aboutus_wx">
+											<img src="../images/lv/wx.png" alt="wx">
+										</div>
+									</dd>
+									<dd style="background:url(../images/lv/us_wb.jpg) no-repeat 0px 0px;"><a href="">南极网新浪微博</a></dd>
+								</dt>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="v_footer_aboutus">
+				<div class="v_footer_aboutus_content">
+					<p>京ICP备11017824号-4&nbsp;/&nbsp;京ICP证130164号&nbsp;&nbsp;北京市公安局朝阳分局备案编号:110105000501</p>
+					<p>Copyright&nbsp;©&nbsp;2006-2013&nbsp;ZC00L&nbsp;全景统计</p>
+				</div>
+			</div>
+		</div>
+		<div class="v_main_back" id="_v_main_back">
+			<ul>
+				<li><img src="../images/lv/green_panle.png" alt="绿色通道" style="margin: 10px 14px;"></li>
+				<li><img src="../images/lv/mission.png" alt="任务" style="margin: 22px 14px;"></li>
+				<li><img src="../images/lv/my_dream.png" alt="我的梦想" style="margin: 10px 14px;"></li>
+				<li><img src="../images/lv/area.png" alt="area" style="margin: 22px 14px;"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="v_contact"></div>
+	<div class="v_contact_main">
+		<div class="v_contact_header">
+			<div class="v_contact_header_close" id="_v_contact_close"></div>
+			<ul>
+				<li style="background: rgb(88,191,249);color:white;">登录</li>
+				<li>注册</li>
+			</ul>
+		</div>
+		<div class="v_login">
+			<div class="v_login_left">
+				<input type="text" style="background: url(../images/lv/login_mail.png) no-repeat 5px 11px;" placeholder="邮箱">
+				<input type="text" style="background: url(../images/lv/login_key.png) no-repeat 5px 11px;"placeholder="密码">
+				<input type="text" style="display:inline-block;width: 102px;">&nbsp;&nbsp;&nbsp;&nbsp;<span>获取验证码</span><br>
+				<input type="checkbox" style="display:inline-block;width: 13px;height: 13px;margin-top: 10px;">记住我<a href="">忘记密码</a>
+				<div>
+					<span>登录</span>&nbsp;&nbsp;&nbsp;&nbsp;没有账号？<a href="javascript:void(0);" id="_v_toregister">马上注册</a>
+				</div>
+			</div>
+			<div class="v_login_right">
+				<p>使用合作网站账号登录</p>
+				<ul>
+					<li><img src="../images/lv/login_qq.png" alt=""></li>
+					<li><img src="../images/lv/login_weibo.png" alt=""></li>
+					<li><img src="../images/lv/login_renren.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div class="v_register">
+			<ul>
+				<li style="background: url(../images/lv/register_model.png);"><div style="background: url(../images/lv/register_phone.png) no-repeat 8px 5px;">用手机注册</div></li>
+				<li><div style="background: url(../images/lv/register_mail.png) no-repeat 8px 11px;">用邮箱注册</div></li>
+			</ul>
+			<p><input type="text" placeholder="手机号码" id="_v_register_id"></p>
+			<p><input type="text" placeholder="昵称">&nbsp;&nbsp;<span>2-15个汉字或4-30个字符</span></p>
+			<p><input type="password" placeholder="密码" id="_v_register_psw"></p>
+			<p><input type="password" placeholder="确认密码" id="_v_register_enpsw">&nbsp;&nbsp;<span id="_v_register_pswstate"></span></p>
+			<p><input type="text" style="width: 102px;">&nbsp;&nbsp;&nbsp;&nbsp;<span>获取验证码</span></p>
+			<p><input type="checkbox" style="display:inline-block;width: 13px;height: 13px;margin-top: 10px;"><a href="">同意《南极公约》所有条款</a></p>
+			<p>
+				<span class="register_btn" style="color:white;font-size: 16px;">同意并注册</span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:rgb(88,191,249);" id="_v_tologin">已有账号登陆</a>
+			</p>
+		</div>
+	</div>
+</body>
+<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery.nicenav.js"></script>
+<script>
+	$.nicenav(300);
+	/*************WeiXin*******************/
+	$("#_v_us_wx").hover(function(){
+		$(this).children("div").show();
+	},function(){
+		$(this).children("div").hide();
+	})
+	/**************Top********************/
+	$(window).scroll( function(){
+		var top= document.body.scrollTop || document.documentElement.scrollTop;
+		//$top = $("body").scrollTop();
+		if(top > 600){
+			$("#_v_main_back").show();
+		}
+		else if(top < 600){
+			$("#_v_main_back").hide();
+		}
+	})
+	$($("#_v_main_back>ul>li")[3]).click(function(){
+		$("body,html").animate({scrollTop:0},500);
+	})
+	/***************Tab*******************/
+	$("#nav > li").click(function(){
+		$(".v_content_right_con_my,.v_content_right_con_focus,.v_content_right_con_nodata,.v_content_right_con_friend").hide();
+		$($(".v_content_right_con_my,.v_content_right_con_focus,.v_content_right_con_nodata,.v_content_right_con_friend")[$(this).index()]).show();
+	})
+	/************Contact*******************/
+	$($(".v_header_main_inf_login>a")[0]).click(function(){
+		$w = parseInt($(".v_mydream").width());
+		$h = parseInt($(".v_mydream").height())-60;
+		$mw = $w/2 - 280;
+		$(".v_contact").css({"width":$w,"height":$h,"opacity":0.7}).show();
+		$(".v_contact_main").css("left",$mw).show();
+		$(".v_login").show();
+		$(".v_register").hide();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[0]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	$($(".v_header_main_inf_login>a")[1]).click(function(){
+		$w = parseInt($(".v_mydream").width());
+		$h = parseInt($(".v_mydream").height())-60;
+		$mw = $w/2 - 280;
+		$(".v_contact").css({"width":$w,"height":$h,"opacity":0.7}).show();
+		$(".v_contact_main").css("left",$mw).show();
+		$(".v_login").hide();
+		$(".v_register").show();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[1]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	/***********Contact-Tab*********************/
+	$(".v_contact_header>ul>li").click(function(){
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$(this).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	$($(".v_contact_header>ul>li")[0]).click(function(){
+		$(".v_register").hide();
+		$(".v_login").show();
+	})
+	$($(".v_contact_header>ul>li")[1]).click(function(){
+		$(".v_login").hide();
+		$(".v_register").show();
+	})
+	$("#_v_contact_close").click(function(){
+		$(".v_contact,.v_contact_main").hide();
+	})
+	$("#_v_tologin").click(function(){
+		$(".v_register").hide();
+		$(".v_login").show();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[0]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	$("#_v_toregister").click(function(){
+		$(".v_register").show();
+		$(".v_login").hide();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[1]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	/***********Register***********************/
+	$(".v_register>ul>li").click(function(){
+		$(".v_register>ul>li").css("background","none");
+		$(this).css("background","url(../images/lv/register_model.png)")
+	})
+	$($(".v_register>ul>li")[0]).click(function(){
+		$("#_v_register_id").attr("placeholder","手机号码");
+	})
+	$($(".v_register>ul>li")[1]).click(function(){
+		$("#_v_register_id").attr("placeholder","邮箱地址");
+	})
+	$("#_v_register_enpsw").blur(function(){
+		if($(this).val() == $("#_v_register_psw").val()){
+			$("#_v_register_pswstate").html("密码一致")
+			$("#_v_register_pswstate").css("color","green");
+		}else{
+			$("#_v_register_pswstate").html("密码不一致，请重新输入");
+			$("#_v_register_pswstate").css("color","red");
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		
+		.L-head{
+			position:fixed;
+			width: 100%;
+			height: 60px;
+			top: 0;
+			z-index: 9999;
+			background:white;
+		}
+		.L-head-center-a{
+			width: 1000px;
+			margin: 0 auto;
+
+		}
+		.L-head-left{
+			float: left;
+			width: 300px;
+			height: 60px; 
+			padding-left: 50px;
+		}
+		.L-head-left a{
+			float: left;
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			text-decoration: none;
+			color: gray;
+		}
+		.L-head-center{
+			float: left;
+			width: 215px;
+			height: 36px;
+			margin-top: 10px;
+			overflow: hidden;
+			margin-left: 15px;
+		}
+		.L-head-center input{
+			float: left;
+		}
+		.L-head-center .text{
+			width: 164px;
+			height: 35px;
+			border: 1px solid #E6E6E6;
+		}
+		.L-head-center .button{
+			width: 35px;
+			height:35px;
+			background:url(../images/liang/sousuo_botton.jpg) no-repeat;
+			border:0;
+		}
+		.L-head-right{
+			float: right;
+			width: 229px;
+			height: 60px;
+			margin-left:10px;
+			 text-align: left;
+
+		}
+		.L-head-right .oul{
+			padding-top: 10px; 
+			margin-left: -200px;
+		}
+		.L-head-right li{
+			position: relative;
+		}
+		.L-head-right li a{
+			width: 40px;
+			float: left;
+			height: 40px;
+			margin-left: 20px;
+			
+		}
+		.L-head-right img{
+			display: inline;
+			width: 35px;
+			height: 35px;
+			border-radius: 30px;
+		}
+		.L-head-right .span1{
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			left: 101px;
+			top: 0;
+			background: url(../images/liang/w_prompt.png) 0 0 no-repeat;
+		}
+		.L-main{
+			height:1925px;
+			width:100% ;
+			margin-top: 60px;
+			padding-top: 30px;
+			background:#3D94E5 url(../images/liang/G-1.jpg) no-repeat top center;
+		}
+		.L-main-center{
+			width: 1000px;
+			background:white;
+			margin:auto;
+			height: 1170px;
+			overflow: hidden;
+		}
+		.L-main-left{
+			width: 220px;
+			height: 1170px;
+			float: left;
+			background: rgb(1,218,206);
+		}
+		.L-main-right{
+			width: 700px;
+			height: 1170px;
+			float:left;
+			margin-left: 40px;
+		}
+		.L-main-left a{
+			display: block;
+		}
+		.L-main-left .a1{
+			width: 220px;
+			height: 87px;
+			background: url(../images/liang/c1.jpg) no-repeat;
+		}
+		.L-main-left .a2{
+			width: 220px;
+			height: 87px;
+			background: url(../images/liang/c22.jpg) no-repeat;
+		}
+		.L-main-left .a3{
+			width: 220px;
+			height: 87px;
+			background: url(../images/liang/c33.jpg) no-repeat;
+		}
+		.L-main-left .a4{
+			width: 220px;
+			height: 87px;
+			background: url(../images/liang/c44.jpg) no-repeat;
+		}
+		.L-main-left .a5{
+			width: 220px;
+			height: 87px;
+			background:url(../images/liang/c55.jpg) no-repeat;
+		}
+		.L-main-left .a6{
+			width: 220px;
+			height: 87px;
+			background: url(../images/liang/c11.jpg) no-repeat;
+		}
+		.L-main-right .L-main-right-top{
+			margin-top: 23px;
+			height: 39px;
+			background: url(../images/liang/G-32.jpg) no-repeat;
+		}
+		.L-main-right-top span{
+			font: 18px/40px "微软雅黑","黑体";
+			margin-left: 45px;
+		}
+		.L-main-right-center{
+			height: 40px;
+			border-bottom: 3px solid #E6E6E6;
+		}
+		.L-main-right-center ul{
+			overflow: hidden;
+
+		}
+		.L-main-right-center li{
+			float: left;
+			padding:0 10px;
+			margin-left: 100px;
+			line-height: 40px;
+			cursor: pointer;
+			font: 14px/40px "微软雅黑","黑体";
+		}
+		.li1{
+			
+			border-bottom:3px solid #58BFF9;
+		}
+		.L-ps{
+			height: 75px;
+			line-height: 75px;
+			padding-left: 14px;
+		}
+		.L-ps a{
+			color: blue;
+		}
+		.L-ps span{
+			color: red;
+		}
+		.L-ul li{
+			width: 100%;
+			height: 50px;
+			padding: 15px 13px;
+			line-height: 50px;
+		}
+		.L-ul .L-li1{
+			background: rgb(254,243,196);
+		}
+		.L-ul p{
+			display: inline;
+			margin-left: 150px;
+		}
+		.L-ul li span{
+			float: right;
+		}
+		.L-ul p a{
+			color: red;
+		}
+		.L-main-right-bottom .L-shuzi{
+			text-align: center;
+		}
+		
+		.L-shuzi a{
+			margin-left: 15px;
+
+		}
+		
+		 #ul div{
+			display: none;
+		}
+		.L-main-zuo-top{
+			height:400px;
+			border-bottom: 2px solid #E6E6E6; 
+		}	
+		.L-main-zuo-center{
+			height:227px;
+			border-bottom: 2px solid #E6E6E6; 
+		}
+		.clearfix:after{
+			clear: both;
+			content: "";
+			display: block;
+		}
+		.L-main-zhong li{
+			width:100%;
+			height:100px;
+			margin-top: 30px;
+			background: rgb(244,244,244);
+			font-size: 15px;
+		}
+		.L-main-zhong-1,.L-main-zhong-2{
+			margin-left: 30px;
+			padding-top: 22px;
+		}
+		.L-main-zhong-1 strong{
+			font-size: 15px;
+		}
+		.L-main-zhong-1 a{
+			color: orange;
+		}
+		.L-main-zhong-1 span a{
+			color: blue;
+		}
+		.L-main-zhong-2-2{
+			width: 500px;
+			height: 8px;
+			background: rgb(211,214,245);
+		}
+		.L-main-zhong-2-3{
+			background:green;
+			height:100%;
+			width: 100px; 
+		}
+		.L-main-zhong-2-4{
+			background:blue;
+			height: 100%;
+			width: 90px; 
+		}
+		.L-main-zhong-2-5{
+			background:red;
+			height: 100%;
+			width: 260px; 
+		}
+		.L-main-zhong-2-6{
+			background:rgb(201,229,249);
+			height: 100%;
+			width: 190px; 
+		}
+		.L-main-zhong-2-7{
+			background:yellow;
+			height: 100%;
+			width: 450px; 
+		}
+		.L-main-zhong p,.L-main-zhong span{
+
+			margin-left: 30px;
+			padding-top: 22px;
+		}
+		.L-main-you-top	{
+			height: 76px;
+			line-height: 76px;
+		}
+		.L-main-you-top a{
+			color:blue;
+		}
+		.L-main-you-bottom ul{
+			position: relative;
+		}
+		.L-main-you-bottom li{
+			float:left;
+			width: 100px;
+			margin-left:35px;
+			
+			margin-bottom: 39px;text-align: center;
+		}
+		.L-main-you-bottom img{
+			width: 100px;
+			height: 100px;
+			border-radius: 70px;
+			background: gray;
+		}
+		.L-main-you-position{
+			position: absolute;
+			width: 446px;
+			height: 190px;
+			display: none;
+			top: 42px;
+			left: 180px;
+		}
+		.L-main-you-position-1{
+			height: 38px;
+			background: rgb(115,201,250);
+			text-align: center;
+			line-height: 38px;
+			color: white;
+			
+		}
+
+		.L-main-you-position-1 span{
+			float: right;
+		}
+		.L-main-you-position-2{
+			background: white;
+			height: 152px;
+			padding:15px 15px; 
+		}
+		.L-main-you-position-2 a{
+			float: left;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+		.L-main-you-position-2 p,.L-main-you-position-2 h4{
+			float: right;
+			font-size: 14px;
+			width: 260px;
+			text-align: left;
+			margin-top: 30px;
+			margin-left: 30px;
+		}
+		.L-main-1{
+			height: 50px;
+		}
+		.L-main-1 a{
+			line-height: 70px;
+			color:blue;
+		}
+		.L-main-zuo-top-left{
+			float: left;
+
+		}
+		.L-main-1-2{
+			margin-top: 15px;
+		}
+		.L-main-1-2 span{
+			display: inline-block;
+			width: 80px;
+			text-align: right;
+			margin-right: 27px;
+		}
+		.L-main-1-2-span{
+			float: left;
+
+		}
+		.L-main-1-2 i {
+			color: red;
+		}
+		.L-main-zuo-top-right{
+			float: right;
+			width: 200px;
+			padding-top:80px;text-align: center;
+		}
+		.L-main-zuo-top-right img{
+			width: 180px;
+			height: 180px;
+			background:gray; 
+		}
+		.L-main-zuo-top-right span{
+			color: gray;
+		}
+		.L-main-zuo-bottom .L-main-1-2 a{
+			display: inline-block;
+			height: 28px;
+			width: 55px;
+			margin-right: 15px;
+			text-align: center;
+			line-height:28px; 
+			background: gray;
+			color: white;
+		}
+		.L-main-1-3{
+			margin-top: 15px;
+			padding-left: 107px;	
+		}
+		.L-main-1-3 a{
+			display: inline-block;
+			height: 30px;
+			width: 70px;
+			text-align: center;
+			line-height: 30px;
+			color: gray;
+			border: 1px solid gray;
+		}
+		.L-main-1-3 .L-main-1-3-a{
+			height: 27px;
+			width: 65px;
+			line-height: 27px;
+			background: gray;
+			color:white;
+		}
+		.bbbb a:hover{
+			background: rgb(145,213,251);
+		}
+		.L-main-1-3-baocun-1{
+			padding-top: 30px;
+			text-align: center;
+		}
+		.L-main-1-3-baocun{
+			width: 112px;
+			height: 40px;
+			display:inline-block;
+			line-height: 40px;
+			background: rgb(145,213,251);
+			color: white;
+		}
+		.L-main-1-2 .L-main-1-2-1{
+			width: 1349px;
+			height:1955px;
+			margin-top: 60px;
+			background: black;
+			position:absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+			filter:alpha(opacity=30);
+			display: none;
+		}
+		.L-main-1-2 .L-main-1-2-2{
+			width: 460px;
+			height: 335px;
+			background: white;
+			position: absolute;
+			z-index: 2;
+			top: 305px;
+			right: 300px;
+			text-align: center;
+			display: none;
+			box-shadow: 10px 10px 10px gray;
+		}
+		.L-main-1-2-2-01{
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: white;
+			padding-left: 50px;
+			background: rgb(97,190,242);
+		}
+		.L-main-1-2-2-01-1{
+			float: right;
+		}
+		.L-main-1-2-2 p{
+			padding: 10px 0;
+			font-size: 14px;
+			color: gray;
+		}
+		.L-main-1-2-2 .L-main-1-2-2-02 .L-main-1-2-2-02-1{
+			height:180px;
+			padding: 10px 10px 10px 26px;
+		}
+		.L-main-1-2-2 .L-main-1-2-2-02 .L-main-1-2-2-02-1 a{
+			float: left;
+			padding:0 5px 0 5px;
+			line-height: 26px;
+			border: 1px solid gray;
+			margin-left: 5px;
+			margin-bottom: 5px;
+			font-size: 14px;
+			color: gray;
+		}
+		.L-main-1-2-2-02-1 a:hover{background:rgb(97,190,242);}
+		.L-main-1-2-2-02 .L-main-1-2-2-02-2 a{
+			display: inline-block;
+			width: 88px;
+			height: 26px;
+			border: 1px solid gray;
+			line-height: 26px;
+		}
+	</style>
+</head>
+<body>
+	<div class="L-head">
+		<div class="L-head-center-a">
+			<div class="L-head-left">
+				<a href="../index.html">关于南极</a>
+				<a href="b_tj_dream.html">发现梦想</a>
+				<a href="英雄榜.html">英雄</a>
+			</div>
+			<div class="L-head-center">
+				<form action="">
+					<input type="text" class="text">
+					<a href="sousuo.html"><input type="button" class="button" alt="搜索" title="南极网"></a>
+				</form>
+			</div>
+			<div class="L-head-right">
+				<ul class="oul">
+					<li><a href="nanjishangcheng.html"><img src="../images/liang/01.gif" alt=""></a></li>
+					<li><a href="pinglun.html"><img src="../images/liang/02.gif" alt=""></a>
+					<span class="span1"></span></li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+	<div class="L-main">
+		<div class="L-main-center">
+			<div class="L-main-left">
+				<ul>
+					<a href="#"><li class="a1"></li></a>
+					<a href="404.html"><li class="a2"></li></a>
+					<a href="b_zh_zhgl.html"><li class="a3"></li></a>
+					<a href="v_mydream.html"><li class="a4"></li></a>
+					<a href="404.html"><li class="a5"></li></a>
+					<a href="#"><li class="a6"></li></a>
+				</ul>
+			</div>
+			<div class="L-main-right">
+				<div class="L-main-right-top">
+					<span>个人信息</span>
+				</div>
+				<div class="L-main-right-center">
+					<ul id="ul" class="clearfix">
+						<li class="li1">完善信息</li>
+						<li>属性</li>
+						<li>勋章</li>
+						<li>任务</li>
+					</ul>
+				</div>
+				<div id="divs">
+					<div class="L-main-zuo clearfix">
+						<div class="L-main-zuo-top">
+							<div class="L-main-zuo-top-left">
+								<div class="L-main-1"><a href="">基础信息</a></div>
+								<form action="">
+									<div class="L-main-1-2">
+										<span>账号</span>
+										<span>123456@126.com</span>
+									</div>
+									<div class="L-main-1-2">
+										<span>昵称</span>
+										<input type="text" value="输入文本">
+										<i>*</i>
+									</div>
+									<div class="L-main-1-2">
+										<span>头像上传</span>
+										<input id="input" type="button" value="选择职位">
+										<div id="transparent" class="L-main-1-2-1"></div>
+										<div id="kuang" class="L-main-1-2-2">
+											<div class="L-main-1-2-2-01">
+												选择职业<span id="span" class="L-main-1-2-2-01-1">关闭</span>
+											</div>
+											<p>
+												<img src="" alt="">
+												选择你关注的行业能帮助我们更好的为您推荐心愿
+											</p>
+											<div class="L-main-1-2-2-02">
+												<form action="">
+													<div class="L-main-1-2-2-02-1">
+														<a href="">IT</a>
+														<a href="">通信</a>
+														<a href="">电子</a>
+														<a href="">互联网</a>
+														<a href="">金融业</a>
+														<a href="">房地产</a>
+														<a href="">建筑业</a>
+														<a href="">牧业</a>
+														<a href="">渔业</a>
+														<a href="">农业</a>
+														<a href="">林业</a>
+														<a href="">生产</a>
+														<a href="">加工</a>
+														<a href="">制造</a>
+														<a href="">文体教育</a>
+														<a href="">工艺美术</a>
+														<a href="">贸易</a>
+														<a href="">批发</a>
+														<a href="">零售</a>
+														<a href="">租赁业</a>
+														<a href="">能源</a>
+														<a href="">矿石</a>
+														<a href="">环保</a>
+														<a href="">文化</a>
+														<a href="">传媒</a>
+														<a href="">娱乐</a>
+														<a href="">体育</a>
+														<a href="">交通</a>
+														<a href="">运输</a>
+														<a href="">物流</a>
+														<a href="">仓储</a>
+														<a href="">政府</a>
+														<a href="">非盈利机构</a>
+														<a href="">商业服务</a>
+														<a href="">商业服务</a>
+														<a href="">其他</a>
+													</div>
+													<div class="L-main-1-2-2-02-2">
+														<a id="queding" href="">确定</a>
+														<a id="quxiao" href="" style="background:rgb(97,190,242);">取消</a>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="L-main-1-2">
+										<span>职业</span>
+										<select name="" id="">
+											<option value="">选择职业</option>
+											<option value=""></option>
+											<option value=""></option>
+										</select>
+									</div>
+									<div class="L-main-1-2">
+										<span class="L-main-1-2-span">个人介绍</span>
+										<textarea name="" id="" cols="30" rows="5"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="L-main-zuo-top-right">
+									<a href=""><img src="" alt=""></a>
+									<span>头像预览</span>
+							</div>
+						</div>
+						<div class="L-main-zuo-center">
+							<div class="L-main-1"><a href="">实名信息</a></div>
+							<form action="">
+								<div class="L-main-1-2">
+									<span>姓名</span>
+									<input type="text" value="输入文本"><i>*</i>
+								</div>
+								<div class="L-main-1-2">
+									<span>身份证号</span>
+									<input type="text" value="输入文本"><i>*</i>
+								</div>
+								<div class="L-main-1-2">
+									<span>身份证照片</span>
+									<input type="button" value="上传照片">
+								</div>
+							</form>
+						</div>
+						<div class="L-main-zuo-bottom">
+							<div class="L-main-1"><a href="">拓展信息</a></div>
+							<form action="">
+								<div class="L-main-1-2">
+									<span>性别</span>
+									<input type="radio">男<input type="radio">女
+								</div>
+								<div class="L-main-1-2">
+									<span>生日</span>
+									<select name="" id="">
+										<option value="">1978</option>
+									</select>年
+									<select name="" id="">
+										<option value="">12</option>
+									</select>月
+									<select name="" id="">
+										<option value="">31</option>
+									</select>日
+								</div>
+								<div class="L-main-1-2">
+									<span>所在城市</span>
+									<select name="" id="">
+										<option value="">1978</option>
+									</select>省
+									<select name="" id="">
+										<option value="">12</option>
+									</select>市
+									<select name="" id="">
+										<option value="">31</option>
+									</select>区
+								</div>
+								<div class="L-main-1-2">
+									<span>户籍地</span>
+									<select name="" id="">
+										<option value="">1978</option>
+									</select>省
+									<select name="" id="">
+										<option value="">12</option>
+									</select>市
+									<select name="" id="">
+										<option value="">31</option>
+									</select>区
+								</div>
+								<div class="L-main-1-2">
+									<span>爱好标签</span>
+									<a href="">娱乐</a>
+									<a href="">生活</a>
+									<a href="">电影
+										
+									</a>
+								</div>
+								<div class="L-main-1-3">
+									<input type="text" value="输入文本">
+									<a href="" class="L-main-1-3-a">添加</a>
+									<span>最多可添加3个爱好标签</span>
+								</div>
+								<div class="L-main-1-3 bbbb">
+									热门标签
+									<a href="">电影</a>
+									<a href="">生活</a>
+									<a href="">艺术</a>
+								</div>
+								<div class="L-main-1-3-baocun-1">
+									<a href="" class="L-main-1-3-baocun">保存</a>
+								</div>
+							</form>
+							
+						</div>
+					</div>
+					<div class="L-main-zhong clearfix">
+						<ul>
+							<li>
+								<p>
+									<strong>智力等级:</strong>
+									<a href="">等级权限</a>
+								</p>
+								<span>您本次升级，还需要有效的出注意3次哦<a href="">加快升级</a>?</span>
+								<div class="L-main-zhong-2">
+									<div class="L-main-zhong-2-2">
+										<div class="L-main-zhong-2-3"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="L-main-zhong-1">
+									<strong>智力等级:</strong>
+									<a href="">铜</a>
+									<span>您本次升级，还需要有效的出注意3次哦<a href="">加快升级</a>?</span>
+								</div>
+								<div class="L-main-zhong-2">
+									<div class="L-main-zhong-2-2">
+										<div class="L-main-zhong-2-3"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="L-main-zhong-1">
+									<strong>智力等级:</strong>
+									<a href="">银</a>
+									<span>您本次升级，还需要有效的出注意3次哦<a href="">加快升级</a>?</span>
+								</div>
+								<div class="L-main-zhong-2">
+									<div class="L-main-zhong-2-2">
+										<div class="L-main-zhong-2-4"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="L-main-zhong-1">
+									<strong>智力等级:</strong>
+									<a href="">铜</a>
+									<span>您本次升级，还需要有效的出注意3次哦<a href="">加快升级</a>?</span>
+								</div>
+								<div class="L-main-zhong-2">
+									<div class="L-main-zhong-2-2">
+										<div class="L-main-zhong-2-5"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="L-main-zhong-1">
+									<strong>智力等级:</strong>
+									<a href="">金</a>
+									<span>您本次升级，还需要有效的出注意3次哦<a href="">加快升级</a>?</span>
+								</div>
+								<div class="L-main-zhong-2">
+									<div class="L-main-zhong-2-2">
+										<div class="L-main-zhong-2-6"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="L-main-zhong-1">
+									<strong>智力等级:</strong>
+									<a href="">铁</a>
+									<span>您本次升级，还需要有效的出注意3次哦<a href="">加快升级</a>?</span>
+								</div>
+								<div class="L-main-zhong-2">
+									<div class="L-main-zhong-2-2">
+										<div class="L-main-zhong-2-7"></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="L-main-you">
+						<div class="L-main-you-top">
+							当前勋章数量:10 <a href="">继续获取勋章</a>
+						</div>
+						<div  id="L-main-you-position" class="L-main-you-bottom">
+							<ul id="L-main-you-bottom-ul" class="clearfix">
+								<li>
+									<a href="">
+										<img src="../images/liang/001.jpg" alt="">
+									</a>
+									<span><a href="">等级大侠</a></span>
+									<div id="daxia" class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											勋章说明
+											<span id="haoba">关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>1111</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											1111
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/003.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											2222
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/004.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											3333
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/005.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											5555
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/006.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											6666
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/007.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											8888
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/004.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											99999
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+									<div class="L-main-you-position">
+										<div class="L-main-you-position-1">
+											101010100
+											<span>关闭</span>
+										</div>
+										<div class="L-main-you-position-2">
+											<a href="">
+												<img src="" alt="">
+											</a>
+											<h4>等级大侠</h4>
+											<p>个人等级超过30级,特此颁发等级大侠勋章</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+								</li>
+								<li>
+									<a href=""><img src="../images/liang/002.jpg" alt=""></a>
+									<span><a href="">等级大侠</a></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="L-main-right-bottom">
+						<div class="L-ps">
+							已接受任务:
+							<span>10</span>个&nbsp;
+							已完成任务:
+							<span>5</span>个&nbsp;
+							<a href="">继续做任务</a>
+						</div>
+						<ul id="L-ul_" class="L-ul">
+							<li class="L-li1">每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+							<li>
+								每日任务:每日一影
+								<p>获取:<a href="">40</a>经验<a href="">40</a>南极币</p>
+								<span>未完成</span>
+							</li>
+						</ul>
+						<div class="L-shuzi">
+							<a href="">&lt;</a>
+							<a href="">1</a>
+							<a href="">2</a>
+							<a href="">3</a>
+							<a href="">4</a>
+							<a href="">...</a>
+							<a href="">8</a>
+							<a href="">&gt;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+ <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script> 
+<script>
+		
+		$("#ul>li").click(function(){
+			$("#divs>div").hide().eq($(this).index()).show();
+			$("#ul>li").eq($(this).index()).addClass("li1").siblings().removeClass("li1");
+
+		})
+		$("#input").click(function(){
+			$("#transparent,#kuang").css("display","block");
+		})
+		$("#span,#quxiao,#queding").click(function(){
+			$("#transparent,#kuang").css("display","");
+		})
+
+		$("#L-main-you-bottom-ul>li").mouseover(function(){
+			$("#daxia").css("display","block")
+		}).mouseout(function(){
+			$("#daxia").css("display","")
+		})
+		$("#haoba").click(function(){
+			$("#daxia").css("display","")
+		})
+</script>
+</html>

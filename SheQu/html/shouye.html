@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/shouye.css">	
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+	<div class="x_box">
+		<div class="x_con">
+			<ul class="x_ul">
+				<li class="x_li">
+					<a href="" class="x_a">
+						<img src="../images/shanghu/s1.png" alt="">
+						<p>社区活动</p>
+					</a>
+				</li>
+				<li>
+					<a href="" class="x_a">
+						<img src="../images/shanghu/s2.png" alt="">
+						<p>社区活动</p>
+					</a>
+				</li>
+				<li>
+					<a href="" class="x_a">
+						<img src="../images/shanghu/s3.png" alt="">
+						<p>社区活动</p>
+					</a>
+				</li>
+				<li style="border:none;">
+					<a href="" class="x_a">
+						<img src="../images/shanghu/s4.png" alt="">
+						<p>社区活动</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src='../javascript/jquery-1.11.2.js'></script>
+<script>
+	$(window).load(function(){
+		$wid=$(".x_li").width();
+		$s=$wid/2;
+		$d=$wid/4;
+		$(".x_ul>li").css({"height":$wid});
+		$(".x_a>img").css({"height":$s},{"width":$s});
+	
+	})
+	$(window).resize(function(){
+		$wid=$(".x_li").width();
+		$s=$wid/2;
+		$d=$wid/4;
+		$(".x_ul>li").css({"height":$wid});
+		$(".x_a>img").css({"height":$s},{"width":$s});
+	})
+</script>
+</html>

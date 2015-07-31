@@ -1,0 +1,39 @@
+body{
+	max-width: 768px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.x_box{
+	width: 100%;
+	height:1000px;
+	background: yellow;
+	overflow: hidden;
+}
+.x_con{
+	margin-top: 100px;
+	width: 100%;
+}
+.x_ul{
+	background: white;
+	width: 100%;
+	display: -webkit-box;
+	border-top:1px solid gray;
+	border-bottom: 1px solid gray;
+}
+.x_ul li{
+	width: 25%;
+	box-sizing:border-box;
+	border-right: 1px solid gray;
+}
+.x_ul li a{
+	box-sizing:border-box;
+	padding-top: 12%;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.x_ul li a p{
+	margin-top: 10     %;
+	font-size: 0.8em;
+}

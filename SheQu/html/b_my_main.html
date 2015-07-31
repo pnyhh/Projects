@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="../css/b_Personal_set.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/b_my_main.css">
+<style type="text/css">
+
+</style>
+<body>
+	<div class="maxDiv" id="maxDiv"> 
+		<div class="headDiv fix">
+			<a href="javascript:history.back(-1);"></a>
+			<span class="huanzi">个人中心</span>
+		</div>
+		<div class="con_ajax">
+	 	    <div class="conDiv fix">
+				<div class="conDiv_0"></div>
+				<div class="conDiv_1">
+					<a href="b_Personal_set.html"style="display:inline-block;width:100%;height:100%;"></a>
+				</div>
+				<div class="conDiv_2"></div>
+				<div class="conDiv_3">
+					<input style="background-color: transparent; border: 0px" value="ssss" id="i1" readonly ></input>
+					<span class="span1" id="span1" ></span>
+				</div>
+				<div class="conDiv_4">
+					<input style="background-color: transparent;color:#d5d7d6 ;border: 0px" value="北京市朝阳区快是是是是是是是速公路" id="i2" readonly ></input>
+					<span class="span2" id="span2"></span>
+				</div>
+			</div>
+		<!-- 	 ajax转换! -->
+			<div class="b_ajax">  
+				 <!-- 首页  -->
+				<ul class="con_ul fix">
+					<li style='border-left:0px solid red' class="oA1" ></li>
+					<li><a href="shequhuodong.html" class="oA2"></a></li>
+					<li class="oA3"></li>
+				</ul>
+				<div class="f_div1">
+					<div class="f_div1_1 fix" >
+						<div class="f_div1_2"></div>
+					</div>
+				</div>
+				<div class="f_div2">
+				<a href="v_complaint.html" style="display:inline-block;width:100%;height:100%;">
+					<div class="f_div2_1 fix" >
+						<div class="f_div1_2"></div>
+					</div>
+					</a>
+				</div>
+				<!-- 邀请加入 -分享-->
+				<div class="invite">
+					<div class="invite_1">
+						<div class="f_div3">
+							<div class="f_div3_1 fix">
+								<div class="f_div1_2"></div>
+							</div>
+						</div>
+						<div class="f_div4">
+							<div class="f_div4_1">退出登录</div>
+						</div>
+					</div>
+					<div class="invite_2">
+						<div id="ckepop" class='feixiangjias'>  
+					      <a href="javascript:" style="margin-left: 4px;" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank">加入到：</a>
+					        <br> 
+					      <a class="jiathis_button_qzone">QQ空间</a> 
+					      
+					      <a class="jiathis_button_tsina" style="display: inline-block;margin-left: 4px;">新浪微博</a>  
+					        <br>  
+					      <a class="jiathis_button_kaixin001">开心网</a> 
+					       
+					      <a style="margin-left: 12px; display: inline-block;" class="jiathis_button_renren" >人人网</a>
+					       <br> 
+					      <a class="jiathis_button_baidu">百度收藏</a> 
+					         
+					      <a class="jiathis_button_tqq">腾讯微博</a>  
+  						</div>  
+					</div>
+					
+				</div>
+			</div> 
+		</div>	
+	</div>
+	<div class="v_footer">
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/home.png"></h1>
+                <p style="color:rgb(0,121,255);">首页</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/cafe.png"></h1>
+                <p>便民</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div style="width:25%;height:98px;float:left;height:98px;border-top: 1px solid gray;">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1 style="position:relative;" id="tel"><img src="../images/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                <p>一键拨号</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/building.png"></h1>
+                <p>社区</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/people.png"></h1>
+                <p>我的</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+    </div>
+	
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="../js/b_Personal_set.js"></script>  
+<script type="text/javascript" src="../js/b_my_main.js"></script>
+<script type="text/javascript" src="../js/js分享.js" charset="utf-8"></script>  
+
+
+<script>
+	$(document).ready(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+    $(window).resize(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+</script>
+</html>

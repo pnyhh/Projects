@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <style>
+        .v_header{width:100%;height:79px;
+            position:fixed;top: 0px;z-index: 1000;background: white;}
+        .v_header_l,.v_header_r{width:20%;height: 78px;border-bottom:1px solid rgb(240,239,244);float:left;text-align: center;line-height: 98px;}
+        .v_header_m{width: 60%;height: 78px;border-bottom: 1px solid rgb(240,239,244);
+            float: left;font-family: "黑体";font-size: 1.5em;text-align: center;line-height: 78px;}
+        .v_header_r{text-align: center;line-height: 78px;}
+        .v_footer{position: fixed;bottom: 0px;width: 100%;height: 58px;z-index: 1000;background: white;}
+        .v_footer_div{width: 18.75%;height: 58px;float: left;border-top: 1px solid gray;padding-top: 10px;}
+        .v_footer_l,.v_footer_r{width: 15%;float: left;height: 58px;}
+        .v_footer_m{width: 70%;height: 58px;float: left;}
+        .v_footer_m h1{height: 30px;text-align: center;}
+        .v_footer_m p{height: 38px;text-align: center;font-family: "黑体";font-size: 0.6em;}
+        .v_footer_m h1 img{width: 20px;height: 20px;}
+        #phone{width: 40px;height: 40px;}
+        #tel{padding-top: 10px;}
+        .v_content{margin-top: 79px;background: rgb(240,239,244);overflow: hidden;}
+        .v_content_l,.v_content_r{width: 5%;float: left;height: 644px;}
+        .v_content_m{width: 90%;height: 686px;float: left;overflow: hidden;}
+        .v_content_title{
+            box-sizing:border-box;
+            -moz-box-sizing:border-box; /* Firefox */
+            -webkit-box-sizing:border-box; /* Safari */
+            width: 100%;border: 1px solid rgb(214,214,214);
+            border-radius: 5px;
+            background: #ffffff;
+            height: 146px;
+            margin-top: 34px;
+        }
+        .v_content_con{
+            box-sizing:border-box;
+            -moz-box-sizing:border-box; /* Firefox */
+            -webkit-box-sizing:border-box; /* Safari */
+            width: 100%;border: 1px solid rgb(214,214,214);
+            border-radius: 5px;
+            background: #ffffff;
+            height: 486px;
+            margin-top: 8px;
+        }
+        .v_content_title p{height: 83px;text-align: left;padding-left: 15px;font-size: 0.7em;font-family: "黑体";
+        line-height: 33px;}
+        .v_content_title h1{text-align: right;padding-right: 10px;}
+        .v_content_con h2{padding-left: 20px;height: 62px;font-size: 0.7em;
+            font-family: "黑体";line-height: 62px;}
+        .v_content_con h2 select{width: 80%;height: 32px;}
+        .v_content_con h2 select option{font-size: 0.9em;}
+        .v_content_con h3{margin-top: 40px;width: 100%;height: 200px;text-align: center;}
+        .v_content_con h3 input{width: 95%;height: 200px;}
+        .v_content_con p{width: 100%;height: 53px;margin-top: 42px;text-align: center;}
+        .v_content_con p a{display: inline-block;width: 164px;height: 52px;background: rgb(82,202,24);
+        font-size: 1.2em;text-align: center;line-height: 52px;color: #ffffff;font-weight: bold;
+        border: 1px solid gray;border-radius: 5px;}
+    </style>
+</head>
+<body style="min-width: 320px;max-width: 768px;min-height: 1000px;">
+<div class="main">
+    <div class="v_header">
+        <div class="v_header_l">
+            <img src="../images/lv/back.png" alt=""/>
+        </div>
+        <div class="v_header_m">
+            意见投诉
+        </div>
+        <div class="v_header_r"></div>
+    </div>
+    <div class="v_content" id="content">
+        <div class="v_content_l"></div>
+        <div class="v_content_m">
+            <div class="v_content_title">
+                <p>欢迎您使用XX物业投诉意见。您可以对我们的工作提出意见和建议，也可以向我们咨询和投诉！</p>
+                <h1><img src="../images/lv/call.png" alt=""/></h1>
+            </div>
+            <div class="v_content_con">
+                <h2>类别&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select>
+                        <option value="AAA">请选择投诉类别</option>
+                        <option value="BBB">人品差</option>
+                        <option value="CCC">机器卡</option>
+                    </select>
+                </h2>
+                <h3>
+                    <input type="text" placeholder="我的意见投诉建议"/>
+                </h3>
+                <p><a href="v_reply.html">提  交</a></p>
+            </div>
+        </div>
+        <div class="v_content_r"></div>
+    </div>
+    <div class="v_footer">
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <a href="../index.html"><div class="v_footer_m">
+                <h1><img src="../images/lv/home.png"></h1>
+                <p style="color:rgb(0,121,255);">首页</p>
+            </div></a>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/cafe.png"></h1>
+                <p>便民</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div style="width:25%;height98px;float:left;height:98px;border-top: 1px solid gray;">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1 style="position:relative;" id="tel"><img src="../images/lv/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                <p>一键拨号</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/building.png"></h1>
+                <p>社区</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/people.png"></h1>
+                <p>我的</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        if(h<1000){$("#content").css("height",1000);}else{$("#content").css("height",h);}
+        $("#phone").css("right",a);
+    });
+    $(window).resize(function(){
+        var a = ($("#tel").width()-40)/2;
+        $("#phone").css("right",a);
+    });
+</script>
+</html>

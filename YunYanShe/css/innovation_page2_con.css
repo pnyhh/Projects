@@ -1,0 +1,140 @@
+.search_list_info{
+	background:white;
+}
+dl{
+	width:87%;
+}
+.person_pht{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+	font-size:14px;
+}
+.person_pht dl dt{
+	float:left;
+	border:1px solid rgb(188,188,188);
+	margin-left:6px;
+	margin-top:12px;
+	margin-bottom:16px;
+}
+.person_pht dl dt img{
+	width:153px;
+	height:191px;
+	padding:2px;
+}
+.person_pht dl dd{
+	float:left;
+	margin-left:52px;
+	margin-top:12px;
+	color:rgb(155,155,155);
+}
+.person_pht dl dd p{
+	height:32px;
+	line-height:32px;
+}
+.person_pht dl dd p i{
+	font-style:normal;
+}
+.person_pht dl dd p span{
+	display:inline-block;
+	text-indent:2em;
+}
+.person_info {
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+}
+.person_info dl dt{
+	height:38px;
+	line-height:38px;
+	font-size:16px;
+	font-weight:bold;
+	width:92%;
+	margin:0 auto;
+	color:rgb(53,76,104);
+}
+.person_info dl dd{
+	font-size:14px;
+	width:92%;
+	margin:0 auto;
+	color:rgb(161,161,161);
+	margin-bottom:16px;
+}
+.workExperience{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+}
+.workExperience span{
+	display:block;
+	height:38px;
+	line-height:38px;
+	width:92%;
+	margin:0 auto;
+	color:rgb(53,76,104);
+	font-size:16px;
+	font-weight:bold;
+}
+.educationExperience{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+	padding-bottom:18px;
+}
+.educationExperience h3{
+	display:block;
+	height:38px;
+	line-height:38px;
+	width:92%;
+	margin:0 auto;
+	color:rgb(53,76,104);
+	font-size:16px;
+	font-weight:bold;
+}
+.educationExperience table{
+	width:87%;
+	margin-left:4px;
+	border-collapse: collapse;
+}
+.educationExperience table tr{
+	border-bottom:1px solid rgb(196,196,196);
+}
+.educationExperience table th{
+	background:rgb(148,148,148);
+	width:33%;
+	height:24px;
+	color:white;
+	font-size:12px;
+}
+.educationExperience table td{
+	width:33%;
+	height:21px;
+	padding-left:1em;
+	font-size:14px;
+	color:rgb(202,202,202);
+}
+.conpany_info{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+}
+.company_info dl{
+	padding-bottom:20px;
+}
+.company_info dl dt{
+	height:38px;
+	line-height:38px;
+	font-size:16px;
+	font-weight:bold;
+	width:92%;
+	margin:0 auto;
+	color:rgb(53,76,104);
+}
+.company_info dl dd{
+	font-size:14px;
+	width:92%;
+	margin:0 auto;
+	color:rgb(161,161,161);
+	height:23px;
+	line-height:23px;
+}

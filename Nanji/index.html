@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>这是一个蛋疼的网站</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<style>
+	body{
+		position: relative;
+	}
+	.v_main{
+		position: relative;
+	}
+	.v_header{
+		position: fixed;
+		top: 0px;
+		background: #f6f6f6;
+		width: 100%;
+		z-index: 1001;
+	}
+	.v_header_main{
+		overflow: hidden;
+		margin: 0 auto;
+		width: 1000px;
+		height: 60px;
+	}
+	.v_header_main_logo,.v_header_main_nav{
+		float: left;
+	}
+	.v_header_main_inf{
+		position: relative;
+		overflow: hidden;
+		float: right;
+		width: 229px;
+		height: 60px;
+	}
+	.v_header_main_nav li{
+		float: left;
+		height: 60px;
+		border-left: 1px solid #f6f6f6;
+		border-right: 1px solid #f6f6f6;
+	}
+	.v_header_main_nav li a{
+		display: block;
+		font-size: 14px;
+		color: #4f4f4f;
+		line-height: 60px;
+		padding-left: 25px;
+		padding-right: 10px;
+		background: url(images/lv/head_back.png);
+		background-repeat: no-repeat;
+	}
+	.v_header_main_search{
+		float: left;
+		overflow: hidden;
+		width: 215px;
+		height: 36px;
+		margin-top: 13px;
+		margin-left: 15px;
+	}
+	.v_header_main_search_text{
+		float: left;
+		width: 178px;
+		height: 33px;
+		border: 1px solid #e6e6e6;
+		outline: 0 none;
+	}
+	.v_header_main_search_btn{
+		float: left;
+		width: 35px;
+		height: 35px;
+		border: none;
+		background: url(images/lv/header_search.png);
+		cursor:pointer;
+	}
+	.v_header_main_inf_mission{
+		overflow: hidden;
+		float: left;
+	}
+	.v_header_main_inf_mission li{
+		float: left;
+		border-left: 1px solid #f6f6f6;
+		border-right: 1px solid #f6f6f6;
+		width: 65px;
+		height: 60px;
+		line-height: 60px;
+	}
+	.v_header_main_inf_mission li a{
+		display: block;
+		padding-left: 25px;
+		padding-right: 10px;
+		font-size: 14px;
+		color: #4f4f4f;
+		background: url(images/lv/header_right_back.png);
+		background-repeat: no-repeat;
+	}
+	.v_header_main_inf_login{
+		float: left;
+		line-height: 60px;
+		height: 60px;
+		font-size: 14px;
+	}
+	.v_header_main_inf_login_log{
+		background: url(images/lv/header_right_back.png);
+		background-repeat: no-repeat;
+		padding-left: 15px;
+		background-position: 2px -37px;
+	}
+	.v_header_main_inf_login_jiang{
+		position: absolute;
+		top: 10px;
+		left: 8px;
+	}
+	.v_sky{
+		width: 100%;
+		height: 560px;
+		background: url(images/lv/sky.jpg);
+		background-repeat: no-repeat;
+		background-position: center 60px;
+	}
+	.v_sky_star{
+		position: absolute;
+		width: 80px;
+		height: 80px;
+	}
+	.v_sky_star_main{display: none;}
+	.v_sky_star_with{
+		position: absolute;
+		top: 20px;
+		left: 0px;
+		width: 207px;
+		height: 150px;
+		background: url(images/lv/star_content.png);
+		background-position: center;
+	}
+	.v_sky_star_with img{
+		position: absolute;
+		top: 2px;
+		left: 172px;
+	}
+	.v_sky_star_with p{
+		margin-top: 60px;
+		text-indent: 25px;
+		font-size: 14px;
+		color: white;
+		height: 35%;
+	}
+	.v_sky_star_with h6{
+		margin-top: 5px;
+		text-align: right;
+		margin-right: 50px;
+		font-size: 13px;
+		color: white;
+		cursor: pointer;
+	}
+	.v_sky_star_with h6:hover{text-decoration: underline;}
+	.v_ice{
+		width: 100%;
+		height: 300px;
+		background: url(images/lv/ice.png);
+		background-position: center 0;
+		background-repeat: no-repeat;
+		margin-top: -350px;
+	}
+	.v_ice a{
+		display: block;
+		font-size: 20px;
+		color: white;
+		margin: 0 auto;
+		width: 160px;
+		height: 212px;
+		line-height: 268px;
+		text-align: center;
+	}
+	.v_publish_back{
+		width: 100%;
+		height: 126px;
+		background: url(images/lv/publish_back.png);
+		background-position: center 0;
+		background-repeat: no-repeat;
+	}
+	.v_publish{
+		height: 1200px;
+		width: 100%;
+		background: rgb(192,235,255);
+	}
+	.v_publish_main{
+		position: relative;
+		top: -91px;
+		width: 1090px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	.v_publish_main_left{
+		float: left;
+		width: 500px;
+	}
+	.v_publish_main_right{
+		float: right;
+		width: 500px;
+		margin-top: 20px;
+	}
+	.v_publish_main_timeline{
+		position: relative;
+		float: left;
+		height: 100%;
+		width: 90px;
+	}
+	.v_publish_main_timeline_line{
+		width: 4px;
+		height: 100%;
+		background: white;
+		margin: 0 auto;
+	}
+	.v_publish_main_timeline_ball{
+		position: absolute;
+		width: 74px;
+		height: 22px;
+		background: url(images/lv/timeline_3.jpg);
+		top: 0px;
+		left: 34px;
+	}
+	.v_publish_main_timeline_ball img{
+		position: absolute;
+		top: 0px;
+		left: 76px;
+		cursor:pointer;
+	}
+	.v_publish_main_timeline_left1,.v_publish_main_timeline_left2{
+		position: absolute;
+		width: 74px;
+		height: 22px;
+		background: url(images/lv/timeline_2.jpg);
+		top: 33px;
+		left: 222px;
+		z-index: 20;
+	}
+	.v_publish_main_timeline_left2{left: 261px;}
+	.v_publish_main_timeline_right1,.v_publish_main_timeline_right2{
+		position: absolute;
+		width: 74px;
+		height: 22px;
+		background: url(images/lv/timeline_3.jpg);
+		top: 33px;
+		left: -76px;
+		z-index: 20;
+	}
+	.v_publish_main_timeline_more{
+		position: absolute;
+		width: 182px;
+		height: 29px;
+		background: url(images/lv/timeline_more.png);
+		top: 1050px;
+		left: 34px;
+		cursor: pointer;
+	}
+	.v_publish_main_footer{
+		position: absolute;
+		bottom: 35px;
+		width: 100%;
+		height: 66px;
+		background: rgb(192,235,255);
+	}
+	.v_publish_main_footer_back{
+		width: 206px;
+		height: 66px;
+		margin: 0 auto;
+		background: url(images/lv/publish_footer.png);
+		background-repeat: no-repeat;
+		background-position:center;
+	}
+	.v_publish_friend{position: relative;}
+	.v_publish_friend_header{
+		width: 100%;
+		height: 372px;
+		background: url(images/lv/publish_friend.png);
+		background-position:top center;
+		background-repeat: no-repeat;
+	}
+	.v_publish_friend_content{
+		overflow: hidden;
+		width: 100%;
+		height: 856px;
+		background: rgb(12,217,205);
+	}
+	.v_publish_friend_content_left,.v_publish_friend_content_right{
+		overflow: hidden;
+		float: left;
+		width: 50%;
+		height: 856px;
+		/*********呵呵********/
+		font-size: 120px;
+		line-height: 856px;
+		text-align: center;
+		vertical-align: center;
+		color: white;
+	}
+	.v_publish_friend_footer{
+		width: 100%;
+		height: 76px;
+		background:rgb(12,217,205);
+		text-align: center;
+	}
+	.v_publish_friend_footer img{cursor: pointer;}
+	.v_publish_hero_logo{
+		position: absolute;
+		top: -23px;
+		left: 186px;
+	}
+	.v_footer{
+		position: relative;
+	}
+	.v_footer_contact{
+		width: 100%;
+		height: 255px;
+		padding-top: 30px;
+		background: #4e525b;
+	}
+	.v_footer_aboutus{
+		width: 100%;
+		height: 145px;
+		background: #3a3e49;
+	}
+	/********************左一块*******************************/
+	.v_publish_main_left1{
+		position: relative;
+		height: 570px;
+		margin-top: 30px;
+		padding-right: 20px;
+	}
+	.v_publish_main_left1_header{
+		position: relative;
+		float: right;
+		width: 220px;
+		height: 85px;
+	}
+	.v_publish_main_left1_header h1{
+		float: left;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.v_publish_main_left1_header span{
+		float: left;
+		margin-left: 15px;
+		padding-left: 20px;
+		padding-top: 10px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-144px -259px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_left1_header img{float: right;}
+	.v_publish_main_left1_header p{
+		float: left;
+		overflow: hidden;
+		padding-left: 5px;
+		color:white;
+		width: 109px;
+		height: 18px;
+		border: 1px solid rgb(78,82,91);
+		border-radius: 1px;
+		background: rgb(78,82,91);
+	}
+	.v_publish_main_left1_header i{
+		float: left;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-top: 2px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-147px -189px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_left1_header b{
+		float: left;
+		margin-left: 10px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	.v_publish_main_left1_content{
+		float: left;
+		position: relative;
+		margin-top: 5px;
+		margin-left: 46px;
+	}
+	.v_publish_main_left1_content_header{
+		width: 458px;
+		height: 30px;
+		background: url(images/lv/publish_header_left.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.v_publish_main_left1_content_content{
+		width: 458px;
+		background:url(images/lv/publish_content_back.png);
+		background-repeat: repeat-y;
+		background-position: -3px 0px;
+	}
+	.v_publish_main_left1_content_footer{
+		position: relative;
+		width: 458px;
+		height: 62px;
+	}
+	.v_publish_main_left1_content_footer img{float: left;}
+	.v_publish_main_left1_content_footer_m{
+		float: left;
+		width: 112px;
+		height: 62px;
+		background: url(images/lv/publish_footer_middle1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 45px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_main_left1_content_footer_r{
+		float: left;
+		width: 96px;
+		height: 62px;
+		background: url(images/lv/publish_footer_right1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 32px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_left1_state{
+		position: absolute;
+		top: 19px;
+		left: 0px;
+	}
+	.v_publish_main_left1_text{padding-top: 15px;}
+	.v_publish_main_left1_text h1{
+		text-align: center;
+	}
+	.v_publish_main_left1_text h1 a{
+		font-size: 18px;
+		color: #333;
+		font-family: "Microsoft YaHei","黑体";
+	}
+	.v_publish_main_left1_text p{
+		margin: 0 auto;
+		width: 410px;
+		color: #878787;
+		word-break:break-all;
+	}
+	.v_publish_main_left1_text p span{
+		background: rgb(88,191,249);
+		color: white;
+		font-size: 13px;
+	}
+	.v_publish_main_left1_text h1 a:hover{text-decoration: underline;}
+	.v_publish_main_left1_inf{
+		float: right;
+		background: none;
+	}
+	.v_publish_main_left1_inf a{
+		padding-left: 27px;
+		font-size: 11px;
+		color: #878787;
+		background: url(images/lv/publish_sprite.png);
+		background-repeat: no-repeat;
+	}
+	.v_publish_main_left1_image,.v_publish_main_left1_state{
+		text-align: center;
+		margin-top: 15px;
+	}
+	.v_publish_main_left1_state div{width: 312px;height: 13px;float: left;}
+	.v_publish_main_left1_state span{float: left;margin-left: 25px;font-size: 13px;color: gray;}
+	.v_publish_main_left1_state b{float: left;font-size: 11px;margin-left: 15px;}
+	.state_money{position: absolute;background: url(images/lv/piblish_state_money.png);background-repeat: no-repeat;left: 220px;top: -28px;text-align: left;font-size: 13px;color: white;text-indent: 10px;}
+	.v_publish_main_left1_heros ul{overflow: hidden;}
+	.v_publish_main_left1_heros li{float: left;width: 45px;margin-left: 15px;height: 45px;margin-top: 10px;}
+	.v_publish_main_left1_heros li img{width: 45px;height: 45px;}
+	.v_publish_main_left1_with{
+		position: absolute;
+		display: none;
+		width: 318px;
+		height: 229px;
+		border: 1px solid rgb(234,235,235);
+		top: -59px;
+		left: 85px;
+		z-index: 18;
+		background: rgb(253,253,254);
+	}
+	.v_publish_main_left1_with h1,.v_publish_main_left1_with h2{
+		width: 50%;
+		float: left;
+		height: 30px;
+		line-height: 33px;
+	}
+	.v_publish_main_left1_with h1{
+		color: rgb(65,160,220);
+		font-size: 18px;
+		font-family: "宋体",Arial;
+		font-weight: bold;
+		text-decoration: none;
+		cursor: pointer;
+		text-indent: 15px;
+	}
+	.v_publish_main_left1_with h2{
+		color: #000000;
+		font-size: 13px;
+		font-family: "宋体",Arial;
+		text-decoration: none;
+		text-align: right;
+		background: url(images/lv/publish_div_icon.png);
+		background-repeat: no-repeat;
+		background-position: 18px 6px;
+	}
+	.v_publish_main_left1_with p{
+		font-size: 12px;
+		color: rgb(135,135,135);
+		text-indent: 15px;
+	}
+	.v_publish_main_left1_with ul,.v_publish_main_left1_with ol{
+		overflow: hidden;
+		margin-top: 10px;
+	}
+	.v_publish_main_left1_with ul li,.v_publish_main_left1_with ol li{float: left;}
+	.v_publish_main_left1_with ul li{
+		width: 79px;
+		height: 32px;
+		text-indent: 40px;
+		font-size: 11px;
+		color: rgb(65,160,220);
+		line-height: 30px;
+		background: url(images/lv/publish_sprite.png);
+		background-repeat: no-repeat;
+	}
+	.v_publish_main_left1_with ol li{margin-left: 3px;}
+	.v_publish_main_left1_with ol li img{
+		width: 50px;
+		height: 50px;
+	}
+	.v_publish_main_left1_with b{font-size: 13px;}
+	.v_publish_main_left1_with b span{color: rgb(254,156,136);}
+	.v_publish_main_left1_with_btn ul li{
+		float: left;
+		background: none;
+		width: 50px;
+		height: 20px;
+		border: 1px solid gray;
+		cursor: pointer;
+		line-height: 20px;
+		text-align: center;
+		text-indent: 0px;
+		margin-left: 22px;
+		margin-top: 13px;
+	}
+	.v_publish_main_share{
+		position: absolute;
+		display: none;
+		width: 355px;
+		height: 60px;
+		top: 50px;
+		left: 60px;
+		border: 1px;
+		border-radius: 5px;
+		background: white;
+	}
+	.v_publish_main_share ul{overflow: hidden;}
+	.v_publish_main_share li{
+		float: left;
+		width: 88px;
+		height: 60px;
+		cursor: pointer;
+		background: url(images/lv/share.png);
+		background-repeat: no-repeat;
+		color: gray;
+		font-size: 14px;
+		line-height: 60px;
+		text-align: right;
+	}
+	/**************************左二块*******************************/
+	.v_publish_main_left2{
+		position: relative;
+		margin-top: 20px;
+		padding-right: 20px;
+		height: 470px;
+	}
+	.v_publish_main_left2_header{
+		position: relative;
+		float: right;
+		width: 260px;
+		height: 85px;
+	}
+	.v_publish_main_left2_header h1{
+		float: left;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.v_publish_main_left2_header span{
+		float: left;
+		margin-left: 15px;
+		padding-left: 20px;
+		padding-top: 10px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-144px -259px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_left2_header img{float: right;}
+	.v_publish_main_left2_header p{
+		float: left;
+		overflow: hidden;
+		padding-left: 5px;
+		color:white;
+		width: 109px;
+		height: 18px;
+		border: 1px solid rgb(78,82,91);
+		border-radius: 1px;
+		background: rgb(78,82,91);
+	}
+	.v_publish_main_left2_header i{
+		float: left;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-top: 2px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-147px -189px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_left2_header b{
+		float: left;
+		margin-left: 10px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	.v_publish_main_left2_content{
+		float: left;
+		position: relative;
+		margin-top: 5px;
+		margin-left: 46px;
+	}
+	.v_publish_main_left2_content_header{
+		width: 458px;
+		height: 30px;
+		background: url(images/lv/publish_header_left.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.v_publish_main_left2_content_content{
+		width: 458px;
+		height: 215px;
+		background:url(images/lv/publish_content_back.png);
+		background-repeat: repeat-y;
+		background-position: -3px 0px;
+	}
+	.v_publish_main_left2_content_footer{
+		position: relative;
+		width: 458px;
+		height: 62px;
+	}
+	.v_publish_main_left2_content_footer img{float: left;}
+	.v_publish_main_left2_content_footer_m{
+		float: left;
+		width: 112px;
+		height: 62px;
+		background: url(images/lv/publish_footer_middle1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 45px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_main_left2_content_footer_r{
+		float: left;
+		width: 96px;
+		height: 62px;
+		background: url(images/lv/publish_footer_right1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 32px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_left2_state{
+		position: absolute;
+		top: 19px;
+		left: 0px;
+	}
+	/**************************左三块*******************************/
+	.v_publish_main_left2{
+		margin-top: 20px;
+		padding-right: 20px;
+		height: 470px;
+	}
+	.v_publish_main_left2_header{
+		position: relative;
+		float: right;
+		width: 260px;
+		height: 85px;
+	}
+	.v_publish_main_left2_header h1{
+		float: left;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.v_publish_main_left2_header span{
+		float: left;
+		margin-left: 15px;
+		padding-left: 20px;
+		padding-top: 10px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-144px -259px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_left2_header img{float: right;}
+	.v_publish_main_left2_header p{
+		float: left;
+		overflow: hidden;
+		padding-left: 5px;
+		color:white;
+		width: 109px;
+		height: 18px;
+		border: 1px solid rgb(78,82,91);
+		border-radius: 1px;
+		background: rgb(78,82,91);
+	}
+	.v_publish_main_left2_header i{
+		float: left;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-top: 2px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-147px -189px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_left2_header b{
+		float: left;
+		margin-left: 10px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	.v_publish_main_left2_content{
+		float: left;
+		position: relative;
+		margin-top: 5px;
+		margin-left: 46px;
+	}
+	.v_publish_main_left2_content_header{
+		width: 458px;
+		height: 30px;
+		background: url(images/lv/publish_header_left.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.v_publish_main_left2_content_content{
+		width: 458px;
+		height: 215px;
+		background:url(images/lv/publish_content_back.png);
+		background-repeat: repeat-y;
+		background-position: -3px 0px;
+	}
+	.v_publish_main_left2_content_footer{
+		width: 458px;
+		height: 62px;
+	}
+	.v_publish_main_left2_content_footer img{float: left;}
+	.v_publish_main_left2_content_footer_m{
+		float: left;
+		width: 112px;
+		height: 62px;
+		background: url(images/lv/publish_footer_middle1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 45px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_main_left2_content_footer_r{
+		float: left;
+		width: 96px;
+		height: 62px;
+		background: url(images/lv/publish_footer_right1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 32px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_left2_state{
+		position: absolute;
+		top: 19px;
+		left: 0px;
+	}
+	/**************************右一块*******************************/
+	.v_publish_main_right1{
+		position: relative;
+		padding-left: 20px;
+		height: 397px;
+		margin-top: 90px;
+	}
+	.v_publish_main_right1_header{
+		position: relative;
+		float: left;
+		width: 260px;
+		height: 85px;
+	}
+	.v_publish_main_right1_header h1{
+		float: left;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.v_publish_main_right1_header span{
+		float: left;
+		padding-left: 20px;
+		padding-top: 10px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-144px -259px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_right1_header img{
+		float: left;
+		margin-right: 10px;
+	}
+	.v_publish_main_right1_header p{
+		float: left;
+		overflow: hidden;
+		padding-left: 5px;
+		color:white;
+		width: 109px;
+		height: 18px;
+		border: 1px solid rgb(78,82,91);
+		border-radius: 1px;
+		background: rgb(78,82,91);
+	}
+	.v_publish_main_right1_header i{
+		float: left;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-top: 2px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-147px -189px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_right1_header b{
+		float: left;
+		margin-left: 10px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	.v_publish_main_right1_content{
+		float: left;
+		position: relative;
+		margin-left: -11px;
+		margin-top: 5px;
+	}
+	.v_publish_main_right1_content_header{
+		width: 458px;
+		height: 30px;
+		background: url(images/lv/publish_header_right.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.v_publish_main_right1_content_content{
+		width: 458px;
+		height: 215px;
+		background:url(images/lv/publish_content_back.png);
+		background-repeat: repeat-y;
+		background-position: -3px 0px;
+	}
+	.v_publish_main_right1_content_footer{
+		position: relative;
+		width: 458px;
+		height: 62px;
+	}
+	.v_publish_main_right1_content_footer img{float: left;}
+	.v_publish_main_right1_content_footer_m{
+		float: left;
+		width: 112px;
+		height: 62px;
+		background: url(images/lv/publish_footer_middle1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 45px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_main_right1_content_footer_r{
+		float: left;
+		width: 96px;
+		height: 62px;
+		background: url(images/lv/publish_footer_right1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 32px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_right1_state{
+		position: absolute;
+		top: 18px;
+		left: 351px;
+	}
+	/**************************右二块*******************************/
+	.v_publish_main_right2{
+		position: relative;
+		padding-left: 20px;
+		height: 472px;
+		margin-top: 40px;
+	}
+	.v_publish_main_right2_header{
+		position: relative;
+		float: left;
+		width: 320px;
+		height: 85px;
+	}
+	.v_publish_main_right2_header h1{
+		float: left;
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.v_publish_main_right2_header span{
+		float: left;
+		padding-left: 20px;
+		padding-top: 10px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-144px -259px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_right2_header img{
+		float: left;
+		margin-right: 10px;
+	}
+	.v_publish_main_right2_header p{
+		float: left;
+		overflow: hidden;
+		padding-left: 5px;
+		color:white;
+		width: 109px;
+		height: 18px;
+		border: 1px solid rgb(78,82,91);
+		border-radius: 1px;
+		background: rgb(78,82,91);
+	}
+	.v_publish_main_right2_header i{
+		float: left;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-top: 2px;
+		background: url(images/lv/publish_sprite.png);
+		background-position:-147px -189px;
+		background-repeat:no-repeat;
+	}
+	.v_publish_main_right2_header b{
+		float: left;
+		margin-left: 10px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	.v_publish_main_right2_content{
+		float: left;
+		position: relative;
+		margin-left: -11px;
+		margin-top: 5px;
+	}
+	.v_publish_main_right2_content_header{
+		width: 458px;
+		height: 30px;
+		background: url(images/lv/publish_header_right.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.v_publish_main_right2_content_content{
+		width: 458px;
+		height: 290px;
+		background:url(images/lv/publish_content_back.png);
+		background-repeat: repeat-y;
+		background-position: -3px 0px;
+	}
+	.v_publish_main_right2_content_footer{
+		position: relative;
+		width: 458px;
+		height: 62px;
+	}
+	.v_publish_main_right2_content_footer img{float: left;}
+	.v_publish_main_right2_content_footer_m{
+		float: left;
+		width: 112px;
+		height: 62px;
+		background: url(images/lv/publish_footer_middle1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 45px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_main_right2_content_footer_r{
+		float: left;
+		width: 96px;
+		height: 62px;
+		background: url(images/lv/publish_footer_right1.png);
+		background-repeat: no-repeat;
+		font-size: 14px;
+		line-height: 59px;
+		text-indent: 32px;
+		color: rgb(51,51,51);
+	}
+	.v_publish_right2_state{
+		position: absolute;
+		top: 18px;
+		left: 351px;
+	}
+	.v_publish_hero{
+		position: relative;
+		width: 100%;
+		height: 520px;
+		background: url(images/lv/hero_back.jpg);
+		background-position:center 0;
+		background-repeat: no-repeat;
+		padding-top: 75px;
+	}
+	.v_publish_hero_content{
+		position: relative;
+		width: 100%;
+	}
+	.v_publish_hero_content_middle{
+		overflow: hidden;
+		width: 1104px;
+		height: 520px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.v_publish_hero_content ul{
+		float: left;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	.v_publish_hero_content li{
+		position: relative;
+		float: left;
+		width: 184px;
+		height: 224px;
+		margin-left: 30px;
+		margin-top: 5px;
+		background-repeat: no-repeat;
+	}
+	.v_hero_icon{margin-top: 22px;}
+	.v_hero_name,.v_hero_btn{
+		position: absolute;
+		line-height: 32px;
+		text-align: center;
+		color: white;
+		font-size: 14px;
+	}
+	.v_hero_name{
+		top: 188px;
+		left: 5px;
+		width: 100px;
+		height: 32px;
+	}
+	.v_hero_btn{
+		width: 69px;
+		height: 32px;
+		top: 188px;
+		left: 111px;
+		cursor: pointer;
+	}
+	.v_publish_hero_content_more{
+		position: absolute;
+		font-size: 30px;
+		font-family: Arial;
+		color: white;
+		top: 470px;
+		left: 1050px;
+	}
+	.v_publish_hero_content_with{
+		position: absolute;
+		display: none;
+		width: 290px;
+		height: 211px;
+		top: 0px;
+		left: 180px;
+		z-index: 202;
+		background: white;
+		padding-top: 20px;
+	}
+	.v_publish_hero_content_with h1,.v_publish_hero_content_with h2{
+		float: left;
+		height: 24px;
+	}
+	.v_publish_hero_content_with h1{
+		width: 230px;
+		text-align: left;
+		text-indent: 20px;
+		line-height: 24px;
+		color: #41A0DC;
+		cursor: pointer;
+	}
+	.v_publish_hero_content_with h2{
+		width: 50px;
+		font-size: 11px;
+		line-height: 24px;
+		padding-right: 10px;
+	}
+	.v_publish_hero_content_with h2 span{color: red;}
+	.v_publish_hero_content_with p{
+		text-align: left;
+		text-indent: 20px;
+		color: gray;
+		font-size: 12px;
+		margin-top: 10px;
+		line-height: 25px;
+	}
+	.v_publish_hero_content_with b{
+		float: left;
+		width: 290px;
+		text-align: left;
+		text-indent: 20px;
+		font-size: 14px;
+	}
+	.v_publish_hero_content_with ul,.v_publish_hero_content_with ol{
+		overflow: hidden;
+		float: left;
+	}
+	.v_publish_hero_content_with ul li{
+		float: left;
+		width: 40px;
+		height: 40px;
+		margin-left: 23px;
+	}
+	.v_publish_hero_content_with ol li{
+		float: left;
+		width: 53px;
+		height: 24px;
+		border: 1px solid gray;
+		cursor: pointer;
+		font-size: 13px;
+		color: black;
+		text-align: center;
+		line-height: 24px;
+		margin-left: 14px;
+		margin-top: 17px;
+	}
+	.v_publish_hero_content_with ul li img{width: 40px;height: 40px;}
+	.v_footer_contact_content{
+		width: 1040px;
+		margin: 0 auto;
+		height: 100%;
+	}
+	.v_footer_contact_content ul{
+		height: 255px;
+	}
+	.v_footer_contact_content li{
+		float: left;
+		width: 251px;
+		margin-right: 9px;
+		height: 100%;
+	}
+	.v_footer_contact_content dt{
+		width: 230px;
+		height: 56px;
+		border-bottom: 1px solid #75787F;
+	}
+	.v_footer_contact_content dt a:hover{text-decoration: underline;}
+	.v_footer_contact_content dt a{
+		font-size: 22px;
+		font-family: "黑体";
+		color: #ADAEB0;
+		line-height: 56px;
+	}
+	.v_footer_contact_content span{
+		float: left;
+		width: 55px;
+		height: 27px;
+		margin:22px 20px 0 0;
+		background: #646c79;
+		text-align: center;
+	}
+	.v_footer_contact_content span:hover{background: rgb(88,191,249);}
+	.v_footer_contact_content span a,.v_footer_contact_content dd a,.v_footer_contact_content dd p{
+		color: #F5F5F5;
+		font-size: 14px;
+		font-family: "Microsoft YaHei","黑体";
+	}
+	.v_footer_contact_content dd{margin-top: 10px;}
+	.v_footer_contact_content dd a:hover{
+		text-decoration: underline;
+	}
+	.v_footer_contact_content span a:hover{
+		text-decoration: none;
+	}
+	.v_footer_aboutus_content{
+		width: 1040px;
+		padding-top: 15px;
+		margin: 0 auto;
+	}
+	.v_footer_aboutus_content p{
+		overflow: hidden;
+		font-size: 11px;
+		font-family: "Microsoft YaHei","黑体";
+		color: #AAAFB3;
+	}
+	.v_footer_contact_content_us dd{
+		text-indent: 30px;
+		height: 24px;
+	}
+	.v_aboutus_wx{
+		position: absolute;
+		display: none;
+		top: -44px;
+		left: -136px;
+	}
+	.v_main_back{
+		position: fixed;
+		display: none;
+		right: 30px;
+		bottom: 100px;
+		z-index: 999;
+	}
+	.v_main_back li{
+		width: 60px;
+		height: 60px;
+		background: rgb(30,129,209);
+		margin-top: 3px;
+		cursor: pointer;
+	}
+	.v_main_back li:hover{background: rgb(12,108,186);}
+	.v_contact{position: absolute;top: 60px;left: 0px;background: gray;z-index: 1000;display: none;}
+	.v_contact_main{width: 560px;background: white;position: absolute;top: 110px;z-index: 1000;display: none;}
+	.v_contact_header{width: 500px;margin: 0 auto;height: 54px;border-bottom: 2px solid gray;}
+	.v_contact_header ul{overflow: hidden;}
+	.v_contact_header ul li{
+		float: left;
+		width: 98px;
+		height: 34px;
+		font-size: 18px;
+		font-family: "微软雅黑";
+		text-align: center;
+		line-height: 34px;
+	}
+	.v_login{height: 304px;width: 560px;}
+	.v_register{height: 460px;width: 560px;display: none;}
+	.v_contact_header_close{width: 20px;height: 20px;background: url(images/lv/login_close.png);margin-left: 500px;margin-top: 10px;cursor: pointer;}
+	.v_login_left{float: left;width: 360px;font-size: 13px;color: rgb(135,135,135);}
+	.v_login_left input{
+		display: block;
+		width: 233px;
+		height: 33px;
+		text-indent: 30px;
+		margin-top: 20px;
+		margin-left: 30px;
+	}
+	.v_login_left span,.v_register p span{font-size: 13px;color: rgb(88,191,249);}
+	.v_login_left div{margin-left: 30px;margin-top: 20px;}
+	.v_login_left a,.v_register a{margin-left: 20px;color: rgb(88,191,249);text-decoration: underline;}
+	.v_login_left div span{display: inline-block;width: 104px;height: 38px;color: white;letter-spacing: 15px;background: rgb(88,191,249);font-size: 20px;line-height: 38px;border-radius: 3px;text-indent: 25px;cursor: pointer;}
+	.v_login_left div a{margin-left: 0px;}
+	.v_login_right{float: left;}
+	.v_login_right p{font-size: 14px;font-weight: bold;text-align: center;margin-top: 10px;}
+	.v_login_right ul{margin-top: 30px;}
+	.v_login_right li{cursor: pointer;margin-top: 5px;}
+	.v_register ul{overflow: hidden;margin-left: 30px;margin-top: 10px;}
+	.v_register ul li{float: left;width: 183px;height: 42px;cursor: pointer;}
+	.v_register ul li div{width: 181px;height: 33px;border: 1px solid rgb(224,223,223);font-size: 13px;text-align: center;line-height: 33px;}
+	.v_register p input{
+		width: 233px;
+		height: 33px;
+		text-indent: 15px;
+		margin-top: 20px;
+		margin-left: 30px;
+		font-size: 13px
+	}
+	.register_btn{display: inline-block;width: 104px;height: 38px;color: white;background: rgb(88,191,249);font-size: 16px;line-height: 38px;border-radius: 3px;text-indent: 13px;cursor: pointer;margin-left: 30px;}
+	.v_register p a{font-size: 13px;color: rgb(135,135,135);text-decoration: none;}
+	</style>
+<body>
+	<div class="v_main">
+		<div class="v_header">
+			<div class="v_header_main">
+				<div class="v_header_main_logo">
+					<a href="#">
+						<img src="images/lv/logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="v_header_main_nav">
+					<ul>
+						<li><a href="html/b_tj_dream.html" style="background-position: 5px 23px;">发现心愿</a></li>
+						<li><a href="html/英雄榜.html" style="background-position: 5px -16px;">英&nbsp;&nbsp;雄</a></li>
+						<li><a href="html/b_fb_dream.html" style="background-position: 5px -58px;">发起心愿</a></li>
+					</ul>
+				</div>
+				<div class="v_header_main_search">
+					<input type="text" class="v_header_main_search_text">
+					<a href="html/sousuo.html"><input type="button" class="v_header_main_search_btn"></a>
+				</div>
+				<div class="v_header_main_inf">
+					<ul class="v_header_main_inf_mission">
+						<li><a href="" style="background-position: 5px 23px;">任务</a></li>
+						<li><a href="html/nanjishangcheng.html" style="background-position: 4px -53px;">商城</a></li>
+					</ul>
+					<div class="v_header_main_inf_login">
+						<img src="images/lv/jiang-pic.gif" alt="jiang" class="v_header_main_inf_login_jiang">
+						<a href="javascript:void(0);" class="v_header_main_inf_login_log">登陆</a> | <a href="javascript:void(0);">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="v_content">
+			<div class="v_sky" id="_v_sky">
+				<div class="v_sky_star" style="top: 84px;left: 207px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 243px;left: 298px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 128px;left: 403px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 69px;left: 501px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 221px;left: 721px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 149px;left: 801px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 295px;left: 885px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="v_sky_star" style="top: 72px;left: 1052px;">
+					<div class="v_sky_star_main">
+						<img src="images/lv/star.gif" alt="star">
+						<div class="v_sky_star_with">
+							<p>这些都是什么鬼</p>
+							<h6>→详情</h6>
+							<img src="images/lv/star_header.png" alt="icon">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="v_ice" id="_v_ice">
+				<a href="html/b_fb_dream.html">发布心愿</a>
+			</div>
+			<div class="v_publish">
+				<div class="v_publish_back"></div>
+				<div class="v_publish_main">
+					<div class="v_publish_main_left">
+						<div class="v_publish_main_left1">
+							<div class="v_publish_main_left1_with"  id="_v_publish_left1_with">
+								<div class="v_publish_main_left1_with_header">
+									<h1>Mark</h1><h2>中国公益集团董事长</h2>
+									<p>我只想做一些和别人不一样的事</p>
+									<ul>
+										<li style="background-position: 4px 0px;">250</li>
+										<li style="background-position: 2px -63px;">250</li>
+										<li style="background-position: 2px -131px;">250</li>
+										<li style="background-position: 2px -200px;">250</li>
+									</ul>
+									<b>他的勋章(<span>12</span>)</b>
+									<ol>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_more.png" alt="badge"></li>
+									</ol>
+									<div class="v_publish_main_left1_with_btn">
+										<ul>
+											<li>加好友</li>
+											<li>私信</li>
+											<li>送礼物</li>
+											<li>举报</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="v_publish_main_left1_header" id="_v_publish_left1">
+								<div class="v_publish_main_timeline_left1"></div>
+								<h1>Mark</h1><span>北京</span><img src="images/lv/mark.png" alt="mark">
+								<p><i></i><b>12:36 am</b></p>
+							</div>
+							<div class="v_publish_main_left1_content">
+								<img src="images/lv/publish_state_ing.png" alt="state" class="v_publish_left1_state">
+								<div class="v_publish_main_left1_content_header"></div>
+								<div class="v_publish_main_left1_content_content">
+									<div class="v_publish_main_left1_text">
+										<h1><a href="html/mengxiang.html">梦想详细入口</a></h1>
+										<p>adfldsfjalsdhlnldglkhldgldhslghdasllhaosdlahlghdlsglahghldghlkadshlgnlahdglnadlgnlgagnlakdhglahldglahglkhldglahglhghladhglashdlghasldghshdglhalskhglashglhg
+											<span>+参与</span>
+											<span class="v_publish_main_left1_inf" style="background:none;">
+												<a href="" style="background-position: -142px -103px;">数据</a><a href="" style="background-position: -135px 3px;">数据</a>
+											</span>
+										</p>
+										<div class="v_publish_main_left1_image">
+											<img src="images/lv/publish_img.jpg" alt="img">
+											<img src="images/lv/publish_img.jpg" alt="img">
+											<img src="images/lv/publish_img.jpg" alt="img">
+											<span></span>
+										</div>
+										<div class="v_publish_main_left1_state" style="margin-top: 30px;height: 20px;">
+											<b>已募捐</b><div style="background:rgb(228,228,229);margin-top:3px;margin-left: 20px;position: relative;"><div style="background: rgb(88,191,249);width:260px;" id="money">
+											</div><div class="state_money"	style="height: 27px;">150,406￥</div></div><span>90%</span>
+										</div>
+										<div class="v_publish_main_left1_heros">
+											<ul>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/hero_i_2.png" alt=""></li>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/hero_i_2.png" alt=""></li>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/hero_i_2.png" alt=""></li>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/hero_i_2.png" alt=""></li>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/hero_i_2.png" alt=""></li>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/hero_i_2.png" alt=""></li>
+												<li><img src="images/lv/hero_i_1.png" alt=""></li>
+												<li><img src="images/lv/publish_more.png" alt=""></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="v_publish_main_left1_content_footer">
+									<div class="v_publish_main_share">
+										<ul>
+											<li style="background-position: 4px 19px;">腾讯微博</li>
+											<li style="background-position: 4px -46px;">QQ空间</li>
+											<li style="background-position: 4px -103px;">QQ好友</li>
+											<li style="background-position: 4px -156px;">新浪微博</li>
+										</ul>
+									</div>
+									<img src="images/lv/publish_footer_left.png" alt="footer_left">
+									<span class="v_publish_main_left1_content_footer_m">
+										查看梦想
+									</span>
+									<span class="v_publish_main_left1_content_footer_r" id="_v_publish_left1_share">
+										分享
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="v_publish_main_left2">
+							<div class="v_publish_main_left1_with" id="_v_publish_left2_with">
+								<div class="v_publish_main_left1_with_header">
+									<h1>Queen舞</h1><h2>中国公益集团总经理</h2>
+									<p>我只想做一些和别人不一样的事</p>
+									<ul>
+										<li style="background-position: 4px 0px;">250</li>
+										<li style="background-position: 2px -63px;">250</li>
+										<li style="background-position: 2px -131px;">250</li>
+										<li style="background-position: 2px -200px;">250</li>
+									</ul>
+									<b>他的勋章(<span>12</span>)</b>
+									<ol>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_more.png" alt="badge"></li>
+									</ol>
+									<div class="v_publish_main_left1_with_btn">
+										<ul>
+											<li>加好友</li>
+											<li>私信</li>
+											<li>送礼物</li>
+											<li>举报</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="v_publish_main_left2_header" id="_v_publish_left2">
+								<div class="v_publish_main_timeline_left2"></div>
+								<h1>Queen舞</h1><span>北京</span><img src="images/lv/queen.png" alt="mark">
+								<p><i></i><b>12:36 am</b></p>
+							</div>
+							<div class="v_publish_main_left2_content">
+								<img src="images/lv/publish_state_ing.png" alt="state" class="v_publish_left1_state">
+								<div class="v_publish_main_left2_content_header"></div>
+								<div class="v_publish_main_left2_content_content"></div>
+								<div class="v_publish_main_left2_content_footer">
+									<div class="v_publish_main_share">
+										<ul>
+											<li style="background-position: 4px 19px;">腾讯微博</li>
+											<li style="background-position: 4px -46px;">QQ空间</li>
+											<li style="background-position: 4px -103px;">QQ好友</li>
+											<li style="background-position: 4px -156px;">新浪微博</li>
+										</ul>
+									</div>
+									<img src="images/lv/publish_footer_left.png" alt="footer_left">
+									<span class="v_publish_main_left2_content_footer_m">
+										查看梦想
+									</span>
+									<span class="v_publish_main_left2_content_footer_r" id="_v_publish_left2_share">
+										分享
+									</span>
+								</div>
+							</div>
+						</div>
+						<!--****************************************************************-->
+						<div class="v_publish_main_left2" style="display:none;">
+								<div class="v_publish_main_left2_header">
+									<div class="v_publish_main_timeline_left2"></div>
+									<h1>Queen舞</h1><span>北京</span><img src="images/lv/queen.png" alt="mark">
+									<p><i></i><b>12:36 am</b></p>
+								</div>
+								<div class="v_publish_main_left2_content">
+									<img src="images/lv/publish_state_ing.png" alt="state" class="v_publish_left1_state">
+									<div class="v_publish_main_left2_content_header"></div>
+									<div class="v_publish_main_left2_content_content"></div>
+									<div class="v_publish_main_left2_content_footer">
+										<img src="images/lv/publish_footer_left.png" alt="footer_left">
+										<span class="v_publish_main_left2_content_footer_m">
+											查看梦想
+										</span>
+										<span class="v_publish_main_left2_content_footer_r">
+											分享
+										</span>
+									</div>
+								</div>
+							</div>
+					</div>
+					<!--****************************************************************-->
+				
+					<div class="v_publish_main_timeline">
+						<div class="v_publish_main_timeline_ball">
+							<img src="images/lv/publish_refresh.png" alt="refresh">
+						</div>
+						<div class="v_publish_main_timeline_more"></div>
+						<div class="v_publish_main_timeline_line"></div>
+					</div>
+					<div class="v_publish_main_right">
+						<div class="v_publish_main_right1">
+							<div class="v_publish_main_left1_with" id="_v_publish_right1_with">
+								<div class="v_publish_main_left1_with_header">
+									<h1>青灯素月</h1><h2>中国公益集团副经理</h2>
+									<p>我只想做一些和别人不一样的事</p>
+									<ul>
+										<li style="background-position: 4px 0px;">250</li>
+										<li style="background-position: 2px -63px;">250</li>
+										<li style="background-position: 2px -131px;">250</li>
+										<li style="background-position: 2px -200px;">250</li>
+									</ul>
+									<b>他的勋章(<span>12</span>)</b>
+									<ol>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_more.png" alt="badge"></li>
+									</ol>
+									<div class="v_publish_main_left1_with_btn">
+										<ul>
+											<li>加好友</li>
+											<li>私信</li>
+											<li>送礼物</li>
+											<li>举报</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="v_publish_main_right1_header" id="_v_publish_right1">
+								<div class="v_publish_main_timeline_right1"></div>
+								<img src="images/lv/light.png" alt="mark"><h1>青灯素月</h1><span>上海</span>
+								<p><i></i><b>12:36 am</b></p>
+							</div>
+							<div class="v_publish_main_right1_content">
+								<img src="images/lv/publish_state_end_r.png" alt="state" class="v_publish_right1_state">
+								<div class="v_publish_main_right1_content_header"></div>
+								<div class="v_publish_main_right1_content_content"></div>
+								<div class="v_publish_main_right1_content_footer">
+									<div class="v_publish_main_share">
+										<ul>
+											<li style="background-position: 4px 19px;">腾讯微博</li>
+											<li style="background-position: 4px -46px;">QQ空间</li>
+											<li style="background-position: 4px -103px;">QQ好友</li>
+											<li style="background-position: 4px -156px;">新浪微博</li>
+										</ul>
+									</div>
+									<img src="images/lv/publish_footer_left.png" alt="footer_left">
+									<span class="v_publish_main_right1_content_footer_m">
+										查看梦想
+									</span>
+									<span class="v_publish_main_right1_content_footer_r" id="_v_publish_right1_share">
+										分享
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="v_publish_main_right2">
+							<div class="v_publish_main_left1_with" id="_v_publish_right2_with">
+								<div class="v_publish_main_left1_with_header">
+									<h1>忽闻布谷鸟声唤</h1><h2>他们都在吹牛逼</h2>
+									<p>我只想做一些和别人不一样的事</p>
+									<ul>
+										<li style="background-position: 4px 0px;">250</li>
+										<li style="background-position: 2px -63px;">250</li>
+										<li style="background-position: 2px -131px;">250</li>
+										<li style="background-position: 2px -200px;">250</li>
+									</ul>
+									<b>他的勋章(<span>12</span>)</b>
+									<ol>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_img.jpg" alt="badge"></li>
+										<li><img src="images/lv/publish_more.png" alt="badge"></li>
+									</ol>
+									<div class="v_publish_main_left1_with_btn">
+										<ul>
+											<li>加好友</li>
+											<li>私信</li>
+											<li>送礼物</li>
+											<li>举报</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="v_publish_main_right2_header" id="_v_publish_right2">
+								<div class="v_publish_main_timeline_right2"></div>
+								<img src="images/lv/eat.png" alt="mark"><h1>忽闻布谷鸟声唤</h1><span>新疆</span>
+								<p><i></i><b>12:36 am</b></p>
+							</div>
+							<div class="v_publish_main_right2_content">
+								<img src="images/lv/publish_state_expire_r.png" alt="state" class="v_publish_right1_state">
+								<div class="v_publish_main_right2_content_header"></div>
+								<div class="v_publish_main_right2_content_content"></div>
+								<div class="v_publish_main_right2_content_footer">
+									<div class="v_publish_main_share">
+										<ul>
+											<li style="background-position: 4px 19px;">腾讯微博</li>
+											<li style="background-position: 4px -46px;">QQ空间</li>
+											<li style="background-position: 4px -103px;">QQ好友</li>
+											<li style="background-position: 4px -156px;">新浪微博</li>
+										</ul>
+									</div>
+									<img src="images/lv/publish_footer_left.png" alt="footer_left">
+									<span class="v_publish_main_right2_content_footer_m">
+										查看梦想
+									</span>
+									<span class="v_publish_main_right2_content_footer_r" id="_v_publish_right2_share">
+										分享
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="v_publish_main_footer">
+						<p class="v_publish_main_footer_back"></p>
+					</div>
+				</div>
+		</div>
+			<div class="v_publish_friend">
+				<div class="v_publish_friend_header"></div>
+				<div class="v_publish_friend_content">
+					<div class="v_publish_friend_content_left">没登陆</div>
+					<div class="v_publish_friend_content_right">不让看</div>
+				</div>
+				<div class="v_publish_friend_footer">
+					<img src="images/lv/publish_friend_footer.png" alt="more">
+				</div>
+			</div>
+			<div class="v_publish_hero">
+				<img src="images/lv/hero_logo.jpg" alt="hero_logo" class="v_publish_hero_logo">
+				<div class="v_publish_hero_content">
+					<div class="v_publish_hero_content_middle" id="_v_heros_with">
+						<ul>
+							<li style="background: url(images/lv/hero_1.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">Sara</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_2.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">Selina</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_3.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">喵喵</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_4.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">中二病</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with" style="left:-290px;">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_3.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">肾疼</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with" style="left:-290px;">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<br>
+							<li style="background: url(images/lv/hero_4.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">中医</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_2.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">头疼</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_3.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">腰疼</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_2.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">蛋也疼</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with" style="left:-290px;">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+							<li style="background: url(images/lv/hero_1.png);">
+								<img class="v_hero_icon" src="images/lv/hero_i_1.png" alt="icon">
+								<a href="" class="v_hero_name">呵呵</a>
+								<span class="v_hero_btn">关注</span>
+								<div class="v_publish_hero_content_with" style="left:-290px;">
+									<h1>Marble</h1><h2>排名<span>1</span></h2>
+									<p>我是上天派来吹牛逼的</p>
+									<b>他的勋章(<span>8</span>)</b>
+									<ul>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+										<li><img src="images/lv/badge.png" alt="badge"></li>
+									</ul>
+									<ol>
+										<li>好友</li>
+										<li>私信</li>
+										<li>送礼物</li>
+										<li>举报</li>
+									</ol>
+								</div>
+							</li>
+						</ul>
+						<a href="" class="v_publish_hero_content_more">more...</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="v_footer">
+			<div class="v_footer_contact">
+				<div class="v_footer_contact_content">
+					<ul>
+						<li>
+							<dl>
+								<dt><a href="html/b_tj_dream.html">发现心愿</a>
+									<dd style="margin-top: 0;">
+										<span><a href="">生活</a></span>
+										<span><a href="">职场</a></span>
+										<span><a href="">旅游</a></span>
+										<br>
+										<span><a href="">娱乐</a></span>
+										<span><a href="">感情</a></span>
+										<span><a href="">学习</a></span>
+										<br>
+										<span><a href="">健身</a></span>
+										<span><a href="">爱好</a></span>
+										<span><a href="">...</a></span>
+									</dd>
+								</dt>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><a href="html/关于南极.html">玩转南极</a>
+									<dd><a href="">发心愿</a></dd>
+									<dd><a href="">做英雄</a></dd>
+									<dd><a href="">得勋章</a></dd>
+									<dd><a href="">网站地图</a></dd>
+									<dd><a href="">夜月游戏</a></dd>
+								</dt>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt><a href="html/关于南极.html">关于南极</a>
+									<dd><a href="">南极介绍</a></dd>
+									<dd><a href="">南极能做什么</a></dd>
+									<dd><a href="">南极公约</a></dd>
+									<dd><a href="">加入我们</a></dd>
+								</dt>
+							</dl>
+						</li>
+						<li>
+							<dl class="v_footer_contact_content_us">
+								<dt><a href="html/关于南极.html">联系南极</a>
+									<dd style="background:url(images/lv/us_mail.jpg) no-repeat 0px 0px;"><a href="">Support@nanji.com</a></dd>
+									<dd style="background:url(images/lv/us_wx.jpg) no-repeat 0px 0px;position: relative;" id="_v_us_wx">
+										<p>南极网微信(nanjiwang520)</p>
+										<div class="v_aboutus_wx">
+											<img src="images/lv/wx.png" alt="wx">
+										</div>
+									</dd>
+									<dd style="background:url(images/lv/us_wb.jpg) no-repeat 0px 0px;"><a href="">南极网新浪微博</a></dd>
+								</dt>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="v_footer_aboutus">
+				<div class="v_footer_aboutus_content">
+					<p>京ICP备11017824号-4&nbsp;/&nbsp;京ICP证130164号&nbsp;&nbsp;北京市公安局朝阳分局备案编号:110105000501</p>
+					<p>Copyright&nbsp;©&nbsp;2006-2013&nbsp;ZC00L&nbsp;全景统计</p>
+				</div>
+			</div>
+		</div>
+		<div class="v_main_back" id="_v_main_back">
+			<ul>
+				<li><img src="images/lv/green_panle.png" alt="绿色通道" style="margin: 10px 14px;"></li>
+				<li><img src="images/lv/mission.png" alt="任务" style="margin: 22px 14px;"></li>
+				<li><a href="html/v_mydream.html"><img src="images/lv/my_dream.png" alt="我的梦想" style="margin: 10px 14px;"></a></li>
+				<li><img src="images/lv/area.png" alt="area" style="margin: 22px 14px;"></li>
+			</ul>
+		</div>
+	</div>
+	<div class="v_contact"></div>
+	<div class="v_contact_main">
+		<div class="v_contact_header">
+			<div class="v_contact_header_close" id="_v_contact_close"></div>
+			<ul>
+				<li style="background: rgb(88,191,249);color:white;">登录</li>
+				<li>注册</li>
+			</ul>
+		</div>
+		<div class="v_login">
+			<div class="v_login_left">
+				<input type="text" style="background: url(images/lv/login_mail.png) no-repeat 5px 11px;" placeholder="邮箱">
+				<input type="text" style="background: url(images/lv/login_key.png) no-repeat 5px 11px;"placeholder="密码">
+				<input type="text" style="display:inline-block;width: 102px;">&nbsp;&nbsp;&nbsp;&nbsp;<span>获取验证码</span><br>
+				<input type="checkbox" style="display:inline-block;width: 13px;height: 13px;margin-top: 10px;">记住我<a href="">忘记密码</a>
+				<div>
+					<a href="html/个人信息.html"><span>登录</span></a>&nbsp;&nbsp;&nbsp;&nbsp;没有账号？<a href="javascript:void(0);" id="_v_toregister">马上注册</a>
+				</div>
+			</div>
+			<div class="v_login_right">
+				<p>使用合作网站账号登录</p>
+				<ul>
+					<li><img src="images/lv/login_qq.png" alt=""></li>
+					<li><img src="images/lv/login_weibo.png" alt=""></li>
+					<li><img src="images/lv/login_renren.png" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<div class="v_register">
+			<ul>
+				<li style="background: url(images/lv/register_model.png);"><div style="background: url(images/lv/register_phone.png) no-repeat 8px 5px;">用手机注册</div></li>
+				<li><div style="background: url(images/lv/register_mail.png) no-repeat 8px 11px;">用邮箱注册</div></li>
+			</ul>
+			<p><input type="text" placeholder="手机号码" id="_v_register_id"></p>
+			<p><input type="text" placeholder="昵称">&nbsp;&nbsp;<span>2-15个汉字或4-30个字符</span></p>
+			<p><input type="password" placeholder="密码" id="_v_register_psw"></p>
+			<p><input type="password" placeholder="确认密码" id="_v_register_enpsw">&nbsp;&nbsp;<span id="_v_register_pswstate"></span></p>
+			<p><input type="text" style="width: 102px;">&nbsp;&nbsp;&nbsp;&nbsp;<span>获取验证码</span></p>
+			<p><input type="checkbox" style="display:inline-block;width: 13px;height: 13px;margin-top: 10px;"><a href="">同意《南极公约》所有条款</a></p>
+			<p>
+				<span class="register_btn" style="color:white;font-size: 16px;">同意并注册</span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:rgb(88,191,249);" id="_v_tologin">已有账号登陆</a>
+			</p>
+		</div>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	/**************Ice**********************/
+	$("#_v_sky").hover(function(){
+		$("#_v_ice").stop().animate({marginTop:-100},1500);
+	},function(){
+		$("#_v_ice").stop().animate({marginTop:-350},1500);
+	})
+	/*****************With********************/
+	$("#_v_publish_left1").hover(function(){
+		$("#_v_publish_left1_with").show();
+		$("#_v_publish_left1_with").hover(function(){$(this).show()},function(){$(this).hide()})
+	},function(){
+		$("#_v_publish_left1_with").hide();
+	})
+	$("#_v_publish_left2").hover(function(){
+		$("#_v_publish_left2_with").show();
+		$("#_v_publish_left2_with").hover(function(){$(this).show()},function(){$(this).hide()})
+	},function(){
+		$("#_v_publish_left2_with").hide();
+	})
+	$("#_v_publish_right1").hover(function(){
+		$("#_v_publish_right1_with").show();
+		$("#_v_publish_right1_with").hover(function(){$(this).show()},function(){$(this).hide()})
+	},function(){
+		$("#_v_publish_right1_with").hide();
+	})
+	$("#_v_publish_right2").hover(function(){
+		$("#_v_publish_right2_with").show();
+		$("#_v_publish_right2_with").hover(function(){$(this).show()},function(){$(this).hide()})
+	},function(){
+		$("#_v_publish_right2_with").hide();
+	})
+	/****************Share*******************/
+	$("#_v_publish_left1_share,#_v_publish_left2_share,#_v_publish_right1_share,#_v_publish_right2_share").hover(function(){
+		$(this).siblings().first().show();
+		$(this).siblings().first().hover(function(){$(this).show();},function(){$(this).hide();})
+	},function(){
+		$(this).siblings().first().hide();
+	})
+	/**************Hero*********************/
+	$("#_v_heros_with>ul>li").hover(function(){
+		$(this).children("div").show();
+	},function(){
+		$(this).children("div").hide();
+	})
+	/*************WeiXin*******************/
+	$("#_v_us_wx").hover(function(){
+		$(this).children("div").show();
+	},function(){
+		$(this).children("div").hide();
+	})
+	/**************Top********************/
+	$(window).scroll( function(){
+		var top= document.body.scrollTop || document.documentElement.scrollTop;
+		//$top = $("body").scrollTop();
+		if(top > 600){
+			$("#_v_main_back").show();
+		}
+		else if(top < 600){
+			$("#_v_main_back").hide();
+		}
+	})
+	$($("#_v_main_back>ul>li")[3]).click(function(){
+		$("body,html").animate({scrollTop:0},1500);
+	})
+	/*************Star*********************/
+	$(".v_sky_star").hover(function(){
+		$(this).children(".v_sky_star_main").show();
+	},function(){
+		$(this).children(".v_sky_star_main").hide();
+	})
+	/************Contact*******************/
+	$($(".v_header_main_inf_login>a")[0]).click(function(){
+		$w = parseInt($(".v_main").width());
+		$h = parseInt($(".v_main").height())-60;
+		$mw = $w/2 - 280;
+		$(".v_contact").css({"width":$w,"height":$h,"opacity":0.7}).show();
+		$(".v_contact_main").css("left",$mw).show();
+		$(".v_login").show();
+		$(".v_register").hide();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[0]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	$($(".v_header_main_inf_login>a")[1]).click(function(){
+		$w = parseInt($(".v_main").width());
+		$h = parseInt($(".v_main").height())-60;
+		$mw = $w/2 - 280;
+		$(".v_contact").css({"width":$w,"height":$h,"opacity":0.7}).show();
+		$(".v_contact_main").css("left",$mw).show();
+		$(".v_login").hide();
+		$(".v_register").show();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[1]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	/***********Contact-Tab*********************/
+	$(".v_contact_header>ul>li").click(function(){
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$(this).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	$($(".v_contact_header>ul>li")[0]).click(function(){
+		$(".v_register").hide();
+		$(".v_login").show();
+	})
+	$($(".v_contact_header>ul>li")[1]).click(function(){
+		$(".v_login").hide();
+		$(".v_register").show();
+	})
+	$("#_v_contact_close").click(function(){
+		$(".v_contact,.v_contact_main").hide();
+	})
+	$("#_v_tologin").click(function(){
+		$(".v_register").hide();
+		$(".v_login").show();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[0]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	$("#_v_toregister").click(function(){
+		$(".v_register").show();
+		$(".v_login").hide();
+		$(".v_contact_header>ul>li").css({"background":"white","color":"black"});
+		$($(".v_contact_header>ul>li")[1]).css({"background":"rgb(88,191,249)","color":"white"});
+	})
+	/***********Register***********************/
+	$(".v_register>ul>li").click(function(){
+		$(".v_register>ul>li").css("background","none");
+		$(this).css("background","url(images/lv/register_model.png)")
+	})
+	$($(".v_register>ul>li")[0]).click(function(){
+		$("#_v_register_id").attr("placeholder","手机号码");
+	})
+	$($(".v_register>ul>li")[1]).click(function(){
+		$("#_v_register_id").attr("placeholder","邮箱地址");
+	})
+	$("#_v_register_enpsw").blur(function(){
+		if($(this).val() == $("#_v_register_psw").val()){
+			$("#_v_register_pswstate").html("密码一致")
+			$("#_v_register_pswstate").css("color","green");
+		}else{
+			$("#_v_register_pswstate").html("密码不一致，请重新输入");
+			$("#_v_register_pswstate").css("color","red");
+		}
+	})
+</script>
+</html>

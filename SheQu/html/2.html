@@ -1,0 +1,31 @@
+	<!-- 我的消息 -->
+		<ul class="my_news">
+				<li class="fix">
+					<div class="my_news_img"></div>
+					<div class="my_news_img2">物业费到期，请速到物</div>
+					<div class="my_news_img3" style="float: right">2014-3-10</div>
+				</li>
+				<li class="fix">
+					<div class="my_news_img"></div>
+					<div class="my_news_img2">物业费到期，请速到物</div>
+					<div class="my_news_img3" style="float: right">2014-3-10</div>
+				</li>
+				<li  class="fix" style="border-bottom: 0px solid #d7d8da;">
+					<div class="my_news_img"></div>
+					<div class="my_news_img2">物业费到期，请速到物</div>
+					<div class="my_news_img3" style="float: right">2014-3-10</div>
+				</li>
+			
+		</ul>
+
+
+		<script type="text/javascript">
+
+						// 消息2
+			$(".my_news>li").click(function(){
+				$(".huanzi").html("我的消息");
+						$(".con_ajax").load("3.html?date="+Math.random())	
+			});
+
+
+		</script>

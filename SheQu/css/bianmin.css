@@ -1,0 +1,178 @@
+html{font-family:"微软雅黑",Arial,sans-serif}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,button,textarea,p,th,td{padding:0;margin:0;font-family:Microsoft YaHei,sans-serif,Arial}
+a{text-decoration:none;color:#000;outline:none}
+li{list-style:none}
+img{border:0;border:none;}
+.x_box{
+	width:94%;
+	margin: 0 auto;
+	background:#f0eff4;
+}
+.x_header{
+	width:100%;
+	background:white;
+	height: 80px;
+	display:-webkit-box;
+}
+.x_header a:nth-child(1){
+	display: block;
+	width:20%;
+	height: 80px;
+	background: url(../images/bianmin/h1.png) 10% 50% no-repeat;
+}
+.x_header a:nth-child(2){
+	display: block;
+	width:60%;
+	text-align: center;
+	font:1.5em/80px "黑体";
+}
+.x_header a:nth-child(3){
+	display: block;
+	width:20%;
+	height: 80px;
+	background: url(../images/bianmin/h2.png) 90% 50% no-repeat;
+}
+
+.x_content{
+	margin: 25px auto;
+	width:94%;
+	margin-bottom: 90px;
+}
+.x_content_1{
+	margin-bottom:5px;
+	width:100%;
+	overflow: hidden;
+}
+.x_content_1 a{
+	display:block;
+	text-align: center;
+	color:white;
+	font:bold 1em "Arial";
+
+}
+.x_content_top{
+	width:100%;
+	display:-webkit-box;
+}
+.x_content_top a:nth-child(1){
+	width:49%;
+	margin-right: 2%;
+	background: #e66444 url(../images/bianmin/c1.png)50% 60% no-repeat;
+	background-size: 30%;
+}
+.x_content_top a:nth-child(2){
+	width:23.5%;
+	margin-right: 2%;
+	background: #f09056 url(../images/bianmin/c2.png)50% 60%  no-repeat;
+	background-size: 60%;
+}
+.x_content_top a:nth-child(3){
+	width:23.5%;
+	background: #a2c159 url(../images/bianmin/c3.png) 50% 60%  no-repeat;
+	background-size: 60%;
+}
+.x_content_bottom{
+	margin-top:10px;
+	width:100%;
+	display:-webkit-box;
+
+}
+.x_content_bottom a:nth-child(1){
+	width:23.5%;
+	margin-right: 2%;
+	background: #9178af url(../images/bianmin/c4.png) 50% 60%  no-repeat;
+	background-size: 60%;
+}
+.x_content_bottom a:nth-child(2){
+	width:23.5%;
+	margin-right: 2%;
+	background: #49a7da url(../images/bianmin/c5.png) 50% 60%  no-repeat;
+	background-size: 60%;
+}
+.x_content_bottom a:nth-child(3){
+	width:23.5%;
+	margin-right: 2%;
+	background: #56bc8a url(../images/bianmin/c6.png) 50% 60%  no-repeat;
+	background-size: 60%;
+}
+.x_content_bottom a:nth-child(4){
+	width:23.5%;
+	background: #d179ad url(../images/bianmin/c7.png) 50% 60%  no-repeat;
+	background-size: 60%;
+}
+.x_content2{
+	width:100%;
+	border:1px solid #cfcfcf;
+	border-radius: 5px;
+	background: white;
+	margin-top: 25px;
+}
+.x_content2 a{
+	display:block;
+	width:100%;
+	text-align: center;
+	font:1em "宋体";
+	color:#414141;
+}
+.x_content2 ul{
+	display:-webkit-box;
+}
+.x_content2 ul li:nth-child(1){
+	width:34%;
+}
+.x_content2 ul li:nth-child(2){
+	width: 33%;
+	border-left: 1px solid #ececec;
+	border-right: 1px solid #ececec;
+}
+.x_content2 ul li a:nth-child(2){
+	border-top: 1px solid #ececec;
+	border-bottom:1px solid #ececec;
+}
+.x_content2 ul li:nth-child(3){
+	width: 33%;
+}
+.x_content2 ul li p{
+	font-size:1.5em ;
+	padding-left: 0.2em;
+	padding-top: 0.3em;
+}
+.x_content2_li1{
+	color:#fb9543;
+	background:url(../images/bianmin/c10.png)bottom left no-repeat,url(../images/bianmin/c9.png)bottom right no-repeat;
+	background-size:50%,80%;
+}
+.x_content2_li2{
+	color:#87be31;
+	background:url(../images/bianmin/c10.png)bottom left no-repeat,url(../images/bianmin/c12.png)bottom right no-repeat;
+	background-size:50%,80%;
+}
+.x_content2_li3{
+	color:#f4cdcd;
+	background:url(../images/bianmin/c10.png)bottom left no-repeat,url(../images/bianmin/c13.png)bottom right no-repeat;
+	background-size:50%,80%;
+}
+.x_content2_li4{
+	color:#94b9df;
+	background:url(../images/bianmin/c10.png)bottom left no-repeat,url(../images/bianmin/c14.png)bottom right no-repeat;
+	background-size:50%,80%;
+}
+.x_content2_li5{
+	color:#9aa0c3;
+	background:url(../images/bianmin/c10.png)bottom left no-repeat,url(../images/bianmin/c15.png)bottom right no-repeat;
+	background-size:50%,80%;
+}
+.x_content2_li6{
+	color:#fb9543;
+	background:url(../images/bianmin/c10.png)bottom left no-repeat,url(../images/bianmin/c16.png)bottom right no-repeat;
+	background-size:50%,80%;
+}
+.v_footer{position: fixed;bottom: 0px;width: 94%;height: 58px;z-index: 1000;background: white;}
+.v_footer_div{width: 18.75%;height: 58px;float: left;border-top: 1px solid gray;padding-top: 10px;}
+.v_footer_l,.v_footer_r{width: 15%;float: left;height: 58px;}
+.v_footer_m{width: 70%;height: 58px;float: left;}
+.v_footer_m h1{height: 30px;text-align: center;}
+.v_footer_m p{height: 38px;text-align: center;font-family: "黑体";font-size: 0.6em;}
+.v_footer_m h1 img{width: 20px;height: 20px;}
+#phone{width: 40px;height: 40px;}
+#tel{padding-top: 10px;}

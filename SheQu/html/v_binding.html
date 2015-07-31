@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <style>
+        .v_header{width:100%;height:79px;
+            position:fixed;top: 0px;z-index: 1000;background: white;}
+        .v_header_l,.v_header_r{width:20%;height: 78px;border-bottom:1px solid rgb(240,239,244);float:left;text-align: center;line-height: 98px;}
+        .v_header_m{width: 60%;height: 78px;border-bottom: 1px solid rgb(240,239,244);
+            float: left;font-family: "黑体";font-size: 1.5em;text-align: center;line-height: 78px;}
+        .v_header_r{text-align: center;line-height: 78px;}
+        .v_header_r a{font-size: 1.2em;text-decoration: none;color:rgb(0,120,255);font-family: "黑体";}
+        .v_content{margin-top: 79px;background: rgb(240,239,244);overflow: hidden;}
+        .v_content_text{margin-top: 28px;}
+        .v_content_l,.v_content_r{width: 5%;height: 78px;float: left;}
+        .v_content_m{width: 90%;float: left;background: white;height: 76px;border: 1px solid rgb(214,214,214);}
+        .v_content_m input{display: block;width: 100%;height: 76px;font-size: 1.3em;text-indent: 10px;}
+    </style>
+</head>
+<body style="max-width: 768px;">
+<div class="main">
+    <div class="v_header">
+        <div class="v_header_l">
+            <img src="../images/lv/back.png" alt=""/>
+        </div>
+        <div class="v_header_m">
+            绑定小区
+        </div>
+        <div class="v_header_r"><a href="">保存</a></div>
+    </div>
+    <div class="v_content" id="content">
+        <div class="v_content_text">
+            <div class="v_content_l"></div>
+            <div class="v_content_m"><input type="text" placeholder="直接输入小区注册码"/></div>
+            <div class="v_content_r"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var h = $(window).height();
+        $("#content").css("height",h);
+    })
+</script>
+</html>

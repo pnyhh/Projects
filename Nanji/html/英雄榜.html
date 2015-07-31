@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>英雄榜</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.l-nav{
+			width: 100%;
+			height: 60px;
+			background: white;
+			position:fixed;
+			z-index: 9999;
+		}
+		.clearfix:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		.l-nav-center{
+			width: 1000px;
+			height: 100%;
+			margin:0 auto;
+			padding-left: 179px;
+		}
+		.l-nav-left,.l-nav-middle,.l-nav-right{
+			float: left;
+		}
+		.l-nav-left li{
+			float: left;
+			width: 70px;
+			font-size: 14px;
+			margin-right: 32px;
+			text-align: center;
+			line-height: 61px;
+		}
+		.l-nav-left li a{
+			color: #5B5B5B;
+		}
+		.l-nav-middle{
+			padding-top: 12px;
+			padding-right: 39px;
+
+		}
+		.l-nav-middle input{
+			width: 181px;
+			height: 33px;
+		}
+		.l-nav-right{
+			width: 200px;
+			position: relative;
+			padding-top: 6px;
+		}
+		.l-nav-right a{
+			margin-right: 23px;
+		}
+		.l-nav-right-span{
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			top: 11px;
+			right: 85px;
+			background: url(../images/liang/w_prompt.png) no-repeat;
+		}
+		.kong{height:60px;}
+		/*这是页面主体*/
+		.l-main{
+			width:100%;
+			height:1787px;
+			background: url(../images/liang/background.png) top center no-repeat;
+		}
+		.l-main-center{
+			width: 1000px;
+			margin: 0 auto;
+			height: 100%;
+			padding-top: 224px;
+		}
+		.l-main-left{
+			float: left;
+			width: 430px;
+		}
+		/*左小半部分*/
+		.l-main-left-zuo{
+			float: left;
+			width: 318px;
+		}
+		 .l-main-left-zuo h1{
+			width:318px;
+			height: 64px;
+			color: #282828;
+			font-size: 26px; 
+			text-align: right;
+			line-height: 64px;
+		}
+		.l-main-left-zuo ul li{
+			width: 318px;
+			height: 116px;
+			margin-top: 42px;
+			background: white;
+			position: relative;
+			padding-top: 1px;
+			border-radius: 6px;
+			box-shadow: 0 0 20px #819eab;
+		}
+		.l-main-left-zuo ul li p,.l-main-left-zuo ul li div{
+			margin-left: 18px;
+			margin-top: 12px;
+			font-size: 14px;
+			vertical-align: center;
+		}
+		.l-main-left-zuo ul li p{
+			color: #AAAAAA;
+		}
+		.l-main-left-zuo ul li:after{
+			content: "";
+			position: absolute;
+			top: 20px;
+			right: -20px;
+			border:10px solid transparent;
+			border-left:10px solid white;
+
+		}
+		 .l-main-left-zuo-a a,.l-main-right-2-a a{
+			float: left;
+			margin-right: 8px;
+			padding:4px 5px;
+			border: 1px solid gray;
+		}
+		.l-main-left-zuo-a a:hover,.l-main-right-2-a a:hover{
+			background: #007DFB;
+		}
+		.l-main-left-zuo .l-main-left-zuo-a a span,.l-main-right-2-a a span{
+			width: 10px;
+			height: 10px;
+			float: left;
+			margin:5px; 
+			background: url(../images/liang/jia.png)no-repeat;
+		}
+		/*左边右小部分*/
+		.l-main-left-you{
+			float: right;
+			width: 97px;
+			height: 100px;
+		}
+
+		.l-main-left-middle{
+			width: 4px;
+			height: 1365px;
+			background: white;
+			position: relative;
+			margin: 40px auto 0 ;
+				
+		}
+		.l-main-left-middle div{
+			width: 98px;
+			height: 146px;
+			background: white;
+			position: absolute;
+			top: 44px;
+			left:-44px;
+			text-align: center;
+			padding-top: 10px;
+
+		}
+		.l-main-left-middle div img{
+			border-radius: 50px;
+			background: gray;
+		}
+		.l-main-left-middle div span{
+			display: block;
+			width: 100%;
+			height: 33px;
+			background: url(../images/liang/no1.png) center no-repeat;
+		}
+		/*右半部分*/
+		.l-main-right{
+			float: right;
+			width: 430px;
+		}
+		.l-main-right-1{
+			float: left;
+			width: 97px;
+			height: 100px;
+		}
+		.l-main-right-2{
+			float: right;
+			width: 318px;
+		}
+		 .l-main-right-2 h1{
+			width:318px;
+			height: 64px;
+			color: #282828;
+			font-size: 26px; 
+			text-align: left;
+			line-height: 64px;
+		}
+
+		.l-main-right-2 ul li{
+			width: 318px;
+			height: 177px;
+			margin-top: 39px;
+			background: white;
+			position: relative;
+			padding-top: 1px;
+			border-radius: 6px;
+			box-shadow: 0 0 20px #819eab;
+		}
+		.l-main-right-2 ul li:after{
+			content: "";
+			clear: both;
+			display: block;
+			position: absolute;
+			top: 20px;
+			left: -20px;
+			border: 10px solid transparent;
+			border-right: 10px solid white;
+
+		}
+		.l-main-right-2 p,.l-main-right-2 dl,.l-main-right-2 div{
+			margin:10px 0 0 20px;
+		}
+		.l-main-right-2 dl dd{
+			float: left;
+			height: 79px;
+			width: 56px;
+			margin-right: 16px;
+
+		}
+		.l-main-right-2 dl dd span{
+			font-size: 12px;
+		}
+		.l-main-right-2 dl dd a{
+			float: left;
+		}
+		.l-main-colors{
+			width: 116px;
+			margin: 0 auto;
+			padding-top:69px;
+		}
+		.l-main-colors ul li{
+			height: 56px;
+			margin-top: 15px;
+			text-align: center;
+		} 
+		.l-main-colors ul li a{
+			font-size: 14px;
+			color: #fff;
+			display: block;
+			width: 100%;
+			line-height: 56px;
+			background: url(../images/liang/colors.png) 0 0 no-repeat;
+		}
+		/*下面是页面底部*/
+		.footer-up{
+			width: 100%;
+			height: 286px;
+			background: rgb(78,82,91);
+		}
+		.footer-ul{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.footer-ul li{
+			float:left;
+			width: 230px;
+			margin-right: 26px;
+		}
+		.footer-ul li dl dt a{color: #747474;}
+		.footer-ul li dl dt{
+			width: 100%;
+			height: 80px;
+			font:22px/105px "微软雅黑","宋体";
+			border-bottom: 1px solid gray;
+		}
+		.footer-ul .footer-right_{
+			margin-right: 0;
+		}
+		.footer-ul .footer-a a{
+			float: left;
+			width: 54px;
+			height: 28px;
+			background: gray;
+			color: white;
+			text-align: center;
+			line-height: 28px;
+			margin-top: 15px;
+			margin-right: 20px;
+		}
+		.footer-a a:hover{
+			background: #1EB6FF;
+		}
+		.footer-right_ dl dd a{
+			margin-left:10px;
+		}
+		.footer-ul .footer-a .footer-a-1{
+			width: 84px;
+		}
+		.footer-ul li dl dd{
+			margin-top: 15px;
+		}
+		.footer-ul li dl dd a{
+			color: white;
+			font-size: 14px;
+		}
+		.footer-up a:hover{
+			text-decoration: underline;
+		}
+		/*最底部*/
+		.footer-down{
+			width: 100%;
+			height: 165px;
+			background: rgb(57,62,72);
+			padding-top: 28px;
+		}
+		.footer-down p{
+			width: 1000px;
+			margin: 0 auto;
+			color: #7F7F7F;
+			font-size:12px;
+			text-align: left;
+			margin-top:5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="l-nav">
+		<div class="l-nav-center clearfix">
+			<ul class="l-nav-left clearfix">
+				<li><a href="../index.html">关于南极</a></li>
+				<li><a href="b_tj_dream.html">发现梦想</a></li>
+				<li><a href="英雄榜.html">英雄</a></li>
+			</ul>
+			<div class="l-nav-middle">
+				<input type="text" name="">
+				<a href="sousuo.html">搜索</a>
+			</div>
+			<div class="l-nav-right">
+				<a href="nanjishangcheng.html"><img src="../images/liang/01.gif" alt="" width="44" height="44"></a>
+				<a href="pinglun.html"><img src="../images/liang/02.gif" alt="" width="44" height="44">
+					<span class="l-nav-right-span"></span>
+				</a>
+				
+			</div>
+		</div>
+	</div>
+	<div class="kong"></div>
+	<!-- 页面主体部分 -->
+	<div class="l-main">
+		<div class="l-main-center clearfix">
+			<div class="l-main-left clearfix">
+				<div class="l-main-left-zuo">
+					<h1>个人英雄专区</h1>
+					<ul>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<div>
+								<strong>Mark</strong>
+								<img src="../images/liang/tu1.png" alt="">
+								<img src="../images/liang/tu2.png" alt="">
+								<span>中国公益集团董事长</span>
+							</div>
+							<p>我只想做一些和别人不一样的事</p>
+							<div class="l-main-left-zuo-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="l-main-left-you">
+					<div class="l-main-left-middle">
+						<div>
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:215px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:388px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:562px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:732px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="l-main-right">
+				<div class="l-main-right-1">
+					<div class="l-main-left-middle">
+						<div>
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:263px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:463px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:663px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+						<div style="top:863px;">
+							<a href="">
+								<img src="" alt="" width="76" height="76">
+							</a>
+							<span></span>
+							<i>11,000</i>
+						</div>
+					</div>
+				</div>
+				<div class="l-main-right-2">
+					<h1>品牌营销专区</h1>
+					<ul>
+						<li>
+							<p>戴尔企业</p>
+							<dl>
+								<dt></dt>
+								<dd>
+									<a href=""><img src="../images/liang/001.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/004.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+							</dl>
+							<div class="l-main-right-2-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<p>戴尔企业</p>
+							<dl>
+								<dt></dt>
+								<dd>
+									<a href=""><img src="../images/liang/001.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/004.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+							</dl>
+							<div class="l-main-right-2-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<p>戴尔企业</p>
+							<dl>
+								<dt></dt>
+								<dd>
+									<a href=""><img src="../images/liang/001.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/004.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+							</dl>
+							<div class="l-main-right-2-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<p>戴尔企业</p>
+							<dl>
+								<dt></dt>
+								<dd>
+									<a href=""><img src="../images/liang/001.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/004.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+							</dl>
+							<div class="l-main-right-2-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+						<li>
+							<p>戴尔企业</p>
+							<dl>
+								<dt></dt>
+								<dd>
+									<a href=""><img src="../images/liang/001.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/003.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+								<dd>
+									<a href=""><img src="../images/liang/004.jpg" width="56" height="56"></a>
+									<span><a href="">产品名字</a></span>
+								</dd>
+							</dl>
+							<div class="l-main-right-2-a">
+								<a href="">
+									<span></span>
+									关注
+								</a>
+								<a href="">私信</a>
+								<a href="">送礼物</a>
+								<a href="">举报</a>
+							</div>
+						</li>
+					</ul>				
+				</div>
+			</div>
+			<div class="l-main-colors">
+				<ul>
+					<li style="background:rgb(230,158,181);"><a href="">善意值</a></li>
+					<li style="background:rgb(79,218,178);"><a href="">一帮一</a></li>
+					<li style="background:rgb(134,218,242);"><a href="">资源</a></li>
+					<li style="background:rgb(232,199,108);"><a href="">资金</a></li>
+					<li style="background:rgb(183,157,225);"><a href="">意见</a></li>
+					<li style="background:rgb(223,180,177);"><a href="">顶</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 页面底部 -->
+		<div class="footer-up">
+			<ul class="footer-ul clearfix">
+				<li>
+					<dl>
+						<dt><a href="">发现梦想</a></dt>
+						<dd class="footer-a">
+							<a href="">微电影</a>
+							<a href="">音乐</a>
+							<a href="">读书</a>
+							<a href="">公益</a>
+							<a href="">教育</a>
+							<a href="">游戏</a>
+							<a href="" class="footer-a-1">更多梦想</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="">发起梦想</a></dt>
+						<dd><a href="">项目指导</a></dd>
+						<dd><a href="">可能遇到的问题</a></dd>
+						<dd><a href="">梦想学校</a></dd>
+						<dd><a href="">英雄指导</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="">关于南极</a></dt>
+						<dd><a href="">关于我们</a></dd>
+						<dd><a href="">我们的梦想</a></dd>
+						<dd><a href="">工作机会</a></dd>
+					</dl>
+				</li>
+				<li class="footer-right_">
+					<dl>
+						<dt><a href="">联系南极</a></dt>
+						<dd><img src="../images/liang/a1.png" alt=""><a href="">nanjin@gmail.com</a></dd>
+						<dd><img src="../images/liang/a2.png" alt=""><a href="">nanjin( 1286804769 )</a></dd>
+						<dd><img src="../images/liang/a3.png" alt=""><a href="">http://weibo.com/pincha123</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-down">
+				<p>
+					京ICP备11017825-4 / 京ICP证130164号&nbsp;&nbsp;北京市公安局朝阳分局备案编号:110105000501 
+				</p>
+				<p>
+				Copyright @ 2006-2013 ZCOOL 全景统计
+				</p>
+		</div>
+		
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"right","bdTop":"164.5"},"images/liang":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

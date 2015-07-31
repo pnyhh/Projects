@@ -1,0 +1,433 @@
+	html{font-family:"微软雅黑",Arial,sans-serif}
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,button,textarea,p,th,td{padding:0;margin:0;font-family:Microsoft YaHei,sans-serif,Arial}
+	a{text-decoration:none;color:#000;outline:none}
+	li{list-style:none}
+	img{border:0;border:none;}
+	body{
+    	background: #fafafa;
+    }
+	.clearfix:after{
+    	content: "";
+    	clear: both;
+    	display: block;
+    }
+    .x_head{
+		width:100%;
+		height:60px;
+		background: #f6f6f6;
+		position: fixed;
+		z-index: 3000;
+	}
+	.x_head1{
+		width:710px;
+		height:60px;
+		margin:0 auto;
+		overflow: hidden;
+	}
+	.x_headnav{
+		line-height: 60px;
+		float:left;
+		overflow: hidden;
+	}
+	.x_headnav li{
+		float:left;
+	}
+	.x_headnav a{
+		font-size: 17px;
+	}
+	.x_form{
+		float:left;
+		margin-left:88px;
+		overflow: hidden;
+		margin-top:14px;
+	}
+	.x_form input{
+		float: left;
+	}
+	.x_text{
+		width:164px;
+		height: 19px;
+		border:1px solid #e6e6e6;
+		border-right: none;
+		line-height: 19px;
+		padding:7px;
+	}
+	.x_btn{
+		width:35px;
+		height:35px;
+		border:0;
+		background: url(../images/mengxiang/sousuo1.jpg) 0 0 no-repeat;
+	}
+	.x_btn:hover{
+		background: url(../images/mengxiang/sousuo.jpg) 0 0 no-repeat;
+	}
+	.x_tubiao{
+		float:left;
+		margin-top:6px; 
+		margin-left:35px;
+		overflow: hidden;
+	}
+	.x_tubiao a{
+		float:left;
+	}
+	 .x_me{
+		margin-left: 20px;
+	}
+	.x_me img{
+		height:47px;
+		width:54px;
+	}
+/*banner蓝色部分*/
+	.x_banner{
+		width:100%;
+		height:138px;
+		padding-top:60px;
+		background: url(../images/mengxiang/F-1.jpg) bottom center no-repeat;
+		position:relative;
+	}
+	.x_banner h3{
+		width:1000px;
+		margin:0 auto;
+		color:white;
+		font: 30px/138px "微软雅黑","黑体";
+	}
+	.x_qiqiu{
+		position: absolute;
+		left:1030px;
+		top:30px;
+		z-index: 9999;
+		width:102px;
+		height: 102px;
+		background: url(../images/sousuo/qiqiu.png)
+	}
+	.x_conter{
+		width:1000px;
+		margin:5px auto 0;
+		overflow: hidden;
+	}
+	.x_conter_top{
+		width:100%;
+		height:39px;
+		overflow: hidden;
+		background: url(../images/sousuo/M-44.jpg) no-repeat;
+	}
+	.x_conter_top a{
+		float: left;
+		font: 18px/38px "微软雅黑","黑体";
+		color: #a6a6a6;
+		margin-right: 20px;
+		width: 110px;
+		text-align: center;
+	}
+	.x_conter_top .x_conter_top1 {
+		background: url(../images/sousuo/li1.png) no-repeat;
+		color: #FFF;
+		width: 110px;
+		text-align: center;
+		font: 18px/39px "微软雅黑","黑体";
+	}
+		/*...........*/
+	/*...........................*/
+	.x_conter_left{
+		margin-top: 20px;
+		width:662px;
+		float:left;
+	}
+	.x_conter_left2,.x_conter_left3,.x_conter_left4,.x_conter_left5,.x_conter_left6{
+		display:none ;
+	}
+	.x_conter_left_div1{
+		margin-top: 10px;
+		margin-bottom: 30px;
+		width: 662px;
+		height: 204px;
+		background: url(../images/sousuo/bj.png);
+	}
+	.x_conter_left_div1_top{
+		padding-top: 20px;
+		padding-left: 20px;
+	}
+	.x_conter_left_div1_r{
+		width:540px;
+		margin-top: 10px;
+		overflow: hidden;
+	}
+	.x_conter_left_div1_r_con p{	
+		overflow: hidden;
+		color: #878787;
+		font: 14px/28px "黑体";
+	}
+
+	.x_conter_left_div1_r_con a{
+		float:right;
+		padding:2px 10px; 
+		color:white;
+		font:12px "宋体";
+		background: #41a0dc;
+		margin-top: 5px;
+		margin-right: 20px;
+	}
+	.x_footer_1divtop_1_2_bots_span1{
+		float: right;
+		background: url(../images/mengxiang/i-22.jpg)0px 8px no-repeat;
+		margin-right: 10px;
+		padding-left: 30px;
+	}
+	.x_footer_1divtop_1_2_bots_span2{
+		float: right;
+		background: url(../images/mengxiang/i-21.jpg)0px 8px no-repeat;
+		padding-left: 20px;
+		color:#41a0dc;
+	}
+	.x_conter_left_div1_bot{
+		width: 662px;
+		border-top: 1px solid #F2F2F2;
+		overflow: hidden;
+	}
+	.x_conter_left_div1_bot li{
+		width:164px;
+		float:left;
+		font:12px/56px "宋体";
+		color:#878787;
+	}
+	.x_conter_left_div1_bot span{
+		padding-left: 70px;
+	}
+	.x_conter_left_div1_li1{
+		background: url(../images/sousuo/D-13.png)30px 13px no-repeat;
+	}
+	.x_conter_left_div1_li2{
+		background: url(../images/sousuo/D-14.jpg)30px 13px no-repeat;
+		border-left: 1px solid #F2F2F2;
+		border-right: 1px solid #F2F2F2;
+	}
+	.x_conter_left_div1_li3{
+		background: url(../images/sousuo/D-15.jpg)30px 13px no-repeat;
+		border-right: 1px solid #F2F2F2;
+	}
+	.x_conter_left_div1_li4{
+		background: url(../images/sousuo/D-16.jpg)30px 13px no-repeat;
+	}
+	.x_conter_right2_21 .x_conter_lefta1{
+		font: 18px/26px "黑体";
+		color: #4f4f4f;
+	}
+	.x_conter_right2_2 .x_conter_leftstrong1{
+		display: inline-block;
+		color: #6b6b6b;
+		font:normal 16px/32px "黑体";
+	}
+	.x_conter_leftdiv1{
+		margin: 12px 0;
+	}
+	.x_conter_leftdiv1 img{
+		margin-right: 10px;
+		width:30px;
+		height:30px;
+	}
+	.x_conter_leftdiv2{
+		width: 435px;
+	}
+	.x_conter_leftdiv2 img{
+		margin-right: 10px;
+		width:58px;
+		height: 40px;
+	}
+	.x_conter_leftdiv3{
+		float: left;
+		width:240px;
+	}
+	.x_conter_leftdiv5{
+		width:240px;
+		overflow: hidden;
+	}
+	.x_conter_leftdiv4{
+		float:left;
+		width: 270px;
+		margin-left: 20px;
+		overflow: hidden;
+	}
+	.x_conter_leftul1 li{
+		float:left;
+		width: 55px;
+		margin-right: 12px;
+		text-align: center;
+	}
+	.x_conter_leftul1 img{
+		width: 55px;
+		height:55px;
+	}
+	.x_conter_leftul1 p{
+		font:12px/30px "宋体";
+		color:#4f4f4f;
+	}
+	.x_conter_leftdiv4 h4{
+		font:normal 16px "黑体";
+		color:#4f4f4f;
+		margin-bottom: 10px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.x_conter_right2_21 span{
+		display: inline-block;
+		vertical-align: middle;
+		width: 11px;
+		height: 15px;
+		background: url(../images/sousuo/l-4.png);
+		margin-right: 10px;
+		margin-left: 15px;
+	}
+	/*...........*/
+	/*...........................*/
+	.x_conter_right{
+		margin-top: 20px;
+		width:300px;
+		float:right;
+	}
+	.x_conter_right1 h3{
+		font:normal 22px/48px "黑体";
+		color: #4f4f4f;
+		background: url(../images/sousuo/l-1.png)3px 40px no-repeat;
+	}
+	.x_conter_right2{
+		margin-top: 15px;
+	}
+	.x_conter_right2 li{
+		margin-bottom:30px;
+		overflow: hidden;
+	}
+	.x_conter_right2_1{
+		float:left;
+		position: relative;
+		margin-right: 10px;
+	}
+	.x_zhao{
+		width:75px;
+		height:75px;
+		position: absolute;
+		left:0px;
+		top:0px;
+		background: url(../images/sousuo/zhao.png) no-repeat;
+	}	
+
+	.x_conter_right2_21 a{
+		color: #333;
+		font: 12px/28px "宋体";
+	}
+	.x_conter_right2_21 img{
+		margin-left: 10px;
+		vertical-align: middle;
+	}
+	.x_conter_right2_2 p{
+		line-height: 30px;
+		color:#6b6b6b;
+	}
+	.x_conter_right3{
+		width:300px;
+		height: 26px;
+		margin: 30px 0;
+		background: url(../images/sousuo/r-1.png) 0px 0px no-repeat;
+	}
+	.x_conter_right3 p{
+		font:18px/26px "黑体";
+		color:#4f4f4f;
+		padding-left: 30px;
+	}
+	.x_conter_right4 li{
+		float:left;
+		margin-right: 25px;
+		margin-bottom: 20px;
+	}
+	.x_conter_right4 li a{
+		background: url(../images/sousuo/r2.png) no-repeat;
+		display: inline-block;
+		width:70px;
+		height: 32px;
+		text-align: center;	
+		font:14px/32px "宋体";
+		color:#a6a6a6;
+	}
+	.x_conter_right4 li a:hover{
+		background: url(../images/sousuo/r3.png) no-repeat;
+		color:white;
+	}
+/*..................................*/
+	/*........................*/
+	.x_footer1{
+		width:100%;
+		height:285px;
+		background: #4e525b;
+		overflow: hidden;
+	}
+	.x_footer1ul{
+		width:1000px;
+		margin:30px auto 0;
+		overflow: hidden;
+	}
+	.x_footer1 ul li{
+		float:left;
+		width: 230px;
+		margin-right:20px; 
+	}
+	.x_footer1 ul li h3{
+		border-bottom: 1px solid #75787F;
+	}
+	.x_footer1 ul li h3 a {
+		font: 22px/55px "Microsoft YaHei","黑体";
+		color: #ADAEB0;
+	}
+	.x_footer1 ul li span{
+		float:left;
+		height: 29px;
+		width: 55px;
+		margin: 22px 20px 0 0;
+		text-align: center;
+		background: #646c79;
+		line-height: 29px;
+	}
+	.x_footer1 ul li span:hover{
+		background: #58bff9;
+	}
+	.x_footer1 ul li a{
+		color:white;
+		font: 14px/27px "Microsoft YaHei","黑体";
+	}
+	.x_footer1 p{
+		margin-top: 10px;
+	}
+	.x_footer1p1{
+		height: 25px;
+		padding-left: 32px;
+		background: url('../images/mengxiang/youxiang.jpg')0 0 no-repeat;
+	}
+	.x_footer1p2{
+		height: 25px;
+		padding-left: 32px;
+		background: url('../images/mengxiang/weixin.jpg')0 0 no-repeat;
+	}
+	.x_footer1p3{
+		height: 25px;
+		padding-left: 32px;
+		background: url('../images/mengxiang/weibo.jpg')0 0 no-repeat;
+	}
+
+	.x_footer2{
+		width:100%;
+		height: 160px;
+		background: #3a3e49;
+		padding-top:20px;
+	}
+	.x_footer2 p{
+		font: 11px/22px "Microsoft YaHei","黑体";
+		color: #AAAFB3;
+		margin:0 auto;
+		width:1000px;
+	}

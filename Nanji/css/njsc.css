@@ -1,0 +1,481 @@
+<style>
+	html{font-family:"微软雅黑",Arial,sans-serif}
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,button,textarea,p,th,td{padding:0;margin:0;font-family:Microsoft YaHei,sans-serif,Arial}
+	a{text-decoration:none;color:#000;outline:none}
+	li{list-style:none}
+	img{border:0;border:none;}
+	.x_head{
+		width:100%;
+		height:60px;
+		background: #f6f6f6;
+		position: fixed;
+		z-index: 3000;
+	}
+	.x_head1{
+		width:710px;
+		height:60px;
+		margin:0 auto;
+		overflow: hidden;
+	}
+	.x_headnav{
+		line-height: 60px;
+		float:left;
+		overflow: hidden;
+	}
+	.x_headnav li{
+		float:left;
+	}
+	.x_headnav a{
+		font-size: 17px;
+	}
+	.x_form{
+		float:left;
+		margin-left:88px;
+		overflow: hidden;
+		margin-top:14px;
+	}
+	.x_form input{
+		float: left;
+	}
+	.x_text{
+		width:164px;
+		height: 19px;
+		border:1px solid #e6e6e6;
+		border-right: none;
+		line-height: 19px;
+		padding:7px;
+	}
+	.x_btn{
+		width:35px;
+		height:35px;
+		border:0;
+		background: url(../images/shangcheng/sousuo1.jpg) 0 0 no-repeat;
+	}
+	.x_btn:hover{
+		background: url(../images/shangcheng/sousuo.jpg) 0 0 no-repeat;
+	}
+	.x_tubiao{
+		float:left;
+		margin-top:6px; 
+		margin-left:35px;
+		overflow: hidden;
+	}
+	.x_tubiao a{
+		float:left;
+	}
+	 .x_me{
+		margin-left: 20px;
+	}
+	.x_me img{
+		height:47px;
+		width:54px;
+	}
+	.x_conter1{
+		width:100%;
+		height: 478px;
+		padding-top: 60px;
+		background:url(../images/shangcheng/sc-1.png) center no-repeat;
+	}
+	.x_conter11{
+		margin: 0 auto;
+		width: 1000px;
+		overflow: hidden;
+		width: 1000px;
+		position: relative;
+		height: 450px;
+	}
+	.x_tabimg{
+		z-index: 1;
+		width:1000px;
+		height:415px;
+		position: relative;
+		overflow: hidden;
+		margin:0 auto;
+	}
+	.x_tabimg li{
+		width:100%;
+		text-align:center;
+		height:390px;
+		margin-top: 25px;
+	/*	display: none;*/
+	}
+	.x_conter111{
+		position: absolute;
+		z-index: 1500;
+		top: 0px;
+		left: 0;
+		background: url(../images/shangcheng/sc-2.png) no-repeat;
+		width: 1000px;
+		height: 416px;
+	}
+	.x_tabbtn{
+		width:60px;
+		height:30px;
+		margin:5px auto;
+		line-height: 30px;
+		padding-top: 10px;
+		overflow: hidden;
+	}
+	.x_tabbtn li{
+		float:left;
+		cursor: pointer;
+		width: 8px;
+		height: 8px;
+		margin: 5px;
+		background: url(../images/shangcheng/tabbtn.png) -18px 0;
+	}
+	.x_tabbtn .on{
+		background-position: 0 0;
+	}
+	.x_conter2{
+		width:1000px;
+		height:705px;
+		margin: 0 auto;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.x_conter21{
+		width:230px;
+		height: 705px;
+		float:left;
+		background: url(../images/shangcheng/zuobj.jpg) repeat;
+	}
+	.x_conter21a1{
+		display: block;
+		width: 230px;
+		height: 125px;
+		background: url(../images/shangcheng/0daoju.jpg)
+	}
+	.x_conter21a2{
+		display: block;
+		width: 230px;
+		height: 125px;
+		background: url(../images/shangcheng/1daoju.jpg)
+	}
+	.x_conter22a{
+		display: block;
+		width: 230px;
+		height: 125px;
+		background: url(../images/shangcheng/daoju1.png)
+	}
+	.x_conter21a{
+		display: block;
+		width: 230px;
+		height: 125px;
+		background: url(../images/shangcheng/liwu1.png)
+	}
+	.x_conter22{
+		float: left;
+		width:765px;
+		height: 695px;
+		border:3px solid gray;
+		border-radius: 15px;
+		border-left: none;
+	}
+	.x_conter220{
+		display: none;
+	}
+	.x_conter221{
+		float:left;
+		margin:15px 0 15px 45px;
+		position: relative;
+	}
+	.x_conter221 p{
+		color: #4e525b;
+		font: 14px/14px "宋体";
+		text-align: center;
+		margin-top: 12px;
+	}
+	.x_conter221 span{
+		display: block;
+		color: #878787;
+		font: 14px/14px "宋体";
+		text-align: center;
+		margin-top: 6px;
+	} 
+	.x_conter221a{
+		display: block;
+		background: url(../images/shangcheng/goumai1.jpg) no-repeat;
+		width: 77px;
+		height: 28px;
+		text-align: center;
+		line-height: 28px;
+		font: 14px/28px "宋体";
+		color: #FFF;
+		margin: 0 auto;
+		margin-top: 12px;
+	}
+	.x_conter221yincangdiv{
+		display: none;
+		overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    left:95px;
+	    width: 289px;
+	    height: 196px;
+	    z-index: 1000;
+	    background: url(../images/shangcheng/sc-19.png);
+	}
+	.x_conter221yincangdiva1{
+		width: 12px;
+		height: 11px;
+		float: right;
+		display:block;
+		margin: 10px 15px 0 0;
+	}  
+	.x_conter221yincangdivtext{
+		width: 250px;
+		margin: 0 auto;
+		margin-top: 29px;
+	}
+	.x_conter221yincangdivtext h3{
+		color: #4e525b;
+		font: 14px/14px "宋体";
+		font-weight: bold;
+		margin-bottom: 14px;
+	}
+	.x_conter221yincangdivtext p{
+		color: #878787;
+		font: 12px/24px "宋体";
+		margin-top: 8px;
+		width: 245px;
+		text-align: left;
+	}
+	.x_conter221yincangdiva2{
+		display: block;
+		width: 77px;
+		height: 28px;
+		margin: 0 auto;
+		margin-top: 20px;
+		font: 14px/28px "宋体";
+		color: #FFF;
+		text-align: center;
+		background: url(../images/shangcheng/sc-17.jpg);
+	}
+	.x_xxgm{
+		background: url(../images/shangcheng/sc-20.png) no-repeat;
+		width: 634px;
+		height: 481px;
+		overflow: hidden;
+		position: fixed;
+		top: 70px;
+		left: 365px;
+		z-index: 2000;
+		display: none;
+	}
+	.x_xxgm_close{
+		float:right;
+		margin-top:10px;
+		margin-right: 10px;
+	}
+	.x_xxgm_top{
+		height:40px;
+		text-align: center;
+		font-size: 18px;
+		color: white;
+		line-height: 40px;
+	}
+	.x_xxgm_main{
+		width: 540px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.x_xxgm_main_user{
+		overflow: hidden;
+	}
+	.x_xxgm_main_user_L{
+		float:left;
+	}
+	.x_xxgm_main_user_R{
+		float:left;
+		margin-left: 30px;
+		margin-top: 10px;
+	}
+	.x_xxgm_main_user_R p{
+		overflow: hidden;
+	}
+	.x_xxgm_main_user_R p span{
+		color: #4e525b;
+		font: 14px/28px "宋体";
+		float: left;
+	}
+	.x_xxgm_main_user_R p a{
+		float:left;
+		margin-left:15px;
+		color:#fe7b61; 
+		font: 24px/28px "Arial";
+	}
+	.x_xxgm_main_user_R p strong{
+		font: 14px/28px "宋体";
+		float: left;
+		color:#fe7b61;
+	}
+	.x_xxgm_main_daoju{
+		margin-top: 15px;
+	}
+	.x_xxgm_main_daoju h3{
+		color: #41a0dc;
+		font: 14px/14px "宋体";
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+	.x_xxgm_main_daoju span{
+		color: #4e525b;
+		font: 12px/24px "宋体";
+	}
+	.x_xxgm_gouqu{
+		width:200px;
+		float:right;
+		margin-right:50px;
+		margin-top:110px;  
+	}
+	.x_xxgm_gouqu a{
+		display: inline-block;
+		margin-left:20px; 
+		width: 77px;
+		height: 28px;
+		text-align: center;
+		font: 14px/28px "宋体";
+		color: #FFF;
+		background: url(../images/shangcheng/goumai1.jpg);
+	}
+	.x_xxgm_gouqu a:hover{
+		background: url(../images/shangcheng/quxiao.jpg);
+	}
+	.x_goumai{
+		background: url(../images/shangcheng/sc-13.png) no-repeat;
+		width: 309px;
+		height: 171px;
+		top:200px;
+		left:500px;
+		overflow: hidden;
+		position: fixed;
+		z-index: 99999;
+		display: none;
+	}
+	.x_goumai_close{
+		float:right;
+		margin-top:5px;
+		margin-right:15px; 
+	}
+	.x_goumai_main{
+		width:200px;
+		margin:40px auto;
+		height: 28px;
+		line-height: 28px;
+	}
+	.x_goumai_main span{
+		color: #4e525b;
+		font: 14px/28px "宋体";
+		margin-right: 5px;
+	}
+		
+	.x_goumai_main input{
+		width:70px;
+		height:26px;
+		border:1px solid #F2F2F2;
+		text-align: center;
+	}
+	.x_goumai_main a{
+		width:20px;
+		height:28px;
+		display: inline-block;
+		text-align: center;
+	}
+	.x_goumai_gouqu{
+		text-align: center;
+	}
+	.x_goumai_gouqu a{
+		display: inline-block;
+		margin:0 20px; 
+		width: 77px;
+		height: 28px;
+		text-align: center;
+		font: 14px/28px "宋体";
+		color: #FFF;
+		background: url(../images/shangcheng/sc-17.jpg);
+	}
+	.x_goumai_gouqu a:hover{
+		background: url(../images/shangcheng/quxiao.jpg);
+	}
+
+
+
+
+
+
+
+
+
+
+	.x_footer1{
+		width:100%;
+		height:285px;
+		background: #4e525b;
+		overflow: hidden;
+	}
+	.x_footer1ul{
+		width:1000px;
+		margin:30px auto 0;
+		overflow: hidden;
+	}
+	.x_footer1 ul li{
+		float:left;
+		width: 230px;
+		margin-right:20px; 
+	}
+	.x_footer1 ul li h3{
+		border-bottom: 1px solid #75787F;
+	}
+	.x_footer1 ul li h3 a {
+		font: 22px/55px "Microsoft YaHei","黑体";
+		color: #ADAEB0;
+	}
+	.x_footer1 ul li span{
+		float:left;
+		height: 29px;
+		width: 55px;
+		margin: 22px 20px 0 0;
+		text-align: center;
+		background: #646c79;
+		line-height: 29px;
+	}
+	.x_footer1 ul li span:hover{
+		background: #58bff9;
+	}
+	.x_footer1 ul li a{
+		color:white;
+		font: 14px/27px "Microsoft YaHei","黑体";
+	}
+	.x_footer1 p{
+		margin-top: 10px;
+	}
+	.x_footer1p1{
+		height: 25px;
+		padding-left: 32px;
+		background: url('../images/shangcheng/youxiang.jpg')0 0 no-repeat;
+	}
+	.x_footer1p2{
+		height: 25px;
+		padding-left: 32px;
+		background: url('../images/shangcheng/weixin.jpg')0 0 no-repeat;
+	}
+	.x_footer1p3{
+		height: 25px;
+		padding-left: 32px;
+		background: url('../images/shangcheng/weibo.jpg')0 0 no-repeat;
+	}
+
+	.x_footer2{
+		width:100%;
+		height: 160px;
+		background: #3a3e49;
+		padding-top:20px;
+	}
+	.x_footer2 p{
+		font: 11px/22px "Microsoft YaHei","黑体";
+		color: #AAAFB3;
+		margin:0 auto;
+		width:1000px;
+	}
+</style>

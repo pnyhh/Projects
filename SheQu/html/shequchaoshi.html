@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{
+			min-width: 320px;
+			max-width: 720px;
+			margin: 0 auto;
+			background:#B9B9B9;
+		}
+		.main{
+			width: 100%;
+		}
+		.head{
+			width: 100%;
+			text-align: center;
+			font:20px/78px "Microsoft YaHei","黑体";
+			height: 78px;
+			background:white;
+			position: fixed;
+			top: 0px;
+			width:100%;
+			overflow: hidden;
+			z-index: 999;
+		}
+		.head-a{
+			float: left;
+			width: 20px;
+			height: 32px;
+			background:url(../images/01.jpg) no-repeat;
+			margin-top: 20px;
+			margin-left: 34px;
+		}
+		.kong{
+			height:78px;
+			width: 100%; 
+		}
+		/*头部*/
+		
+		/*脚步*/
+		.v_footer{position: fixed;bottom: 0px;width: 100%;height: 98px;z-index: 1000;background: white;}
+        .v_footer_div{width: 18.75%;height: 88px;float: left;border-top: 1px solid gray;padding-top: 10px;}
+        .v_footer{position: fixed;bottom: 0px;width: 100%;height: 58px;z-index: 1000;background: white;}
+        .v_footer_div{width: 18.75%;height: 58px;float: left;border-top: 1px solid gray;padding-top: 10px;}
+        .v_footer_l,.v_footer_r{width: 15%;float: left;height: 58px;}
+        .v_footer_m{width: 70%;height: 58px;float: left;}
+        .v_footer_m h1{height: 30px;text-align: center;}
+        .v_footer_m p{height: 38px;text-align: center;font-family: "黑体";font-size: 0.6em;}
+        .v_footer_m h1 img{width: 20px;height: 20px;}
+        #phone{width: 40px;height: 40px;}
+        #tel{padding-top: 10px;}
+		/*主体*/
+		.cont{
+			width: 90%;
+			margin: 0 auto;
+			background: white;
+			border-radius: 10px;
+			margin-top: 24px;
+			padding: 3%;
+			overflow: hidden;
+		}
+		.left{
+			float: left;
+			width: 30%;
+		}
+		.left img{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		.right{
+			width: 60%;
+			float: left;
+			margin-left: 5%;
+		}
+		.right dl dt{
+			font-size: 25px;
+			padding-bottom: 3%;
+		}
+		.right dl dd{
+			font-size: 12px;
+			padding-bottom: 3%;
+		}
+		.right .right_a{
+			display:block;
+			width: 50%;
+			height: 14%;
+			color: white;
+			background: #43E25B;
+			margin:0 auto;
+			float: left;
+			border-radius: 30px;
+			text-align: center;
+		}
+		.kong1{
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+		<div class="head">
+				<span class="head-a"></span>社区超市
+		</div>
+		<div class="kong"></div>
+		<!-- 身体 -->
+		
+			<div class="cont">
+				<div class="left">
+					<img src="../images/shequ.jpg" alt="">
+				</div>
+				<div class="right">
+					<dl>
+						<dt>天宝蕉</dt>
+						<dd>价格：10元/斤</dd>
+						<dd>商家：双龙超市</dd>
+						<dd>地址：四惠大厦</dd>
+					</dl>
+						<a href="" class="right_a">订购</a>
+				</div>
+			</div>
+			<div class="cont">
+				<div class="left">
+					<a href=""><img src="../images/shequ.jpg" alt=""></a>
+				</div>
+				<div class="right">
+					<dl>
+						<dt>天宝蕉</dt>
+						<dd>价格：10元/斤</dd>
+						<dd>商家：双龙超市</dd>
+						<dd>地址：四惠大厦</dd>
+					</dl>
+						<a href="" class="right_a">订购</a>
+					
+				</div>
+			</div>
+			<div class="cont">
+				<div class="left">
+					<img src="../images/shequ.jpg" alt="">
+				</div>
+				<div class="right">
+					<dl>
+						<dt>天宝蕉</dt>
+						<dd>价格：10元/斤</dd>
+						<dd>商家：双龙超市</dd>
+						<dd>地址：四惠大厦</dd>
+					</dl>
+						<a href="" class="right_a">订购</a>
+					
+				</div>
+			</div>
+		<!-- 身体结束 -->
+		<div class="kong1"></div>
+			<div class="v_footer">
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/home.png"></h1>
+                <p style="color:rgb(0,121,255);">首页</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/cafe.png"></h1>
+                <p>便民</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div style="width:25%;height98px;float:left;height:98px;border-top: 1px solid gray;">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1 style="position:relative;" id="tel"><img src="../images/lv/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                <p>一键拨号</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/building.png"></h1>
+                <p>社区</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/people.png"></h1>
+                <p>我的</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+    </div>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+    $(window).resize(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+</script>
+</html>

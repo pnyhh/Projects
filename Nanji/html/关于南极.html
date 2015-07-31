@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+				.l-nav{
+			width: 100%;
+			height: 60px;
+			background: white;
+			position:fixed;
+			z-index: 9999;
+		}
+		.clearfix:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		.l-nav-center{
+			width: 1000px;
+			height: 100%;
+			margin:0 auto;
+			padding-left: 179px;
+		}
+		.l-nav-left,.l-nav-middle,.l-nav-right{
+			float: left;
+		}
+		.l-nav-left li{
+			float: left;
+			width: 70px;
+			font-size: 14px;
+			margin-right: 32px;
+			text-align: center;
+			line-height: 61px;
+		}
+		.l-nav-left li a{
+			color: #5B5B5B;
+		}
+		.l-nav-middle{
+			padding-top: 12px;
+			padding-right: 39px;
+
+		}
+		.l-nav-middle input{
+			width: 181px;
+			height: 33px;
+		}
+		.l-nav-right{
+			width: 200px;
+			position: relative;
+			padding-top: 6px;
+		}
+		.l-nav-right a{
+			margin-right: 23px;
+		}
+		.l-nav-right-span{
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			top: 11px;
+			right: 85px;
+			background: url(../images/liang/w_prompt.png) no-repeat;
+		}
+		.kong{height:60px;}
+				/*下面是页面底部*/
+		.footer-up{
+			width: 100%;
+			height: 286px;
+			background: rgb(78,82,91);
+		}
+		.footer-ul{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.footer-ul li{
+			float:left;
+			width: 230px;
+			margin-right: 26px;
+		}
+		.footer-ul li dl dt a{color: #747474;}
+		.footer-ul li dl dt{
+			width: 100%;
+			height: 80px;
+			font:22px/105px "微软雅黑","宋体";
+			border-bottom: 1px solid gray;
+		}
+		.footer-ul .footer-right_{
+			margin-right: 0;
+		}
+		.footer-ul .footer-a a{
+			float: left;
+			width: 54px;
+			height: 28px;
+			background: gray;
+			color: white;
+			text-align: center;
+			line-height: 28px;
+			margin-top: 15px;
+			margin-right: 20px;
+		}
+		.footer-a a:hover{
+			background: #1EB6FF;
+		}
+		.footer-right_ dl dd a{
+			margin-left:10px;
+		}
+		.footer-ul .footer-a .footer-a-1{
+			width: 84px;
+		}
+		.footer-ul li dl dd{
+			margin-top: 15px;
+		}
+		.footer-ul li dl dd a{
+			color: white;
+			font-size: 14px;
+		}
+		.footer-up a:hover{
+			text-decoration: underline;
+		}
+		/*最底部*/
+		.footer-down{
+			width: 100%;
+			height: 165px;
+			background: rgb(57,62,72);
+			padding-top: 28px;
+		}
+		.footer-down p{
+			width: 1000px;
+			margin: 0 auto;
+			color: #7F7F7F;
+			font-size:12px;
+			text-align: left;
+			margin-top:5px;
+		}
+		/*主体*/
+		.main{
+			width: 100%;
+			height: 1459px;
+			background: url(../images/liang/guanyu.jpg) center top no-repeat;
+			position: relative;
+		}
+		.guan{
+			width: 116px;
+			top: 256px;
+			left: 298px;
+			position: absolute;
+		}
+		.guan h1{
+			font-size: 25px;
+			color: #20211D;
+			margin-right: 10px;
+			margin-bottom: 51px;
+			
+		}
+		.guan ul li{
+			font-size: 16px;
+			color: #424439;
+			padding-left: 20px;
+			margin-bottom: 61px;
+		}
+		.text{
+			width: 741px;
+			height: 1011px;
+			background: white;
+			position: absolute;
+			top: 343px;
+			right: 183px;
+		}
+		.area{
+			width: 675px;
+			margin: 0 auto;
+		}
+		.area ul li{
+			margin-top: 30px;
+		}
+		.area dl dt{
+			font-weight: bold;
+			color: #454545;
+			font-size: 18px;
+		}
+		.area dl dd{
+			margin-top: 24px;
+			color: #878787;
+			font-size: 14px;
+			text-indent: 3em;
+		}
+		.area .left_a{
+			overflow: hidden;
+		}
+		.area .left_a div{
+			margin-left: 46px;
+			float: left;
+		}
+		.bing{
+			position: absolute;
+			bottom: 106px;
+			right:183px;
+			width: 289px;
+			height: 158px;
+			background: url(../images/liang/bingshan.jpg) no-repeat;
+		}
+	</style>
+</head>
+<body>
+		<!-- 头部 -->
+	<div class="l-nav">
+		<div class="l-nav-center clearfix">
+			<ul class="l-nav-left clearfix">
+				<li><a href="../index.html">关于南极</a></li>
+				<li><a href="b_tj_dream.html">发现梦想</a></li>
+				<li><a href="英雄榜.html">英雄</a></li>
+			</ul>
+			<div class="l-nav-middle">
+				<input type="text" name="">
+				<a href="sousuo.html">搜索</a>
+			</div>
+			<div class="l-nav-right">
+				<a href="nanjishangcheng.html"><img src="../images/liang/01.gif" alt="" width="44" height="44"></a>
+				<a href="pinglun.html"><img src="../images/liang/02.gif" alt="" width="44" height="44">
+					<span class="l-nav-right-span"></span>
+				</a>
+				
+			</div>
+		</div>
+	</div>
+	<div class="kong"></div>
+	<!-- 头部结束 -->
+	<!-- 主体 -->
+		<div class="main">
+			<div class="guan">
+				<h1>关于南极</h1>
+				<ul class="ul">
+					<li>南极介绍</li>
+					<li>南极介绍</li>
+					<li>帮助</li>
+					<li>联系南极</li>
+					<li>南极工作</li>
+				</ul>
+			</div>
+			<div class="text">
+				<div class="area">
+					<ul>
+						<li>
+							<dl>
+								<dt>南极介绍</dt>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍。</dd>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍。</dd>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极。</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>南极介绍</dt>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍。</dd>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍。</dd>
+								
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>帮助</dt>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍极介绍南极极介绍南极极介绍南极。</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>联系南极</dt>
+								<dd class="left_a">
+								
+									<div>
+										<p>公司地址：北京市海淀区中关村南</p>
+										<p>大街2号楼数码大厦A座2715室</p>
+										<p>邮编:10086</p>
+									</div>
+									<div>
+										<p>电话:010-51277579</p>
+										<p>传真:010=51277579</p>
+										<p>网址www.httpnanji.com</p>
+									</div>
+								</dd>
+								
+									
+								
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>南极介绍</dt>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍。</dd>
+								<dd>南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍南极介绍。</dd>
+								
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bing"></div>
+		</div>
+
+	<!-- 主体结束 -->
+		<!-- 页面底部 -->
+		<div class="footer-up">
+			<ul class="footer-ul clearfix">
+				<li>
+					<dl>
+						<dt><a href="">发现梦想</a></dt>
+						<dd class="footer-a">
+							<a href="">微电影</a>
+							<a href="">音乐</a>
+							<a href="">读书</a>
+							<a href="">公益</a>
+							<a href="">教育</a>
+							<a href="">游戏</a>
+							<a href="" class="footer-a-1">更多梦想</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="">发起梦想</a></dt>
+						<dd><a href="">项目指导</a></dd>
+						<dd><a href="">可能遇到的问题</a></dd>
+						<dd><a href="">梦想学校</a></dd>
+						<dd><a href="">英雄指导</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt><a href="">关于南极</a></dt>
+						<dd><a href="">关于我们</a></dd>
+						<dd><a href="">我们的梦想</a></dd>
+						<dd><a href="">工作机会</a></dd>
+					</dl>
+				</li>
+				<li class="footer-right_">
+					<dl>
+						<dt><a href="">联系南极</a></dt>
+						<dd><img src="../images/liang/a1.png" alt=""><a href="">nanjin@gmail.com</a></dd>
+						<dd><img src="../images/liang/a2.png" alt=""><a href="">nanjin( 1286804769 )</a></dd>
+						<dd><img src="../images/liang/a3.png" alt=""><a href="">http://weibo.com/pincha123</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-down">
+				<p>
+					京ICP备11017825-4 / 京ICP证130164号&nbsp;&nbsp;北京市公安局朝阳分局备案编号:110105000501 
+				</p>
+				<p>
+				Copyright @ 2006-2013 ZCOOL 全景统计
+				</p>
+		</div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"right","bdTop":"100"},"images/liang":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

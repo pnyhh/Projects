@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>保修信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/baoxiuxinxi.css">
+	<link rel="stylesheet" href="../css/reset.css">	
+</head>
+<body>
+	<div class="x_box">
+		<div class="x_header">
+				<a href=""></a>
+				<a href="javascript:;">小区物业</a>
+				<a href="">报修</a>
+		</div>
+		<div class="x_content">
+			<dl>
+				<dt>您提交的信息</dt>
+				<dd>
+					<p>报修产品:<span>洗衣机</span></p>
+					<p>要求日期:<span>2014-03-25</span><span>10:00-12:00</span></p>
+					<p>报修产品:<span>洗衣机不转</span></p>
+				</dd>
+				<dd style="border:none">
+					<p>用户姓名:<span>笑笑</span></p>
+					<p>手机号码:<span>136813145</span></p>
+					<p>详细地址:<span>A单元40</span></p>
+				</dd>
+			</dl>
+		</div>
+		<div class="v_footer">
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/home.png"></h1>
+                <p style="color:rgb(0,121,255);">首页</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/cafe.png"></h1>
+                <p>便民</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div style="width:25%;height98px;float:left;height:98px;border-top: 1px solid gray;">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1 style="position:relative;" id="tel"><img src="../images/lv/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                <p>一键拨号</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/building.png"></h1>
+                <p>社区</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/people.png"></h1>
+                <p>我的</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+    </div>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+    $(window).resize(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+</script>
+</html>

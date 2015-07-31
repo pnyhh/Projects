@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css" media="screen">
+	<style>
+		.v_main{width: 100%;position: relative;display: block;}
+		.v_header{position: fixed;top: 0px;overflow: hidden;width: 100%;height: 78px;background: rgb(249,249,249);z-index: 1000;}
+		.v_header p{font-size: 24px;color: rgb(65,65,65);font-family: "黑体"; text-align: center;line-height: 78px;font-weight: bold;}
+		.v_header p img{float: right;width: 24px;height: 30px;margin-right: 20px; margin-top: 24px;}
+        .v_footer{position: fixed;bottom: 0px;width: 100%;height: 58px;z-index: 1000;background: white;}
+        .v_footer_div{width: 18.75%;height: 58px;float: left;border-top: 1px solid gray;padding-top: 10px;}
+        .v_footer_l,.v_footer_r{width: 15%;float: left;height: 58px;}
+        .v_footer_m{width: 70%;height: 58px;float: left;}
+        .v_footer_m h1{height: 30px;text-align: center;}
+        .v_footer_m p{height: 38px;text-align: center;font-family: "黑体";font-size: 0.6em;}
+        .v_footer_m h1 img{width: 20px;height: 20px;}
+        #phone{width: 40px;height: 40px;}
+        #tel{padding-top: 10px;}
+        .v_content{margin-top: 78px;background: rgb(240,239,244);padding-bottom: 140px;width: 100%;}
+        .v_content_news{width: 100%;height: 37px;margin-top: 5px;background: #ffffff;}
+        .v_content_news_icon{position: relative;width: 25%;height: 37px;float: left;
+            text-align: center;line-height: 42px;}
+        .v_content_news_icon img{width: 21px;height: 20px;}
+        .v_content_news_icon_num{position: absolute;top: 3px;right: 0px;width: 15px;height: 15px;
+        border-radius: 50%;background: red;color: #ffffff;font-size: 0.5em;text-align: center;
+            line-height:15px; }
+        .v_content_news_text{width: 75%;height: 37px;float: left;}
+        .v_content_news_text_l{width: 10%;height: 37px;
+            float: left;text-align: left;}
+        .v_content_news_text_l img{width: 7px;height: 37px;}
+        .v_content_news_text_r{width: 90%;height: 37px;
+            float: left;font-size: 1.0em;font-family: "黑体";line-height: 37px;text-align: left;}
+		.v_content_nav{width: 100%;height: 136px;overflow: hidden;margin-top: 14px;background: rgb(255,255,255);}
+		.v_content_nav_con{
+			box-sizing:border-box;
+			-moz-box-sizing:border-box; /* Firefox */
+			-webkit-box-sizing:border-box; /* Safari */
+			width: 25%;
+			height: 136px;
+			border: 1px solid rgb(214,214,214);
+			float:left;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.v_content_nav_con div{
+			box-sizing:border-box;
+			-moz-box-sizing:border-box; /* Firefox */
+			-webkit-box-sizing:border-box; /* Safari */
+			float: left;width: 15%;height: 80px;
+		}
+        .v_content_nav_con_middle_1,.v_content_nav_con_middle_2,.v_content_nav_con_middle_3,.v_content_nav_con_middle_4 {
+            text-align: center;line-height: 130px;height: 80px;
+        }
+        .v_content_nav_con_middle_1 img,.v_content_nav_con_middle_2 img,.v_content_nav_con_middle_3 img,.v_content_nav_con_middle_4 img {
+            width: 40px;height: 40px;
+        }
+		.v_content_nav_con p{font-size: 1.0em;font-family: "微软雅黑";line-height: 55px;text-align: center;}
+		.v_content_con{width: 100%;height: 230px;overflow: hidden;margin-top: 16px;background: white;}
+		.v_content_con div{
+			box-sizing:border-box;
+			-moz-box-sizing:border-box; /* Firefox */
+			-webkit-box-sizing:border-box; /* Safari */
+			width: 33.33%;border: 1px solid rgb(214,214,214);
+			height: 230px;
+			float: left;
+		}
+		.v_content_con div h1{font-size: 1.2em;line-height: 80px;font-family: "微软雅黑";text-align:center;}
+		.v_content_con div h2{font-size: 0.8em;line-height: 30px;font-family: "微软雅黑";text-align: left;padding-left: 15px;}
+		.v_content_con_p1,.v_content_con_p2,.v_content_con_p3{text-align: left;line-height: 160px;}
+        .v_content_con_p1 img,.v_content_con_p2 img,.v_content_con_p3 img{
+            width: 76px;height: 58px;
+        }
+		.v_content_luck{margin-top: 18px;background: white;height: 175px;width: 100%;overflow: hidden;}
+		.v_content_luck_main{width: 100%;height: 175px;}
+		.v_content_luck_main{height: 175px;}
+		.v_content_luck_main h1{font-size: 1.4em;line-height: 50px;font-family: "黑体";text-indent: 10px;}
+        .v_content_luck_text{width: 100%;height: 125px;}
+        .v_content_luck_text_l{width: 40%;height: 125px;float: left;text-align: center;line-height: 145px;}
+        .v_content_luck_text_l img{width: 104px;height: 58px;border: 1px solid rgb(214,214,214);}
+        .v_content_luck_text_r{width: 60%;height: 115px;float: left;padding-top: 30px;}
+        .v_content_luck_text_r p{text-align: left;text-indent: 15px;font-size: 0.8em;}
+		.v_content_slider{width: 100%;height: 235px;}
+        #focus{width:100%px;height:235px;overflow:hidden;position:relative;}
+        #focus ul{height:235px;position:absolute;}
+        #focus ul li{float:left;width:20%;height:235px;overflow:hidden;position:relative;background:#000;}
+        #focus ul li div{position:absolute;overflow:hidden;}
+        #focus .btnBg{position:absolute;width:800px;height:20px;left:0;bottom:0;background:#000;}
+        #focus .btn{position:absolute;width:780px;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
+        #focus .btn span{display:inline-block;_display:inline;_zoom:1;width:25px;height:10px;_font-size:0;margin-left:5px;cursor:pointer;background:#fff;}
+        #focus .btn span.on{background:#fff;}
+        #focus .preNext{width:45px;height:100px;position:absolute;top:75px;background:url(images/lv/sprite.png) no-repeat 0 0;cursor:pointer;}
+        #focus .pre{left:0;}
+        #focus .next{right:0;background-position:right top;}
+        #focus img{height: 235px;}
+	}
+	</style>
+</head>
+<body style="max-width: 768px;">
+	<div class="v_main">
+		<div class="v_header">
+			<p>小区助手<a href=" "><img src="images/lv/header_refresh.png" alt=""></a></p>
+		</div>
+		<div class="v_content">
+			<div class="v_content_slider">
+                <div id="focus">
+                    <ul>
+                        <li><a href="" target="_blank"><img src="images/lv/05.jpg" alt="" /></a></li>
+                        <li><a href="" target="_blank"><img src="images/lv/04.jpg" alt="" /></a></li>
+                        <li><a href="" target="_blank"><img src="images/lv/03.jpg" alt="" /></a></li>
+                        <li><a href="" target="_blank"><img src="images/lv/02.jpg" alt="" /></a></li>
+                        <li><a href="" target="_blank"><img src="images/lv/01.jpg" alt="" /></a></li>
+                    </ul>
+                </div>
+			</div>
+			<div class="v_content_news">
+                <div class="v_content_news_icon" id="laba">
+                    <img src="images/lv/laba.png" alt=""/>
+                    <div class="v_content_news_icon_num" id="num">1</div>
+                </div>
+                <div class="v_content_news_text">
+                    <div class="v_content_news_text_l">
+                        <img src="images/lv/content_line.png" alt=""/>
+                    </div>
+                    <div class="v_content_news_text_r">您有一条未读通知</div>
+                </div>
+			</div>
+			<div class="v_content_nav">
+				<div class="v_content_nav_con">
+                <a href="html/shequhuodong.html" style="display:inline-block;width:100%;height:100%;">
+					<div></div>
+					<div class="v_content_nav_con_middle_1" style="width:70%;">
+                        <img src="images/lv/huodong.png" alt=""/>
+					</div>
+					<div></div>
+					<p>社区活动</p></a>
+				</div>
+				<div class="v_content_nav_con">
+                <a href="html/shenghuo.html" style="display:inline-block;width:100%;height:100%;">
+					<div></div>
+					<div class="v_content_nav_con_middle_2" style="width:70%;">
+                        <img src="images/lv/wuye.png" alt=""/>
+					</div>
+					<div></div>
+					<p>物业客服</p></a>
+				</div>
+                <a href="html/v_discount.html"><div class="v_content_nav_con">
+					<div></div>
+					<div class="v_content_nav_con_middle_3" style="width:70%;">
+                        <img src="images/lv/youhui1.png" alt=""/>
+					</div>
+					<div></div>
+					<p>今日优惠</p>
+				</div></a>
+				<div class="v_content_nav_con">
+                <a href="html/shanghu.html" style="display:inline-block;width:100%;height:100%;">
+					<div></div>
+					<div class="v_content_nav_con_middle_4" style="width:70%;">
+                        <img src="images/lv/youhui2.png" alt=""/>
+					</div>
+					<div></div>
+					<p>今日优惠</p></a>
+				</div>
+			</div>
+			<div class="v_content_con">
+				<div>
+					<h1 style="color:rgb(122,94,171);">社区头条</h1>
+					<h2>热门头条 一手掌握</h2>
+					<p class="v_content_con_p1">
+                        <img src="images/lv/yue.png" alt=""/>
+					</p>
+				</div>
+				<div>
+					<h1 style="color:rgb(37,164,215);">物业服务</h1>
+					<h2>业主权益 一站式解决</h2>
+					<p class="v_content_con_p2">
+                        <img src="images/lv/jiao.png" alt=""/>
+					</p>
+				</div>
+				<div>
+					<h1 style="color:rgb(104,113,172);">生活小助手</h1>
+					<h2>生活所需 触手可及</h2> 
+					<p class="v_content_con_p3">
+                        <img src="images/lv/date.png" alt=""/>
+					</p>
+				</div>
+			</div>
+			<div class="v_content_luck">
+				<div class="v_content_luck_main">
+					<h1>大转盘</h1>
+					<div class="v_content_luck_text">
+                        <div class="v_content_luck_text_l">
+                            <img src="images/lv/zhuanpan.png" alt=""/>
+                        </div>
+                        <div class="v_content_luck_text_r">
+                            <p>最低折扣！最大优惠！特价爆品！</p>
+                            <p>更多惊喜优惠等您拿！</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="v_footer">
+            <div class="v_footer_div">
+                <div class="v_footer_l"></div>
+                <div class="v_footer_m">
+                    <h1><img src="images/lv/home.png"></h1>
+                    <p style="color:rgb(0,121,255);">首页</p>
+                </div>
+                <div class="v_footer_r"></div>
+            </div>
+            <div class="v_footer_div">
+                <div class="v_footer_l"></div>
+                <div class="v_footer_m">
+                    <a href="html/bianmin.html" style="inline-block;" width:100%;height:100%;>
+                       <h1><img src="images/lv/cafe.png"></h1>
+                        <p>便民</p> 
+                    </a>
+                    
+                </div>
+                <div class="v_footer_r"></div>
+            </div>
+            <div style="width:25%;height98px;float:left;height:98px;border-top: 1px solid gray;">
+                <div class="v_footer_l"></div>
+                <div class="v_footer_m">
+                    <h1 style="position:relative;" id="tel"><img src="images/lv/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                    <p>一键拨号</p>
+                </div>
+                <div class="v_footer_r"></div>
+            </div>
+            <div class="v_footer_div">
+                <div class="v_footer_l"></div>
+                <div class="v_footer_m">
+                    <a href="html/shequ.html" style="inline-block;" width:100%;height:100%;>
+                        <h1><img src="images/lv/building.png"></h1>
+                        <p>社区</p>
+                    </a>
+                    
+                </div>
+                <div class="v_footer_r"></div>
+            </div>
+            <div class="v_footer_div">
+                <div class="v_footer_l"></div>
+                <a href="html/v_login.html"><div class="v_footer_m">
+                    <h1><img src="images/lv/people.png"></h1>
+                    <p>我的</p>
+                </div></a>
+                <div class="v_footer_r"></div>
+            </div>
+        </div>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/jquery-1.4.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var h = $(window).height();
+        var iw = $(window).width();
+        var a = ($("#tel").width()-40)/2;
+        var w = $("#laba").width()/2-20;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+        $("#num").css("right",w);
+        $("#focus>ul>li>a>img").css("width",iw);
+    });
+    $(window).resize(function(){
+        var h = $(window).height();
+        var iw = $(window).width();
+        var a = ($("#tel").width()-40)/2;
+        var w = $("#laba").width()/2-20;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+        $("#num").css("right",w);
+        $("#focus>ul>li>a>img").css("width",iw);
+    });
+    $(function() {
+        var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+        var len = $("#focus ul li").length; //获取焦点图个数
+        var index = 0;
+        var picTimer;
+
+        //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+        var btn = "<div class='btnBg'></div><div class='btn'>";
+        for(var i=0; i < len; i++) {
+            btn += "<span></span>";
+        }
+        btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+        $("#focus").append(btn);
+        $("#focus .btnBg").css("opacity",0.5);
+
+        //为小按钮添加鼠标滑入事件，以显示相应的内容
+        $("#focus .btn span").css("opacity",0.4).mouseover(function() {
+            index = $("#focus .btn span").index(this);
+            showPics(index);
+        }).eq(0).trigger("mouseover");
+
+        //上一页、下一页按钮透明度处理
+        $("#focus .preNext").css("opacity",0.2).hover(function() {
+            $(this).stop(true,false).animate({"opacity":"0.5"},300);
+        },function() {
+            $(this).stop(true,false).animate({"opacity":"0.2"},300);
+        });
+
+        //上一页按钮
+        $("#focus .pre").click(function() {
+            index -= 1;
+            if(index == -1) {index = len - 1;}
+            showPics(index);
+        });
+
+        //下一页按钮
+        $("#focus .next").click(function() {
+            index += 1;
+            if(index == len) {index = 0;}
+            showPics(index);
+        });
+
+        //本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+        $("#focus ul").css("width",sWidth * (len));
+
+        //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+        $("#focus").hover(function() {
+            clearInterval(picTimer);
+        },function() {
+            picTimer = setInterval(function() {
+                showPics(index);
+                index++;
+                if(index == len) {index = 0;}
+            },4000); //此4000代表自动播放的间隔，单位：毫秒
+        }).trigger("mouseleave");
+
+        //显示图片函数，根据接收的index值显示相应的内容
+        function showPics(index) { //普通切换
+            var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+            $("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+            //$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+            $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+        }
+    });
+</script>
+</html>

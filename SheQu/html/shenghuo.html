@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生活</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/shenghuo.css">	
+	<link rel="stylesheet" href="../css/reset.css">	
+</head>
+<body>
+	<div class="x_box">
+		<div class="x_header">
+			<a href=""></a>
+			<a href="javascript:;">生活小助手</a>
+			<a href=""></a>
+		</div>
+		<div class="x_top">
+			<img src="../images/shenghuo/tab2.jpg" alt="">
+		</div>
+		<div class="x_content">
+			<ul class="x_content_ul">
+				<li>
+					<div class="x_content_div1">
+						<span class="span1"></span>
+					</div>
+					<div class="x_content_div2">
+						<h3>订奶</h3>
+						<p>新鲜牛奶免费到家</p>
+					</div>
+					<div class="x_content_div3">
+						<a href=""></a>
+					</div>
+				</li>
+				<li>
+					<div class="x_content_div1">
+						<span class="span2"></span>
+					</div>
+					<div class="x_content_div2">
+						<h3>送水</h3>
+						<p>送水及时，正规高效</p>
+					</div>
+					<div class="x_content_div3">
+						<a href=""></a>
+					</div>
+				</li>
+				<li>
+					<div class="x_content_div1">
+						<span class="span3"></span>
+					</div>
+					<div class="x_content_div2">
+						<h3>家政</h3>
+						<p>金牌家政，专业化服务</p>
+					</div>
+					<div class="x_content_div3">
+						<a href=""></a>
+					</div>
+				</li>
+				<li>
+					<div class="x_content_div1">
+						<span class="span4"></span>
+					</div>
+					<div class="x_content_div2">
+						<h3>快递</h3>
+						<p>一站式快递查询服务</p>
+					</div>
+					<div class="x_content_div3">
+						<a href=""></a>
+					</div>
+				</li>
+				<li>
+					<div class="x_content_div1">
+						<span class="span5"></span>
+					</div>
+					<div class="x_content_div2">
+						<h3>开锁</h3>
+						<p>正规专业开锁</p>
+					</div>
+					<div class="x_content_div3">
+						<a href=""></a>
+					</div>
+				</li>	
+				<li>
+					<div class="x_content_div1">
+						<span class="span6"></span>
+					</div>
+					<div class="x_content_div2">
+						<h3>疏通</h3>
+						<p>专业疏通管道，服务好</p>
+					</div>
+					<div class="x_content_div3">
+						<a href=""></a>
+					</div>
+				</li>	
+			</ul>
+		</div>
+		<div class="v_footer">
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/home.png"></h1>
+                <p style="color:rgb(0,121,255);">首页</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/cafe.png"></h1>
+                <p>便民</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div style="width:25%;height98px;float:left;height:98px;border-top: 1px solid gray;">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1 style="position:relative;" id="tel"><img src="../images/lv/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                <p>一键拨号</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/building.png"></h1>
+                <p>社区</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/people.png"></h1>
+                <p>我的</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+    </div>
+	</div>
+</body>
+<script src='../js/jquery-1.11.2.js'></script>
+ <script>
+// 	$(window).load(function(){
+// 		$wid=$(".x_content_ul").width()*0.15;
+// 		$(".x_content_ul>li").css({"height":$wid});
+	
+// 	})
+// 	$(window).resize(function(){
+// 		$wid=$(".x_content_ul").width()*0.15;
+// 		$(".x_content_ul>li").css({"height":$wid});
+// 	})
+
+ </script>
+<script>
+	$(document).ready(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+    $(window).resize(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+</script>
+</html>

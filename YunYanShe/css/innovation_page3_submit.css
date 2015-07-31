@@ -1,0 +1,139 @@
+.script_submit{
+	background:white;
+}
+.script_submit .challenge{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+}
+.script_submit .challenge h3{
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+	height:42px;
+	line-height:42px;
+	color:rgb(202,202,202);
+	letter-spacing:0.2em;
+}
+.script_submit .challenge_explain{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+	padding-bottom:1em;
+}
+.script_submit .challenge_explain h4{
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	height:40px;
+	line-height:40px;
+	color:rgb(53,76,104);
+	letter-spacing:0.1em;
+}
+.challenge_submit form{
+	width:100%;
+	border-bottom:1px solid rgb(196,196,196);
+}
+.script_submit .challenge_explain p{
+	width:79%;
+	margin:0 auto;
+	font-size:14px;
+	text-indent:2em;
+}
+.script_submit .challenge_submit{
+	width:96%;
+	margin:0 auto;
+	border-bottom:1px solid rgb(196,196,196);
+	padding-top:1em;
+	padding-bottom:1em;
+	font-size:14px;
+}
+.script_submit .challenge_submit ul{
+	width:79%;
+	margin:0 auto;
+	font-size:14px;
+}
+.script_submit .challenge_submit ul li{
+	height:34px;
+	line-height:34px;
+	color:rgb(202,202,202);
+}
+.script_submit .challenge_submit ul li input{
+	width:259px;
+	height:23px;
+	line-height:23px;
+	outline:none;
+	border:1px solid rgb(175,175,175);
+	border-radius:11px;
+	behavior: url(../css/PIE.htc);
+	position:relative;
+	z-index:10;
+	text-indent:10px;
+}
+.script_submit .challenge_submit ul li select{
+	background-color: transparent;
+	width:263px;
+	height:24px;
+	outline:none;
+	border:1px solid rgb(175,175,175);
+	border-radius:11px;
+	behavior: url(../css/PIE.htc);
+	position:relative;
+	z-index:10;
+	color:rgb(202,202,202);
+}
+.script_submit .challenge_submit ul li textarea{
+	overflow:auto;
+	width:430px;
+	height:90px;
+	padding:5px 10px;
+	margin-top:4px;
+	resize:none;
+	border:1px solid rgb(175,175,175);
+	border-radius:11px;
+	behavior: url(../css/PIE.htc);
+	position:relative;
+	z-index:10;
+	outline:none;
+}
+.script_submit .challenge_submit ul li span{
+	display:inline-block;
+	width:69px;
+	height:23px;
+	line-height:23px;
+	text-align:center;
+	background:rgb(148,148,148);
+	margin-left:10px;
+	cursor:pointer;
+	border-radius:11px;
+	behavior: url(../css/PIE.htc);
+	position:relative;
+	z-index:10;
+	color:white;
+}
+.challenge_submit_bottom{
+	height:202px;
+}
+.challenge_submit form .submit{
+	position:relative;
+	display:block;
+	margin:0 auto;
+	width:186px;
+	height:22px;	
+}
+.challenge_submit form .submit input{
+	position:absolute;
+	top:55px;
+	width:186px;
+	height:22px;
+	background:rgb(53,76,104);
+	border:none;
+	border-radius:11px;
+	behavior: url(../css/PIE.htc);
+	position:relative;
+	z-index:10;
+	outline:none;
+	color:white;
+	line-height:22px;
+	cursor:pointer;
+}

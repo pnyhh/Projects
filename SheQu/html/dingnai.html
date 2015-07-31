@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订奶</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/dingnai.css">	
+</head>
+<body>
+	<div class="x_box">
+		<div class="x_header">
+			<a href=""></a>
+			<a href="javascript:;">订奶</a>
+			<a href=""></a>
+		</div>
+		<div class="x_content">
+			<ul class="x_content_ul">
+				<li><span>光明乳业</span><a href=""></a></li>
+				<li><span>蒙牛</span><a href=""></a></li>
+				<li><span>三元</span><a href=""></a></li>
+				<li style="border:none"><span>三元</span><a href=""></a></li>
+			</ul>
+		</div>
+		<div class="v_footer">
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/home.png"></h1>
+                <p style="color:rgb(0,121,255);">首页</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/cafe.png"></h1>
+                <p>便民</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div style="width:25%;height98px;float:left;height:98px;border-top: 1px solid gray;">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1 style="position:relative;" id="tel"><img src="../images/lv/phone.png"  style="position:absolute;bottom:15px;right:0px;" id="phone"></h1>
+                <p>一键拨号</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/building.png"></h1>
+                <p>社区</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+        <div class="v_footer_div">
+            <div class="v_footer_l"></div>
+            <div class="v_footer_m">
+                <h1><img src="../images/lv/people.png"></h1>
+                <p>我的</p>
+            </div>
+            <div class="v_footer_r"></div>
+        </div>
+    </div>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+    $(window).resize(function(){
+        var h = $(window).height();
+        var a = ($("#tel").width()-40)/2;
+        $("#content").css("height",h);
+        $("#phone").css("right",a);
+    });
+</script>
+</html>
