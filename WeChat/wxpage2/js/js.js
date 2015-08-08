@@ -78,7 +78,6 @@ window.onload = function(){
 	}
 	var oBee = document.getElementById("bee");
 	var oBees = document.getElementsByClassName("be");
-	console.log(oBees)
 	var	oBeeW = oBee.clientWidth;
 		oBee.style.left = (w - oBeeW)/2 + "px";
 	setTimeout(function(){
@@ -96,6 +95,10 @@ window.onload = function(){
 				if(mySwiper.activeIndex == 1){
 					for(var i = 0;i<oBees.length;i++){
 						oBees[i].style.WebkitAnimationPlayState = "running";
+					}
+				}else{
+					for(var i = 0;i<oBees.length;i++){
+						oBees[i].style.WebkitAnimationPlayState = "paused";
 					}
 				}
 			}
