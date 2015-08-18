@@ -3,8 +3,8 @@ $(function() {
 	var len = $("#focus ul li").length; //获取焦点图个数
 	var index = 0;
 	var picTimer;
-	$(".mimg img").eq(0).css("width",sWidth);
-	$(".mimg img").eq(1).css("width",sWidth);
+	$(".mimg img").eq(0).css({"width":sWidth,"height":400});
+	$(".mimg img").eq(1).css({"width":sWidth,"height":400});
 	var wWidth = document.documentElement.clientWidth;
 	$("#focus ul li").css("width",sWidth);
 	$("#focus ul li a img").css({"width":sWidth,"height":500});
