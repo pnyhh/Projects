@@ -421,11 +421,19 @@
 .details_content .infomation ul li{
 	margin-top: 25px;
 }
-.details_content .infomation ul li span,.details_content .infomation .developers span{
+.details_content .infomation ul li span{
+	display: inline-block;
 	margin-left: 45px;
+	width: 250px;
 	color: #7a7a7a;
 	font-size: 16px;
 	font-family: "微软雅黑";
+}
+.details_content .infomation .developers span{
+	color: #7a7a7a;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	margin-left: 45px;
 }
 .details_content .infomation ul li span var{
 	padding: 0 20px;
