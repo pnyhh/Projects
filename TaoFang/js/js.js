@@ -64,6 +64,9 @@ $(function() {
 		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
 		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
 	}
+	$(".slider .search .searimg").click(function(){
+		window.open("html/list.html");
+	})
 });
 $(window).scroll( function(){
 	var top= document.body.scrollTop || document.documentElement.scrollTop;
