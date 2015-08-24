@@ -662,10 +662,13 @@
 	float: none;
 	margin-top: 150px;
 }
-.list_content .board .nav ul{
-	background: #FFFFFF;
+.list_content .board .nav .navcon{
 	width: 487px;
 	margin: 0 auto;
+}
+.list_content .board .nav ul{
+	background: #FFFFFF;
+	border:1px solid #c5c5c5;
 }
 .list_content .board .nav ul li{
 	float: left;
@@ -676,8 +679,8 @@
 	color: #424242;
 	padding-left: 17px;
 	padding-right: 17px;
-	border:1px solid #c5c5c5;
 	cursor: pointer;
+	border-right: 1px solid #C5C5C5;
 }
 .list_content .board .nav .nows{
 	background: #F39636;
