@@ -1,5 +1,6 @@
 .main{
 	width: 100%;
+	position: relative;
 }
 .title{
 	background: #FFF;
@@ -20,7 +21,7 @@
 .nav .navs{
 	float: left;
 }
-.nav .login{
+.nav .loginbtn{
 	float: left;
 }
 .nav .navs li{
@@ -34,13 +35,13 @@
 	padding: 0 15px;
 	color: #f58220;
 }
-.nav .login{
+.nav .loginbtn{
 	border-left: 1px solid #f58220;
 	margin-top: 27px;
 	margin-left: 50px;
 	margin-right: 70px;
 }
-.nav .login a{
+.nav .loginbtn a{
 	line-height: 21px;
 	font-size: 21px;
 	color: #f58220;
@@ -269,6 +270,151 @@
 	top: 0;
 	left: 0;
 	display: none;
+}
+.logincon{
+	width: 100%;
+	height: 2808px;
+	background: rgba(40,40,40,0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+}
+.logincon .login{
+	width: 384px;
+	height: 438px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: #FFFFFF;
+	z-index: 999;
+}
+.logincon .login .content{
+	width: 244px;
+	margin: 0 auto;
+	padding: 0;
+}
+.logincon .login .content .title{
+	width: 100%;
+	border-bottom: 1px solid #676360;
+	position: relative;
+}
+.logincon .login .content .title .left{
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 14.6px;
+	color: #6e6e6e;
+	height: 30px;
+	padding-top: 32px;
+	padding-left: 12px;
+}
+.logincon .login .content .title .right{
+	float: right;
+	font-family: "微软雅黑";
+	font-size: 10.5px;
+	color: #6e6e6e;
+	padding-top: 46px;
+	padding-right: 5px;
+}
+.logincon .login .content .title .right a{
+	color: #abc2e8;
+}
+.logincon .login .content .title .close{
+	position: absolute;
+	right: -55px;
+	top: 12px;
+	cursor: pointer;
+}
+.logincon .login .content .main{
+	margin-top: 20px;
+}
+.logincon .login .content .main ul li .con{
+	width: 242px;
+	border:1px solid #c4c4c4;
+	padding-top: 4px;
+	height: 21px;
+	position: relative;
+}
+.logincon .login .content .main ul li .con span{
+	float: left;
+	width: 55px;
+	height: 18px;
+	font-family: "微软雅黑";
+	font-size: 13.9px;
+	line-height: 18px;
+	text-align: center;
+	border-right: 1px solid #c4c4c4;
+	color: #6E6E6E;
+}
+.logincon .login .content .main ul li{
+	margin-bottom: 33px;
+}
+.logincon .login .content .main ul li .con input{
+	float: right;
+	width: 186px;
+	height: 18px;
+	border:none;
+	outline: none;
+	text-indent: 5px;
+	font-size: 12px;
+}
+.logincon .login .content .main ul li .yzt{
+	width: 71px;
+	height: 28px;
+}
+.logincon .login .content .main ul li .yzt img{
+	width: 71px;
+	height: 28px;
+}
+.logincon .login .content .main ul li .yzt a{
+	color: #ABC2E8;
+	font-size: 10px;
+	margin-left: 20px;
+}
+.logincon .login .content .main ul li .con .yanzheng{
+	width: 84px;
+	float: left;
+}
+.logincon .login .content .main ul li .con .board{
+	position: absolute;
+	width: 242px;
+	height: 26px;
+	background: #FFFFFF;
+	padding-top: 7px;
+	padding-left: 7px;
+	top: 26px;
+	color: #ff6868;
+	font-size: 10.5px;
+}
+.logincon .login .content .main ul li .con .board span{
+	border: none;
+	text-align: left;
+	width: 29px;
+}
+.logincon .login .content .main ul li .sub{
+	display: inline-block;
+	width: 100%;
+	height: 33px;
+	background: #F39636;
+	border: none;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+.logincon .login .content .main ul li .check{
+	float: left;
+	font-size: 14.6px;
+	color: #F39636;
+}
+.logincon .login .content .main ul li .forget{
+	float: right;
+	font-size: 14.6px;
+}
+.logincon .login .content .main ul li .forget a{
+	color: #6E6E6E;
 }
 .footer{
 	height: 140px;
@@ -716,4 +862,121 @@
 	color: #FFFFFF;
 	width: 100%;
 	text-indent: 15px;
+}
+.registered{
+	width: 1280px;
+	margin: 0 auto;
+}
+.registered .content{
+	width: 920px;
+	margin: 0 auto;
+	padding: 0;
+}
+.registered .content .logo{
+	float: none;
+	margin: 0;
+	border-bottom: 1px solid #C4C4C4;
+}
+.registered .content .logo img{
+	margin-bottom: 42px;
+}
+.registered .content .main{
+	border:1px solid #C4C4C4;
+}
+.registered .content .main .cont{
+	width: 882px;
+	margin: 0 auto;
+}
+.registered .content .main .cont .title{
+	font-size: 24px;
+	color: #F39636;
+	width: 100%;
+	margin-top: 44px;
+	border-bottom: 1px solid #C4C4C4;
+}
+.registered .content .main .cont .title span{
+	float: right;
+	font-size: 14.6px;
+	color: #000000;
+	margin-top: 10px;
+}
+.registered .content .main .cont .title span a{
+	color: #3b6dbf;
+}
+.registered .content .main .cont .con{
+	margin-top: 20px;
+}
+.registered .content .main .cont .con ul li{
+	margin-bottom: 46px;
+}
+.registered .content .main .cont .con ul li .line{
+	width: 589px;
+	height: 50.5px;
+	border:1px solid #8a8a8a;
+	padding-top: 11.5px;
+	position: relative;
+}
+.registered .content .main .cont .con ul li .line span{
+	float: left;
+	display: inline-block;
+	height: 41px;
+	width: 132px;
+	border-right: 1px solid #8A8A8A;
+	font-size: 24px;
+	color: #6E6E6E;
+	text-align: center;
+	line-height: 41px;
+}
+.registered .content .main .cont .con ul li .line input{
+	float: right;
+	height: 41px;
+	width: 450px;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	text-align: center;
+}
+.registered .content .main .cont .con ul li .line .board{
+	position: absolute;
+	top: 65px;
+	height: 38px;
+	padding-top: 9px;
+	color: #FF6868;
+}
+.registered .content .main .cont .con ul li .line .board img{
+	vertical-align: bottom;
+}
+.registered .content .main .cont .con ul li .getyzm{
+	float: left;
+	width: 215px;
+	height: 62px;
+	background: #d6d7d6;
+	border:1px solid #c3c4c3;
+	text-align: center;
+	line-height: 62px;
+	cursor: pointer;
+	margin-left: 16px;
+}
+.registered .content .main .cont .con ul li p{
+	font-size: 14.6px;
+	margin-left: 5px;
+	text-align: left;
+}
+.registered .content .main .cont .con ul li p input{
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.registered .content .main .cont .con ul li p a{
+	color: #3B6DBF;
+}
+.registered .content .main .cont .con ul li .sub{
+	width: 136px;
+	height: 45px;
+	border: none;
+	background: #F39636;
+	border-radius: 5px;
+	color: #FFFFFF;
+	outline: none;
+	cursor: pointer;
 }

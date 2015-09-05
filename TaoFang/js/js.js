@@ -67,6 +67,12 @@ $(function() {
 	$(".slider .search .searimg").click(function(){
 		window.open("html/list.html");
 	})
+	$(".loginbtn a").eq(0).click(function(){
+		$(".logincon").show();
+	})
+	$(".login .content .close").click(function(){
+		$(".logincon").hide();
+	})
 });
 $(window).scroll( function(){
 	var top= document.body.scrollTop || document.documentElement.scrollTop;
