@@ -21,8 +21,8 @@
 							<li><a href="" target="_blank">关于我们</a></li>
 						</ul>
 					</div>
-					<div class="login">
-						<a href="" style="margin-left: 10px;">登录</a><a href="">注册</a>
+					<div class="loginbtn">
+						<a href="javascript:void(0);" style="margin-left: 10px;">登录</a><a href="registered.html" target="_blank">注册</a>
 					</div>
 				</div>
 			</div>
@@ -211,6 +211,68 @@
 						</div>
 					</div>
 				</div>
+				<div class="logincon">
+				<div class="login">
+					<div class="content">
+						<div class="title clear">
+							<div class="left">
+								登录
+							</div>
+							<div class="right" style="padding-top: 46px;">
+								没有账号？<a href="registered.html" target="_blank">立即注册</a>
+							</div>
+							<div class="close"><img src="../images/login_close.png" alt="" /></div>
+						</div>
+						<div class="main">
+							<form action="" method="post">
+								<ul>
+									<li>
+										<div class="con clear">
+											<span>手机</span><input type="text" />
+											<div class="board">
+												<span><img src="../images/login_err.png" alt="" /></span>
+												该手机号码不存在
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="con clear">
+											<span>密码</span><input type="text" />
+											<div class="board">
+												<span><img src="../images/login_err.png" alt="" /></span>
+												密码错误，请重新输入
+											</div>
+										</div>
+									</li>
+									<li class="clear">
+										<div class="con clear" style="width: 140px;float: left;">
+											<span>验证码</span><input type="text" class="yanzheng"/>
+											<div class="board" style="width: 134px;">
+												<span><img src="../images/login_err.png" alt="" /></span>
+												验证码不正确
+											</div>
+										</div>
+										<div class="yzt" style="float: left;margin-left: 2px;">
+											<img src="../images/yam.png" alt="" />
+											<a href="javascript:void(0);">换一张</a>
+										</div>
+									</li>
+									<li style="margin-bottom: 15px;"><input type="submit" value="登录" class="sub"/></li>
+									<li class="clear">
+										<div class="check">
+											<input type="checkbox" style="width: 20px;height: 20px;vertical-align: bottom;"/>
+											记住密码
+										</div>
+										<div class="forget">
+											<a href="">忘记密码？</a>
+										</div>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			</div>
 			<div class="footer">
 				<div class="lin">
@@ -220,10 +282,10 @@
 						<li style="border:none"><a href="">招聘信息</a></li>
 					</ul>
 				</div>
-			<div class="copy">
-				Copyright &copy; 2013-2015 苏州威淘信息技术有限公司 苏ICP备14009878号-1
+				<div class="copy">
+					Copyright &copy; 2013-2015 苏州威淘信息技术有限公司 苏ICP备14009878号-1
+				</div>
 			</div>
-		</div>
 		</div>
 		<script src="../js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
@@ -235,6 +297,11 @@
 			var prev = $(".board .nav ul li:first");
 			var next = $(".board .nav ul li:last");
 			var nav = $(".board .nav");
+			navs.hover(function(){
+				$(this).addClass("navssle").siblings().removeClass("navssle");
+			},function(){
+				$(this).removeClass("navssle");
+			})
 			navs.click(function(){
 				$(this).addClass("nows").siblings().removeClass("nows");
 			})
@@ -255,6 +322,18 @@
 			}else{
 				nav.hide();
 			}
+		})
+		$(".navs ul li").hover(function(){
+			$(this).addClass("navssle").children().addClass("navsasle");
+		},function(){
+			$(this).removeClass("navssle").children().removeClass("navsasle");
+		});
+		$(".logincon").height(2093);
+		$(".loginbtn a").eq(0).click(function(){
+			$(".logincon").show();
+		})
+		$(".login .content .close").click(function(){
+			$(".logincon").hide();
 		})
 		</script>
 	</body>

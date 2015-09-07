@@ -67,11 +67,17 @@ $(function() {
 	$(".slider .search .searimg").click(function(){
 		window.open("html/list.html");
 	})
+	$(".logincon").height(2808);
 	$(".loginbtn a").eq(0).click(function(){
 		$(".logincon").show();
 	})
 	$(".login .content .close").click(function(){
 		$(".logincon").hide();
+	})
+	$(".navs ul li").hover(function(){
+		$(this).addClass("navssle").children().addClass("navsasle");
+	},function(){
+		$(this).removeClass("navssle").children().removeClass("navsasle");
 	})
 });
 $(window).scroll( function(){
