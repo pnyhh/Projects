@@ -255,11 +255,11 @@
 					this.style.background = "";
 				});
 			});
+			var mks = $(".scentry,.intention,.message,.pswfix,.userinfofix,.userinfos");
 			$(".userinfos .fixbtn,.left .control .cbtns a:eq(0)").click(function(){
-				$(".userinfos").hide();
+				mks.hide();
 				$(".userinfofix").show();
 			});
-			var mks = $(".scentry,.intention,.message,.pswfix,.userinfofix,.userinfos");
 			$(".right .title ul li").eq(0).click(function(){
 				mks.hide();
 				$(".userinfos").show();
