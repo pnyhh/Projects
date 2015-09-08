@@ -37,17 +37,20 @@
 .nav .navs li a{
 	font-size: 24px;
 	line-height: 75px;
-	font-family: "微软雅黑";
+	font-family: "微软正黑";
 	text-align: center;
 	padding: 0 15px;
 	color: #f58220;
-	font-weight: 300;
+	/*font-weight: 300;*/
 }
 .nav .loginbtn,.nav .userinfo{
 	border-left: 1px solid #f58220;
 	margin-top: 27px;
 	margin-left: 50px;
 	margin-right: 70px;
+}
+.nav .userinfo{
+	margin-top: 23px;
 }
 .nav .loginbtn a,.nav .userinfo a{
 	line-height: 21px;
@@ -600,11 +603,36 @@
 	font-size: 16px;
 	font-family: "微软雅黑";
 }
-.details_content .infomation .developers span{
+.details_content .infomation .developers .kfc{
+	float: left;
 	color: #7a7a7a;
 	font-size: 16px;
 	font-family: "微软雅黑";
 	margin-left: 45px;
+}
+.details_content .infomation .developers .tg{
+	float: right;
+	width: 152px;
+	height: 43px;
+	background: #F39636;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 43px;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.details_content .infomation .developers .sc{
+	float: right;
+	width: 38px;
+	text-align: center;
+	font-size: 16.3px;
+	color: #F39636;
+	vertical-align: middle;
+	margin-top: -8px;
+	margin-right: 70px;
+	margin-left: 50px;
 }
 .details_content .infomation ul li span var{
 	padding: 0 20px;
@@ -1080,6 +1108,7 @@
 	width: 920px;
 	margin: 0 auto;
 	overflow: hidden;
+	padding-bottom: 500px;
 }
 .usermain .search{
 	position: static;
@@ -1149,11 +1178,260 @@
 }
 .usermain .right{
 	float: left;
+	width: 591px;
+	margin-left: 17px;
 }
 .usermain .right .title{
 	border: 1px solid #CDCDCD;
 	width: 589px;
 }
 .usermain .right .title ul li{
-	
+	float: left;
+	font-size: 14.1px;
+	color: #4e4e4e;
+	width: 79px;
+	height: 49px;
+	text-align: center;
+	line-height: 49px;
+}
+.usermain .right .content{
+	width: 589px;
+	border: 1px solid #CDCDCD;
+	margin-top: 9px;
+	padding: 0;
+}
+.usermain .right .content .scentry{
+	height: 181px;
+	background: #FFFFFF;
+}
+.usermain .right .content .scentry .left{
+	float: left;
+	position: relative;
+	width: 239px;
+	height: 181px;
+}
+.usermain .right .content .scentry .left a{
+	display: inline-block;
+	width: 239px;
+	height: 181px;
+}
+.usermain .right .content .scentry .left img{
+	width: 239px;
+	height: 181px;
+}
+.usermain .right .content .scentry .left .mask{
+	width: 100%;
+	height: 28px;
+	position: absolute;
+	width: 100%;
+	background: rgba(75,75,75,0.7);
+	bottom: 0;
+	color: #FFFFFF;
+	line-height: 28px;
+}
+.usermain .right .content .scentry .left .mask .enteyname{
+	float: left;
+	margin-left: 5px;
+}
+.usermain .right .content .scentry .left .mask .enteysale{
+	float: right;
+	margin-right: 5px;
+}
+.usermain .right .content .scentry .right{
+	float: left;
+	width: 316px;
+	height: 161px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #595959;
+	margin-left: 17px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.usermain .right .content .scentry .right .type,.usermain .right .content .scentry .right .hot{
+	margin-bottom: 10px;
+}
+.usermain .right .content .scentry .right .price{
+	text-align: right;
+}
+.usermain .right .content .scentry .right .price span{
+	font-size: 11px;
+}
+.usermain .right .content .scentry .right .price span b{
+	vertical-align: baseline;
+}
+.usermain .right .content .scentry .right .hot .l{
+	float: left;
+}
+.usermain .right .content .scentry .right .hot .r{
+	float: left;
+}
+.usermain .right .content .scentry .right .hot .status{
+	float: left;
+}
+.usermain .right .content .intention{
+	padding: 0 15px 30px;
+}
+.usermain .right .content .intention h2{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #4E4E4E;
+	line-height: 40px;
+}
+.usermain .right .content .intention ul li div{
+	float: left;
+	width: 225px;
+	line-height: 28px;
+	font-size: 14px;
+}
+.usermain .right .content .message{
+	padding: 30px 15px;
+}
+.usermain .right .content .message ul li{
+	height: 27px;
+	padding-left: 30px;
+	background: url(../images/message.png) no-repeat;
+	margin-bottom: 30px;
+}
+.usermain .right .content .message ul li a{
+	font-size: 14px;
+	color: ;
+}
+.usermain .right .content .pswfix{
+	padding: 25px;
+}
+.usermain .right .content .pswfix ul li{
+	margin-bottom: 50px;
+}
+.usermain .right .content .pswfix ul li .line{
+	width: 405px;
+	height: 45px;
+	border:1px solid #8a8a8a;
+	padding-top: 9px;
+	position: relative;
+}
+.usermain .right .content .pswfix ul li .line span{
+	float: left;
+	display: inline-block;
+	height: 35px;
+	width: 100px;
+	border-right: 1px solid #8A8A8A;
+	font-size: 20px;
+	color: #6E6E6E;
+	text-align: center;
+	line-height: 35px;
+}
+.usermain .right .content .pswfix ul li .line input{
+	float: left;
+	height: 41px;
+	width: 272px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	text-align: center;
+}
+.usermain .right .content .pswfix ul li .line .board{
+	position: absolute;
+	top: 50px;
+	height: 38px;
+	padding-top: 9px;
+	color: #FF6868;
+}
+.usermain .right .content .pswfix ul li .line .board img{
+	vertical-align: bottom;
+}
+.usermain .right .content .pswfix ul .sub{
+	text-align: right;
+	padding-right: 50px;
+}
+.usermain .right .content .pswfix ul li .subbtn{
+	width: 114px;
+	height: 37px;
+	background: #F58220;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
+	outline: none;
+}
+.usermain .right .content .userinfofix{
+	padding: 25px;
+}
+.usermain .right .content .userinfofix ul li{
+	margin-bottom: 50px;
+}
+.usermain .right .content .userinfofix ul li .line{
+	width: 405px;
+	height: 45px;
+	border:1px solid #8a8a8a;
+	padding-top: 9px;
+	position: relative;
+}
+.usermain .right .content .userinfofix ul li .line span{
+	float: left;
+	display: inline-block;
+	height: 35px;
+	width: 100px;
+	border-right: 1px solid #8A8A8A;
+	font-size: 20px;
+	color: #6E6E6E;
+	text-align: center;
+	line-height: 35px;
+}
+.usermain .right .content .userinfofix ul li .line input{
+	float: left;
+	height: 41px;
+	width: 272px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	text-align: center;
+}
+.usermain .right .content .userinfofix ul li .line .board{
+	position: absolute;
+	top: 50px;
+	height: 38px;
+	padding-top: 9px;
+	color: #FF6868;
+}
+.usermain .right .content .userinfofix ul li .line .board img{
+	vertical-align: bottom;
+}
+.usermain .right .content .userinfofix ul .sub{
+	text-align: right;
+	padding-right: 50px;
+}
+.usermain .right .content .userinfofix ul li .subbtn{
+	width: 114px;
+	height: 37px;
+	background: #F58220;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
+	outline: none;
+}
+.usermain .right .content .userinfos{
+	padding: 35px;
+	font-size: 16px;
+	color: #5a5a5a;
+	line-height: 31px;
+}
+.usermain .right .content .userinfos .fix{
+	text-align: right;
+	padding-right: 50px;
+}
+.usermain .right .content .userinfos .fixbtn{
+	text-align: center;
+	line-height: 37px;
+	display: inline-block;
+	width: 114px;
+	height: 37px;
+	background: #F58220;
+	color: #FFFFFF;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
+	outline: none;
 }

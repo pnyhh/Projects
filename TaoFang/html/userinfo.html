@@ -43,10 +43,10 @@
 							<div class="himg"><img src="../images/userimg.png" alt="" /></div>
 							<div class="control">
 								<p><span id="username">王大锤</span></p>
-								<p>
-									<a href="">修改资料</a>|
-									<a href="">修改密码</a>|
-									<a href="">退出登录</a>
+								<p class="cbtns">
+									<a href="javascript:void(0);">修改资料</a>&nbsp;|
+									<a href="javascript:void(0);">修改密码</a>&nbsp;|
+									<a href="javascript:void(0);">退出登录</a>
 								</p>
 							</div>
 						</div>
@@ -70,12 +70,157 @@
 					<div class="right">
 						<div class="title">
 							<ul class="clear">
-								<li>个人资料</li>
+								<li style="border-top: 2px solid #f3a34f;">个人资料</li>
 								<li>修改密码</li>
-								<li>系统消息（1）</li>
+								<li>已读（1）</li>
 							</ul>
 						</div>
+						<div class="content">
+							<div class="scentry clear" style="display: none;">
+								<div class="left">
+									<a href="details.html" target="_blank"><img src="../images/img1.jpg" alt="" /></a>
+									<div class="mask clear">
+										<span class="enteyname">水岸年华</span>
+										<span class="enteysale">10988/平米</span>
+									</div>
+								</div>
+								<div class="right">
+									<div class="price">
+										<span><b id="price">10000</b>元/平</span>
+									</div>
+									<div class="type">
+										<span>普通住宅</span>
+									</div>
+									<div class="hot clear">
+										<div class="l">
+											首推户型：
+										</div>
+										<div class="r">
+											<ul>
+												<li>三房两厅两卫（102㎡）</li>
+												<li>三房两厅两卫（102㎡）</li>
+											</ul>
+										</div>
+										<div class="status"><img src="../images/osale.png" alt="" /></div>
+									</div>
+									<div class="address">
+										<span>
+											楼盘地址：<b>苏州高新区科发路108号（伊顿国际学校西）</b>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="intention" style="display: none;">
+								<h2>科技城·青山慧谷</h2>
+								<ul>
+									<li class="clear">
+										<div>预算总价：<span>60万元</span></div>
+										<div>面积：<span>70㎡</span></div>
+									</li>
+									<li class="clear">
+										<div>姓名：<span>王大锤</span></div>
+										<div>户型：<span>1室1厅1卫</span></div>
+									</li>
+									<li class="clear">
+										<div>联系方式：<span>13838384438</span></div>
+										<div>提交时间：<span>2015-09-06</span></div>
+									</li>
+								</ul>
+							</div>
+							<div class="message" style="display: none;">
+								<ul>
+									<li><a href="">水岸年华亲情加推，欢迎您的到来</a></li>
+									<li><a href="">水岸年华请你吃月饼</a></li>
+									<li><a href="">水岸年华请你大宝剑</a></li>
+								</ul>
+							</div>
+							<div class="pswfix" style="display: none;">
+								<form action="" method="post">
+									<ul>
+										<li>
+											<div class="line clear">
+											<span>原密码</span>
+											<input type="password"/>
+											<!--<div class="board">
+												<img src="../images/reg_err.png" alt="" />
+												密码格式不正确
+											</div>-->
+										</div>
+										</li>
+										<li>
+											<div class="line clear">
+											<span>新密码</span>
+											<input type="password" placeholder="6-16位数字或字母，区分大小写"/>
+											<div class="board">
+												<img src="../images/reg_err.png" alt="" />
+												密码格式不正确
+											</div>
+										</li>
+										<li>
+											<div class="line clear">
+											<span>确认密码</span>
+											<input type="password" placeholder="再输入一次新密码"/>
+											<div class="board">
+												<img src="../images/reg_err.png" alt="" />
+												两次密码输入不一致
+											</div>
+										</li>
+										<li class="sub"><input type="submit" value="提交" class="subbtn"/></li>
+									</ul>
+									
+								</form>
+							</div>
+							<div class="userinfofix" style="display: none;">
+								<form action="" method="post">
+									<ul>
+										<li>
+											<div class="line clear">
+											<span>昵称</span>
+											<input type="password"/>
+											<div class="board">
+												<img src="../images/reg_err.png" alt="" />
+												昵称格式不正确
+											</div>
+										</div>
+										</li>
+										<li>
+											<div class="line clear">
+											<span>手机</span>
+											<input type="password"/>
+											<div class="board">
+												<img src="../images/reg_err.png" alt="" />
+												该手机号码已被注册
+											</div>
+										</li>
+										<li>
+											<div class="line clear">
+											<span>身份证</span>
+											<input type="password"/>
+											<div class="board">
+												<img src="../images/reg_err.png" alt="" />
+												身份证不正确
+											</div>
+										</li>
+										<li style="font-size: 20px;color: #6E6E6E;">性别：
+											<input type="radio" name="sex" />男
+											<input type="radio" name="sex" />女
+										</li>
+										<li class="sub"><input type="submit" value="提交" class="subbtn"/></li>
+									</ul>
+									
+								</form>
+							</div>
+							<div class="userinfos">
+								<ul>
+									<li>昵称：<span>王大锤</span></li>
+									<li>手机：<span>13838384438</span></li>
+									<li>身份证号：000000000000<span></span></li>
+									<li>性别：<span>未知</span></li>
+									<li class="fix"><span class="fixbtn">修改资料</span></li>
+								</ul>
+							</div>
 					</div>
+				</div>
 				</div>
 			</div>
 			</div>
@@ -101,6 +246,48 @@
 			},function(){
 				$(this).removeClass("navssle").children().removeClass("navsasle");
 			})
+			$(".right .title ul li").click(function(){
+				$(this).css("border-top","2px solid #f3a34f").siblings().css("border","none");
+			});
+			$(".tabbtn").click(function(){
+				$(this).css("background","#F4F4F4");
+				$(".tabbtn").not(this).each(function(){
+					this.style.background = "";
+				});
+			});
+			$(".userinfos .fixbtn,.left .control .cbtns a:eq(0)").click(function(){
+				$(".userinfos").hide();
+				$(".userinfofix").show();
+			});
+			var mks = $(".scentry,.intention,.message,.pswfix,.userinfofix,.userinfos");
+			$(".right .title ul li").eq(0).click(function(){
+				mks.hide();
+				$(".userinfos").show();
+			});
+			$(".right .title ul li").eq(1).click(function(){
+				mks.hide();
+				$(".pswfix").show();
+			});
+			$(".left .control .cbtns a:eq(1)").click(function(){
+				mks.hide();
+				$(".pswfix").show();
+			});
+			$(".right .title ul li").eq(2).click(function(){
+				mks.hide();
+				$(".message").show();
+			});
+			$(".tabbtn").eq(0).click(function(){
+				mks.hide();
+				$(".scentry").show();
+			});
+			$(".tabbtn").eq(1).click(function(){
+				mks.hide();
+				$(".intention").show();
+			});
+			$(".tabbtn").eq(2).click(function(){
+				mks.hide();
+				$(".message").show();
+			});
 		</script>
 	</body>
 </html>
