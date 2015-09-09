@@ -37,7 +37,7 @@
 .nav .navs li a{
 	font-size: 24px;
 	line-height: 75px;
-	font-family: "微软正黑";
+	font-family: "Microsoft JhengHei";
 	text-align: center;
 	padding: 0 15px;
 	color: #f58220;
@@ -625,12 +625,12 @@
 }
 .details_content .infomation .developers .sc{
 	float: right;
-	width: 38px;
+	width: 40px;
 	text-align: center;
-	font-size: 16.3px;
+	font-size: 13px;
 	color: #F39636;
 	vertical-align: middle;
-	margin-top: -8px;
+	margin-top: -2px;
 	margin-right: 70px;
 	margin-left: 50px;
 }
@@ -1009,10 +1009,11 @@
 }
 .registered .content .main .cont .title{
 	font-size: 24px;
-	color: #F39636;
+	color: #5f5f5f;
 	width: 100%;
 	margin-top: 44px;
 	border-bottom: 1px solid #C4C4C4;
+	text-indent: 25px;
 }
 .registered .content .main .cont .title span{
 	float: right;
@@ -1055,7 +1056,8 @@
 	border: none;
 	outline: none;
 	font-size: 20px;
-	text-align: center;
+	text-align: left;
+	text-indent: 10px;
 }
 .registered .content .main .cont .con ul li .line .board{
 	position: absolute;

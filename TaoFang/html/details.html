@@ -78,7 +78,7 @@
 							<li><span>占地面积：<var>41,133㎡</var></span><span>总建筑面积：<var>90269.53㎡</var></span></li>
 							<li><span>车位配比：<var>1:0.7</var></span></li>
 						</ul>
-						<div class="developers clear"><span class="kfc">开&ensp;发&ensp;商：<var>苏州科技城科新文化旅游发展有限公司</var></span><span class="sc"><img src="../images/staru.png" alt="" />收藏</span><span class="tg">组团购</span></div>
+						<div class="developers clear"><span class="kfc">开&ensp;发&ensp;商：<var>苏州科技城科新文化旅游发展有限公司</var></span><span class="sc"><img src="../images/staru.png" alt="" id="scbtn"/><b>收藏</b></span><span class="tg">组团购</span></div>
 					</div>
 					<div class="map">
 						<div class="title"><img src="../images/detials_title.png" alt="" />地图周边</div>
@@ -311,6 +311,18 @@
 			})
 			$(".login .content .close").click(function(){
 				$(".logincon").hide();
+			});
+			$("#scbtn").bind("mouseover",function(){
+				this.src = "../images/starf.png";
+			})
+			$("#scbtn").bind("mouseout",function(){
+				this.src = "../images/staru.png";
+			})
+			$("#scbtn").click(function(){
+				this.src = "../images/starf.png";
+				$(this).siblings().html("已收藏");
+				$(this).unbind("mouseover");
+				$(this).unbind("mouseout");
 			})
 		</script>
 	</body>
