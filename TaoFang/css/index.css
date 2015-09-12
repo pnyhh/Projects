@@ -1437,3 +1437,123 @@
 	cursor: pointer;
 	outline: none;
 }
+.aboutmain{
+	background: #FFFFFF;
+}
+.about_body{
+	background: #76c9eb;
+	overflow: hidden;
+	position: relative;
+}
+.boo{
+	width: 920px;
+	position: absolute;
+	top: 50px;
+	z-index: 5;
+	margin: 0 auto;
+}
+.about_content{
+	width: 920px;
+	margin: 0 auto;
+	margin-top: 50px;
+	overflow: hidden;
+}
+.aboutus .title,.connect .title,.jobs .title{
+	 height: 41px;
+	 background: #fff600;
+	 font-family: "微软雅黑";
+	 font-size: 18px;
+	 color: #525252;
+	 text-indent: 23px;
+	 line-height: 41px;
+	 width: 100%;
+}
+.aboutus .bg{
+	height: 180px;
+	background: #FFF600;
+	margin-top: 1px;
+}
+.aboutus .txt{
+	margin-top: -150px;
+	margin-bottom: 430px;
+}
+.aboutus .txt .left{
+	float: left;
+	margin-left: 50px;
+}
+.aboutus .txt .right{
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 32px;
+	margin-left: 35px;
+	margin-top: 170px;
+}
+.connect .title{
+	margin-bottom: 1px;
+}
+.connect #allmap{
+	margin-top: 0px;
+	width: 100%;
+	height: 542px;
+}
+.connect .address{
+	margin-top: 15px;
+	margin-bottom: 430px;
+}
+.connect .address p,.jobs p{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: 500;
+	text-indent: 30px;
+	line-height: 30px;
+}
+.jobs .title{
+	margin-bottom: 1px;
+}
+.jobs ul li{
+	float: left;
+	width: 270px;
+	height: 270px;
+	padding: 0 13px;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #2a2a2a;
+	line-height: 28px;
+	background: #FFFFFF;
+	margin-right: 16px;
+}
+.jobs ul li h2{
+	margin-top: 12px;
+}
+.jobs ul li h3{
+	text-align: center;
+}
+.jobs p{
+	margin-top: 32px;
+	margin-bottom: 430px;
+}
+.boo .menu{
+	width: 100px;
+	position: absolute;
+	top: 120px;
+	left: -120px;
+}
+.boo .menu ul li{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.boo .menu ul li .circle{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	vertical-align: baseline;
+	margin-right: 15px;
+}
