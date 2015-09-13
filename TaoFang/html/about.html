@@ -27,11 +27,15 @@
 						<a href="javascript:void(0);" style="margin-left: 10px;">登录</a><a href="registered.html" target="_blank">注册</a>
 					</div>
 					<div class="userinfo" style="display: none;">
-						<a href="javascript:void(0)">王大锤 <img src="../images/user_arrow.png"/></a><a href="" class="wx"><img src="../images/user_wx.png"/></a>
+						<a href="javascript:void(0)">王大锤 <img src="../images/user_arrow.png"/></a><a href="javascript:void(0);" class="wx"><img src="../images/user_wx.png"/></a>
 						<ul class="me" style="display: none;">
-							<li><a href="userinfo.html" target="_blank">个人中心</a></li>
+							<li><a href="javascript:void(0);">个人资料</a></li>
+							<li><a href="javascript:void(0);">我的收藏</a></li>
+							<li><a href="javascript:void(0);">团购意向</a></li>
+							<li><a href="javascript:void(0);">系统消息</a></li>
 							<li><a href="javascript:void(0);">退出登录</a></li>
 						</ul>
+						<div class="wximg"><img src="../images/erw.jpg" alt="" /></div>
 					</div>
 				</div>
 			</div>
@@ -39,7 +43,7 @@
 				<div class="boo">
 					<div class="menu">
 						<ul>
-							<li><span class="circle"></span>关于我们</li>
+							<li style="color: #FFF600;"><span class="circle" style="background: #FFF600;"></span>关于我们</li>
 							<li><span class="circle"></span>联系我们</li>
 							<li><span class="circle"></span>招聘信息</li>
 						</ul>
@@ -92,6 +96,11 @@
 								<h3>后台助理</h3>
 							</li>
 						</ul>
+						<div class="board">
+							这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息
+							这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息这里是招聘信息
+							<span class="close"><img src="../images/login_close.png"/></span>
+						</div>
 						<p>个人简历请投递HR邮箱：249543995@qq.com</p>
 					</div>
 				</div>
@@ -157,6 +166,20 @@
 					$(this).css("background","#E4E4E4").siblings().css("background","");
 				},function(){
 					$(".userinfo .me li").css("background","");
+				});
+				$(".userinfo a:eq(1)").click(function(){
+					$(".wximg").slideToggle(200);
+				});
+				$(".menu ul li").click(function(){
+					$(this).css("color","#FFF600").siblings().css("color","");
+					$(".menu ul li .circle").css("background","");
+					$(".menu ul li .circle").eq($(this).index()).css("background","#FFF600");
+				});
+				$(".jobs ul li h3").click(function(){
+					$(".jobs .board").addClass("checks");
+				});
+				$(".jobs .board .close").click(function(){
+					$(".jobs .board").removeClass("checks");
 				});
 			</script>
 		</div>

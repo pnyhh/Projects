@@ -27,6 +27,12 @@
 .nav .userinfo{
 	position: relative;
 }
+.nav .userinfo .wximg{
+	position: absolute;
+	left: 70px;
+	display: none;
+	z-index: 100;
+}
 .nav .userinfo .me{
 	position: absolute;
 	top: 35px;
@@ -829,6 +835,7 @@
 	background: #FFFFFF;
 	padding: 24px 50px;
 }
+.co
 .list_content .condition dl{
 	margin-bottom: 6px;
 }
@@ -856,7 +863,14 @@
 .list_content .board .contxt{
 	float: left;
 	width: 660px;
-	
+	position: relative;
+}
+.list_content .board .contxt .loading{
+	display: none;
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	left: 178px;
 }
 .list_content .board .contxt .entry{
 	height: 205px;
@@ -1198,6 +1212,7 @@
 	border-right: 1px solid #ababab;
 	text-align: center;
 	line-height: 38px;
+	cursor: pointer;
 }
 .usermain .right{
 	float: left;
@@ -1216,6 +1231,7 @@
 	height: 49px;
 	text-align: center;
 	line-height: 49px;
+	cursor: pointer;
 }
 .usermain .right .content{
 	width: 589px;
@@ -1316,6 +1332,8 @@
 	padding-left: 30px;
 	background-repeat: no-repeat;
 	margin-bottom: 30px;
+	border-bottom: 1px dashed #DDDDDD;
+	padding-bottom: 10px;
 }
 .usermain .right .content .message ul li a{
 	font-size: 14px;
@@ -1352,7 +1370,8 @@
 	border: none;
 	outline: none;
 	font-size: 16px;
-	text-align: center;
+	text-align: left;
+	text-indent: 15px;
 }
 .usermain .right .content .pswfix ul li .line .board{
 	position: absolute;
@@ -1366,7 +1385,7 @@
 }
 .usermain .right .content .pswfix ul .sub{
 	text-align: right;
-	padding-right: 50px;
+	padding-right: 100px;
 }
 .usermain .right .content .pswfix ul li .subbtn{
 	width: 114px;
@@ -1531,8 +1550,12 @@
 	text-indent: 30px;
 	line-height: 30px;
 }
+.jobs{
+	position: relative;
+	z-index: 100;
+}
 .jobs .title{
-	margin-bottom: 1px;
+	margin-bottom: 20px;
 }
 .jobs ul li{
 	float: left;
@@ -1548,13 +1571,39 @@
 }
 .jobs ul li h2{
 	margin-top: 12px;
+	cursor: pointer;
 }
 .jobs ul li h3{
 	text-align: center;
+	cursor: pointer;
 }
 .jobs p{
 	margin-top: 32px;
 	margin-bottom: 430px;
+}
+.jobs .board{
+	width: 450px;
+	height: 448px;
+	border:1px solid #7F7F7F;
+	background: #FFFFFF;
+	position: absolute;
+	padding: 50px;
+	top: 80px;
+	left: 185px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 25px;
+	color: #6E6E6E;
+	display: none;
+}
+.jobs .board .close{
+	position: absolute;
+	right: 17px;
+	top: 17px;
+	cursor: pointer;
+}
+.jobs .checks{
+	display: block;
 }
 .boo .menu{
 	width: 100px;

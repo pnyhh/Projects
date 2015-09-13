@@ -87,6 +87,9 @@ $(function() {
 	},function(){
 		$(".userinfo .me li").css("background","");
 	});
+	$(".userinfo a:eq(1)").click(function(){
+		$(".wximg").slideToggle(200);
+	});
 });
 $(window).scroll( function(){
 	var top= document.body.scrollTop || document.documentElement.scrollTop;

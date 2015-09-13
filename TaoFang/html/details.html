@@ -27,11 +27,15 @@
 						<a href="javascript:void(0);" style="margin-left: 10px;">登录</a><a href="registered.html" target="_blank">注册</a>
 					</div>
 					<div class="userinfo" style="display: none;">
-						<a href="javascript:void(0)">王大锤 <img src="../images/user_arrow.png"/></a><a href="" class="wx"><img src="../images/user_wx.png"/></a>
+						<a href="javascript:void(0)">王大锤 <img src="../images/user_arrow.png"/></a><a href="javascript:void(0);" class="wx"><img src="../images/user_wx.png"/></a>
 						<ul class="me" style="display: none;">
-							<li><a href="userinfo.html" target="_blank">个人中心</a></li>
+							<li><a href="javascript:void(0);">个人资料</a></li>
+							<li><a href="javascript:void(0);">我的收藏</a></li>
+							<li><a href="javascript:void(0);">团购意向</a></li>
+							<li><a href="javascript:void(0);">系统消息</a></li>
 							<li><a href="javascript:void(0);">退出登录</a></li>
 						</ul>
+						<div class="wximg"><img src="../images/erw.jpg" alt="" /></div>
 					</div>
 				</div>
 			</div>
@@ -335,6 +339,9 @@
 				$(this).css("background","#E4E4E4").siblings().css("background","");
 			},function(){
 				$(".userinfo .me li").css("background","");
+			});
+			$(".userinfo a:eq(1)").click(function(){
+				$(".wximg").slideToggle(200);
 			});
 		</script>
 	</body>
