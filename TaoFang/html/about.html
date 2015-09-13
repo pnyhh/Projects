@@ -107,8 +107,8 @@
 			<script type="text/javascript">
 				var h = document.documentElement.clientHeight;
 				var w = document.documentElement.clientWidth;
-				$(".about_content").height(h-265);
-				$(".boo").height(h-265);
+				$(".about_content").height(h-245);
+				$(".boo").height(h-245);
 				$(".boo").css("left",w/2-460);
 				//MAP////
 				function InitMap(lon,lat,keywords){
@@ -134,11 +134,18 @@
 				});
 				$(".menu ul li").eq(1).click(function(){
 					$("#allmap").css("z-index",6);
-					$(".about_content").animate({scrollTop:865},1000);
+					$(".about_content").animate({scrollTop:845},1000);
 				});
-				$(".menu ul li").eq(2).click(function(){
-					$(".about_content").animate({scrollTop:1950},1000);
-				});
+				if($(".about_content").height() < 500){
+					$("#allmap").height(300);
+					$(".menu ul li").eq(2).click(function(){
+						$(".about_content").animate({scrollTop:1680},1000);
+					});
+				}else{
+					$(".menu ul li").eq(2).click(function(){
+						$(".about_content").animate({scrollTop:1930},1000);
+					});
+				}
 			</script>
 		</div>
 	</body>

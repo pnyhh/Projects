@@ -1455,7 +1455,7 @@
 .about_content{
 	width: 920px;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 30px;
 	overflow: hidden;
 }
 .aboutus .title,.connect .title,.jobs .title{
@@ -1488,7 +1488,7 @@
 	color: #FFFFFF;
 	line-height: 32px;
 	margin-left: 35px;
-	margin-top: 170px;
+	margin-top: 150px;
 }
 .connect .title{
 	margin-bottom: 1px;
