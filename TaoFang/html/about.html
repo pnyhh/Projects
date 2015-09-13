@@ -27,7 +27,11 @@
 						<a href="javascript:void(0);" style="margin-left: 10px;">登录</a><a href="registered.html" target="_blank">注册</a>
 					</div>
 					<div class="userinfo" style="display: none;">
-						<a href="">王大锤 <img src="../images/user_arrow.png"/></a><a href="" class="wx"><img src="../images/user_wx.png"/></a>
+						<a href="javascript:void(0)">王大锤 <img src="../images/user_arrow.png"/></a><a href="" class="wx"><img src="../images/user_wx.png"/></a>
+						<ul class="me" style="display: none;">
+							<li><a href="userinfo.html" target="_blank">个人中心</a></li>
+							<li><a href="javascript:void(0);">退出登录</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -145,7 +149,15 @@
 					$(".menu ul li").eq(2).click(function(){
 						$(".about_content").animate({scrollTop:1930},1000);
 					});
-				}
+				};
+				$(".userinfo a:eq(0)").click(function(){
+					$(".userinfo .me").slideToggle(300);
+				});
+				$(".userinfo .me li").hover(function(){
+					$(this).css("background","#E4E4E4").siblings().css("background","");
+				},function(){
+					$(".userinfo .me li").css("background","");
+				});
 			</script>
 		</div>
 	</body>

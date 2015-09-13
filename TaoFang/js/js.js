@@ -78,7 +78,15 @@ $(function() {
 		$(this).addClass("navssle").children().addClass("navsasle");
 	},function(){
 		$(this).removeClass("navssle").children().removeClass("navsasle");
-	})
+	});
+	$(".userinfo a:eq(0)").click(function(){
+		$(".userinfo .me").slideToggle(300);
+	});
+	$(".userinfo .me li").hover(function(){
+		$(this).css("background","#E4E4E4").siblings().css("background","");
+	},function(){
+		$(".userinfo .me li").css("background","");
+	});
 });
 $(window).scroll( function(){
 	var top= document.body.scrollTop || document.documentElement.scrollTop;

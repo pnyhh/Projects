@@ -24,6 +24,27 @@
 .nav .loginbtn,.nav .userinfo{
 	float: left;
 }
+.nav .userinfo{
+	position: relative;
+}
+.nav .userinfo .me{
+	position: absolute;
+	top: 35px;
+	left: 35px;
+	border:1px solid #BFBFBF;
+	background: #FFFFFF;
+	z-index: 100;
+}
+.nav .userinfo .me li a{
+	width: 68px;
+	height: 30px;
+	display: inline-block;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+	color: #5C5C5C;
+}
 .nav .navs li{
 	float: left;
 	padding: 0 10px;
@@ -1293,7 +1314,7 @@
 .usermain .right .content .message ul li{
 	height: 27px;
 	padding-left: 30px;
-	background: url(../images/message.png) no-repeat;
+	background-repeat: no-repeat;
 	margin-bottom: 30px;
 }
 .usermain .right .content .message ul li a{
