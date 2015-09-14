@@ -97,6 +97,7 @@
 						<form action="" method="post" class="comm_sub">
 							<textarea name="" rows="" cols=""></textarea>
 							<input type="checkbox" />匿名评论<span>请<a href="">登录</a>后再评论</span>
+							<input type="submit" class="sub" value="提交"/>
 						</form>
 						<div class="commentnum">
 							<div class="num">全部评论（<span>3</span>）</div>
@@ -207,6 +208,75 @@
 							</form>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="grbuy" style="display: none;">
+				<div class="title">
+					组团购
+					<span class="close"><img src="../images/login_close.png"/></span>
+				</div>
+				<div class="content">
+					<h2>科技城·水岸年华</h2>
+					<form action="" method="post">
+						<ul>
+							<li class="sle">
+								<select name="">
+									<option value="不限">不限</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select><span>室</span>
+								<select name="">
+									<option value="不限">不限</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select><span>厅</span>
+								<select name="">
+									<option value="不限">不限</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select><span>卫</span>
+							</li>
+							<li>
+								<div class="ipt clear">
+									<span class="t">面积</span><input type="text" /><span>平米</span>
+								</div>
+							</li>
+							<li>
+								<div class="ipt clear">
+									<span class="t">预算</span><input type="text" class="checkm"/><span>万元</span>
+								</div>
+								<div class="mess" style="display: none;">
+									<img src="../images/login_err.png" alt="" />此项不能为空
+								</div>
+							</li>
+							<li>
+								<div class="ipt clear">
+									<span class="t">姓名</span><input type="text" class="checkm"/><span></span>
+								</div>
+								<div class="mess" style="display: none;">
+									<img src="../images/login_err.png" alt="" />此项不能为空
+								</div>
+							</li>
+							<li>
+								<div class="ipt clear">
+									<span class="t">手机</span><input type="text"/><span>万元</span>
+								</div>
+								<div class="mess">
+									<img src="../images/login_err.png" alt=""/>该手机号码不存在
+								</div>
+							</li>
+							<li class="subb"><input type="submit" value="提交" class="sub"/></li>
+						</ul>
+					</form>
 				</div>
 			</div>
 			</div>
@@ -342,6 +412,17 @@
 			});
 			$(".userinfo a:eq(1)").click(function(){
 				$(".wximg").slideToggle(200);
+			});
+			$(".details_content .infomation .developers .tg").click(function(){
+				$(".grbuy").show();
+			});
+			$(".details_content .grbuy .title .close").click(function(){
+				$(".grbuy").hide();
+			});
+			$(".checkm:eq(0),.checkm:eq(1)").blur(function(){
+				if($(this).val() == ""){
+					$(this).parent().next().show();
+				}
 			});
 		</script>
 	</body>
