@@ -127,6 +127,7 @@
 									</div>
 								</li>
 							</ul>
+							<p style="margin-top: 15px;"><span class="more">+查看更多</span></p>
 						</div>
 					</div>
 					<div class="dynamic">
@@ -142,9 +143,13 @@
 								<li class="dttxt">
 									<h2><a href="">水岸年华现房在售，总价80万起</a><span>2015-9-6 10:41</span></h2>
 									<p>水岸年华现房在售。3#、5#、7#、9#楼，户型面积80-99㎡，均价10000元/㎡</p>
-									<p class="btns"><a href="" class="btn">详情&#x3c;&#x3c;</a></p>
+									<p class="btns"><a href="javascript:void(0);" class="btn">详情&#x3c;&#x3c;</a></p>
 								</li>
 							</ul>
+							<div class="dynamic_info">
+								淘房通讯(编辑 大美女)水岸年华项目在售5、7、9号楼现房，户型为80-102平，主力户型80平和99平，均价10000元/平左右，优惠1万抵4万。具体信息详询售楼处。
+								<span class="close"><img src="../images/login_close.png"/></span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -201,7 +206,7 @@
 											记住密码
 										</div>
 										<div class="forget">
-											<a href="">忘记密码？</a>
+											<a href="retrieve.html" target="_blank">忘记密码？</a>
 										</div>
 									</li>
 								</ul>
@@ -423,6 +428,12 @@
 				if($(this).val() == ""){
 					$(this).parent().next().show();
 				}
+			});
+			$(".dynamictxt .btn").click(function(){
+				$(".dynamic_info").show();
+			});
+			$(".details_content .dynamic .dynamic_info .close").click(function(){
+				$(".dynamic_info").hide();
 			});
 		</script>
 	</body>

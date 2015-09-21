@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>用户注册--淘房通</title>
+		<title>密码重置--淘房通</title>
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 	</head>
@@ -15,8 +15,7 @@
 				<div class="main">
 					<div class="cont">
 						<div class="title clear">
-							注册
-							<span>已经是会员？<a href="javascript:void(0);">直接登录</a></span>
+							密码重置
 						</div>
 						<div class="con">
 							<form action="" method="post">
@@ -65,14 +64,19 @@
 										</div>
 									</li>
 									<li style="text-align: center;">
-										<p>
-											<input type="checkbox" />
-											我已经阅读并同意<a href="">《淘房通买房用户注册协议》</a>
-										</p>
-										<input type="submit" value="立即注册" class="sub"/>
+										<input type="submit" value="提交" class="sub"/>
 									</li>
 								</ul>
 							</form>
+							<div class="retrieve_alert">
+								<div class="title clear">
+									提示
+									<span class="close"><img src="../images/login_close.png"/></span>
+								</div>
+								<div class="body">
+									密码重置已提交，点击<a href="javascript:void(0);">确认</a>返回登陆
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -130,7 +134,7 @@
 											记住密码
 										</div>
 										<div class="forget">
-											<a href="retrieve.html" target="_blank">忘记密码？</a>
+											<a href="">忘记密码？</a>
 										</div>
 									</li>
 								</ul>
@@ -155,9 +159,17 @@
 		<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
 		<script type="text/javascript">
 			$(".logincon").height(1086);
-			$(".cont span a").eq(0).click(function(){
-				$(".logincon").show();
+			$(".sub").click(function(event){
+				event.preventDefault();
+				$(".retrieve_alert").show();
 			})
+			$(".retrieve_alert .body a").eq(0).click(function(){
+				$(".logincon").show();
+				$(".retrieve_alert").hide();
+			})
+			$(".retrieve_alert .title .close").click(function(){
+				$(".retrieve_alert").hide();
+			});
 			$(".login .content .close").click(function(){
 				$(".logincon").hide();
 			});

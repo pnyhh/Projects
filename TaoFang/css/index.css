@@ -884,6 +884,18 @@
 .details_content .comment .commenttxt .uctxt .r p span{
 	margin-left: 15px;
 }
+.details_content .comment .commenttxt .more{
+	display: inline-block;
+	width: 87px;
+	height: 20px;
+	color: #FFFFFF;
+	border-radius: 5px;
+	background: #F39636;
+	line-height: 20px;
+	font-size: 11px;
+	margin-top: 0;
+	cursor: pointer;
+}
 .details_content .dynamic .dynamictxt{
 	border-bottom: none;
 	padding: 0;
@@ -919,6 +931,30 @@
 }
 .details_content .dynamic .dynamictxt .dttxt p .btn{
 	color: #3A87C3;
+}
+.details_content .dynamic .dynamic_info{
+	width: 1125px;
+	height: 284px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: #FFFFFF;
+	font-size: 20px;
+	color: #5A5A5A;
+	line-height: 36px;
+	border:1px solid #5A5A5A;
+	padding: 35px 25px;
+	text-align: left;
+	display: none;
+}
+.details_content .dynamic .dynamic_info .close{
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	cursor: pointer;
 }
 .details_content .content .left{
 	width: 522px;
@@ -1756,4 +1792,38 @@
 	background: #FFFFFF;
 	vertical-align: baseline;
 	margin-right: 15px;
+}
+.retrieve_alert{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 469px;
+	height: 225px;
+	border:1px solid #5b5b5b;
+	font-size: 16px;
+	color: #676767;
+	background: #FFFFFF;
+	display: none;
+}
+.retrieve_alert .title{
+	height: 40px;
+	line-height: 40px;
+	margin-top: 0 !important;
+	font-size: 16px !important;
+}
+.retrieve_alert .title span{
+	float: right;
+	cursor: pointer;
+	margin-top: 5px !important;
+	margin-right: 10px;
+}
+.retrieve_alert .body{
+	padding-top: 26px;
+	padding-left: 60px;
+}
+.retrieve_alert .body a{
+	color: #5f86f5;
 }

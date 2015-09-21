@@ -22,7 +22,7 @@
 						</ul>
 					</div>
 					<div class="loginbtn">
-						<a href="" style="margin-left: 10px;">登录</a><a href="">注册</a>
+						<a href="javascript:void(0);" style="margin-left: 10px;">登录</a><a href="registered.html" target="_blank">注册</a>
 					</div>
 					<div class="userinfo">
 						<a href="javascript:void(0)">王大锤 <img src="../images/user_arrow.png"/></a><a href="javascript:void(0);" class="wx"><img src="../images/user_wx.png"/></a>
@@ -242,7 +242,68 @@
 				</div>
 			</div>
 			</div>
-			
+			<div class="logincon">
+				<div class="login">
+					<div class="content">
+						<div class="title clear">
+							<div class="left">
+								登录
+							</div>
+							<div class="right" style="padding-top: 46px;">
+								没有账号？<a href="html/registered.html" target="_blank">立即注册</a>
+							</div>
+							<div class="close"><img src="../images/login_close.png" alt="" /></div>
+						</div>
+						<div class="main">
+							<form action="" method="post">
+								<ul>
+									<li>
+										<div class="con clear">
+											<span>手机</span><input type="text" />
+											<div class="board">
+												<span><img src="../images/login_err.png" alt="" /></span>
+												该手机号码不存在
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="con clear">
+											<span>密码</span><input type="text" />
+											<div class="board">
+												<span><img src="../images/login_err.png" alt="" /></span>
+												密码错误，请重新输入
+											</div>
+										</div>
+									</li>
+									<li class="clear">
+										<div class="con clear" style="width: 140px;float: left;">
+											<span>验证码</span><input type="text" class="yanzheng"/>
+											<div class="board" style="width: 134px;">
+												<span><img src="../images/login_err.png" alt="" /></span>
+												验证码不正确
+											</div>
+										</div>
+										<div class="yzt" style="float: left;margin-left: 2px;">
+											<img src="../images/yam.png" alt="" />
+											<a href="javascript:void(0);">换一张</a>
+										</div>
+									</li>
+									<li style="margin-bottom: 15px;"><input type="submit" value="登录" class="sub"/></li>
+									<li class="clear">
+										<div class="check">
+											<input type="checkbox" style="width: 20px;height: 20px;vertical-align: bottom;"/>
+											记住密码
+										</div>
+										<div class="forget">
+											<a href="retrieve.html" target="_blank">忘记密码？</a>
+										</div>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="footer">
 				<div class="lin">
 					<ul class="clear">
@@ -347,6 +408,14 @@
 			});
 			$(".userinfo a:eq(1)").click(function(){
 				$(".wximg").slideToggle(200);
+			});
+			var h = document.documentElement.clientHeight;
+			$(".logincon").height(h);
+			$(".loginbtn a").eq(0).click(function(){
+				$(".logincon").show();
+			})
+			$(".login .content .close").click(function(){
+				$(".logincon").hide();
 			});
 		</script>
 	</body>
