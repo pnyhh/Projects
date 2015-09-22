@@ -1827,3 +1827,35 @@
 .retrieve_alert .body a{
 	color: #5f86f5;
 }
+.agreement{
+	width: 920px;
+	margin: 0 auto;
+	margin-bottom: 250px;
+}
+.agreement .title{
+	padding-top: 100px;
+	background: #F4F4F4;
+}
+.agreement .body{
+	border:1px solid #5B5B5B;
+	background: #FFFFFF;
+	margin-top: 32px;
+}
+.agreement .body .head{
+	width: 914px;
+	margin: 0 auto;
+	border-bottom: 2px solid #F39636;
+	font-size: 24px;
+	line-height: 47px;
+	text-indent: 15px;
+	color: #5B5B5B;
+}
+.agreement .body .text{
+	padding: 35px 20px;
+	font-size: 14px;
+	color: #5B5B5B;
+	line-height: 26px;
+}
+.agreement .body .text h2{
+	font-weight: bold;
+}
