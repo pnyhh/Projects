@@ -134,27 +134,29 @@
 		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery1.11.3-min.js" type="text/javascript" charset="utf-8"></script>
+		<!--jweixin/sha/check-->
 		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<script src="js/sha.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			var obj = sign(localStorage.getItem("ticket"), window.location.href);
 	        wx.config({
-	            debug: true,
-	            appId: 'wxf31739c56da3e4d1',
+	            debug: false,
+	            appId: 'wxf31739c56da3e4d1',//微信公众号ID
 	            timestamp: obj.timestamp,
 	            nonceStr: obj.nonceStr,
 	            signature: obj.signature,
 	            jsApiList: [
-	              'onMenuShareTimeline',
+	              'onMenuShareTimeline',  //功能列表
 	              'onMenuShareAppMessage'
 	            ]
 	        });
 	        wx.ready(function () {
-	            var imgUrl = 'http://www.bjbkws.com/beida.png';
-	            var descContent = '京东大牛、蓝标师姐、百度师哥、创业师兄等移动互联网大咖齐聚北大，这是为什么呢？';
-	            var shareTitle = '您收到一封来自北京大学校友会的邀请  请亲启';
+	            var imgUrl = 'http://www.bjbkws.com/beida.png';//缩略图网络绝对路径
+	            var descContent = '京东大牛、蓝标师姐、百度师哥、创业师兄等移动互联网大咖齐聚北大，这是为什么呢？';//描述信息
+	            var shareTitle = '您收到一封来自北京大学校友会的邀请  请亲启';//标题信息
 	            var lineLink = 'http://jiaoxue.bjbkws.com/wz/index.html';
+	            //链接地址
 	            runfun(function () {
 	                wx.onMenuShareAppMessage({
 	                    title: shareTitle, // 分享标题

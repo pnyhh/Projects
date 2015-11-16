@@ -36,7 +36,7 @@ function runfun(fun){
 function runajax (){
     $.ajax({
 		type:"get",
-		url:"weixin.php",
+		url:"weixin.php", //本地服务器接口
 		async:true,
 		dataType:"json",
 		success:function(data){

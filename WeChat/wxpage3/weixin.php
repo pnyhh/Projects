@@ -11,7 +11,6 @@ function accessToken() {
      $appsecret = "b3de00681f2b220ed21d6eec086740b9";
         $result = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$appid&secret=$appsecret";
         $myContent=file_get_contents($result);
-
          $res = json_decode($myContent);
         $access_token = $res->access_token;
      
